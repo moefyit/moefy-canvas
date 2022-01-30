@@ -1,0 +1,22 @@
+{
+  "name": "@moefy-canvas/theme-popper",
+  "version": "0.0.1",
+  "keywords": [
+    "moefyit",
+    "moefy-canvas-theme"
+  ],
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "dev": "vite --config vite.config.ts playground",
+    "build": "vite build"
+  },
+  "author": "Nyakku Shigure",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^14.14.34"
+  }
+}

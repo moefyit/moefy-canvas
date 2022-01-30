@@ -1,0 +1,24 @@
+{
+  "name": "@moefy-canvas/utils",
+  "version": "0.0.1",
+  "keywords": [
+    "moefyit",
+    "moefy-canvas-utils"
+  ],
+  "main": "./dist/utils.cjs.js",
+  "module": "./dist/utils.es.js",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/utils.es.js",
+      "require": "./dist/utils.cjs.js"
+    }
+  },
+  "scripts": {
+    "build": "vite build"
+  },
+  "author": "Nyakku Shigure",
+  "license": "MIT"
+}

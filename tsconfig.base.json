@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "declaration": true,
+    "declarationMap": true,
+    "lib": ["DOM", "ES2020"],
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "newLine": "lf",
+    "noEmitOnError": true,
+    "noImplicitAny": false,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "target": "ES2018",
+    "baseUrl": "packages",
+    "paths": {
+      "@moefy-canvas/theme-sparkler/*": ["theme-sparkler/src/*"],
+      "@moefy-canvas/theme-sparkler": ["theme-sparkler/src"],
+      "@moefy-canvas/theme-boom/*": ["theme-popper/src/*"],
+      "@moefy-canvas/theme-boom": ["theme-popper/src"],
+      "@moefy-canvas/utils/*": ["utils/src/*"],
+      "@moefy-canvas/utils": ["utils/src"],
+      "@moefy-canvas/core/*": ["core/src/*"],
+      "@moefy-canvas/core": ["core/src"]
+    }
+  }
+}
