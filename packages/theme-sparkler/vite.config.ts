@@ -11,13 +11,14 @@ const config: UserConfig = {
       formats: ['es', 'cjs'],
     },
     rollupOptions: {
-      external: ['@moefy-canvas/utils', '@moefy-canvas/core'],
+      external: ['color2k', 'ts-debounce', '@moefy-canvas/utils', '@moefy-canvas/core'],
     },
   },
   resolve: {
     alias: {
       '@moefy-canvas/utils': path.resolve(__dirname, '../utils/src/index.ts'),
       '@moefy-canvas/core': path.resolve(__dirname, '../core/src/index.ts'),
+      '@moefy-canvas/theme-sparkler': path.resolve(__dirname, './src/index.ts'),
     },
   },
 }

@@ -1,7 +1,10 @@
-import { Sparkler } from '../src/'
-import { SparklerMode, SparklerConfig } from '../src/'
-import { MAX_Z_INDEX } from '@moefy-canvas/core'
-import { CanvasOptions } from '@moefy-canvas/core'
+import {
+  Sparkler,
+  SparklerMode,
+  SparklerConfig,
+  CanvasOptions,
+  MAX_Z_INDEX,
+} from '@moefy-canvas/theme-sparkler'
 
 const themeConfig: SparklerConfig = {
   mode: SparklerMode.TRAIL,

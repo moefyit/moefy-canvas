@@ -1,6 +1,6 @@
 import { Vector2D } from '@moefy-canvas/core'
 import { Random } from '@moefy-canvas/utils'
-import { Color } from '@moefy-canvas/utils'
+import { opacify } from 'color2k'
 
 function normalize(x: number, MIN: number, MAX: number) {
   return (x - MIN) / (MAX - MIN)
@@ -52,7 +52,7 @@ export class Particle {
   }
 
   draw(canvasContext: CanvasRenderingContext2D, currentTime: number) {
-    canvasContext.fillStyle = new Color(this.color).alpha(this.opacity).toRGBAString()
+    canvasContext.fillStyle = opacify(this.color, this.opacity)
 
     canvasContext.beginPath()
     canvasContext.arc(this.position.x, this.position.y, this.size, 0, Math.PI * 2)

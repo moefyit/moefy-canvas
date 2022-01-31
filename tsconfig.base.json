@@ -19,8 +19,8 @@
     "paths": {
       "@moefy-canvas/theme-sparkler/*": ["theme-sparkler/src/*"],
       "@moefy-canvas/theme-sparkler": ["theme-sparkler/src"],
-      "@moefy-canvas/theme-boom/*": ["theme-popper/src/*"],
-      "@moefy-canvas/theme-boom": ["theme-popper/src"],
+      "@moefy-canvas/theme-popper/*": ["theme-popper/src/*"],
+      "@moefy-canvas/theme-popper": ["theme-popper/src"],
       "@moefy-canvas/utils/*": ["utils/src/*"],
       "@moefy-canvas/utils": ["utils/src"],
       "@moefy-canvas/core/*": ["core/src/*"],

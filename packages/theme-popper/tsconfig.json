@@ -1,5 +1,5 @@
 {
   "extends": "../../tsconfig.base.json",
-  "include": ["./src", "./__tests__"],
+  "include": ["./src", "./__tests__", "./playground"],
   "references": [{ "path": "../utils/" }, { "path": "../core/" }]
 }

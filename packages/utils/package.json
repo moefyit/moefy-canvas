@@ -1,6 +1,6 @@
 {
-  "name": "@moefy-canvas/theme-utils",
-  "version": "0.0.1",
+  "name": "@moefy-canvas/utils",
+  "version": "0.0.5-alpha.4",
   "author": "Nyakku Shigure",
   "license": "MIT",
   "keywords": [

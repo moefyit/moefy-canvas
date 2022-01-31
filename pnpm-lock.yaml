@@ -5,12 +5,9 @@ importers:
   .:
     specifiers:
       '@types/node': ^17.0.13
-      ts-debounce: ^2.3.0
       typescript: ^4.5.5
       vite: ^2.7.13
       vite-plugin-dts: ^0.9.9
-    dependencies:
-      ts-debounce: 2.3.0
     devDependencies:
       '@types/node': 17.0.13
       typescript: 4.5.5
@@ -22,23 +19,31 @@ importers:
 
   packages/theme-popper:
     specifiers:
-      '@types/node': ^14.14.34
-    devDependencies:
-      '@types/node': 14.18.9
+      '@moefy-canvas/core': workspace:^
+      '@moefy-canvas/utils': workspace:^
+      ts-debounce: ^2.3.0
+    dependencies:
+      '@moefy-canvas/core': link:../core
+      '@moefy-canvas/utils': link:../utils
+      ts-debounce: 2.3.0
 
   packages/theme-sparkler:
     specifiers:
       '@moefy-canvas/core': workspace:^
       '@moefy-canvas/utils': workspace:^
-      '@types/node': ^14.14.34
+      color2k: ^1.2.5
+      ts-debounce: ^2.3.0
     dependencies:
       '@moefy-canvas/core': link:../core
       '@moefy-canvas/utils': link:../utils
-    devDependencies:
-      '@types/node': 14.18.9
+      color2k: 1.2.5
+      ts-debounce: 2.3.0
 
   packages/utils:
-    specifiers: {}
+    specifiers:
+      '@moefy-canvas/core': workspace:^
+    dependencies:
+      '@moefy-canvas/core': link:../core
 
 packages:
 
@@ -72,10 +77,6 @@ packages:
       path-browserify: 1.0.1
     dev: true
 
-  /@types/node/14.18.9:
-    resolution: {integrity: sha512-j11XSuRuAlft6vLDEX4RvhqC0KxNxx6QIyMXNb0vHHSNPXTPeiy3algESWmOOIzEtiEL0qiowPU3ewW9hHVa7Q==}
-    dev: true
-
   /@types/node/17.0.13:
     resolution: {integrity: sha512-Y86MAxASe25hNzlDbsviXl8jQHb0RDvKt4c40ZJQ1Don0AAL0STLZSs4N+6gLEO55pedy7r2cLwS+ZDxPm/2Bw==}
     dev: true
@@ -103,6 +104,10 @@ packages:
     dependencies:
       tslib: 2.3.1
     dev: true
+
+  /color2k/1.2.5:
+    resolution: {integrity: sha512-G39qNMGyM/fhl8hcy1YqpfXzQ810zSGyiJAgdMFlreCI7Hpwu3Jpu4tuBM/Oxu1Bek1FwyaBbtrtdkTr4HDhLA==}
+    dev: false
 
   /concat-map/0.0.1:
     resolution: {integrity: sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=}

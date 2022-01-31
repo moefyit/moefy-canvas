@@ -11,7 +11,7 @@ const config: UserConfig = {
       formats: ['es', 'cjs'],
     },
     rollupOptions: {
-      external: ['@moefy-canvas/utils', '@moefy-canvas/core'],
+      external: ['ts-debounce', '@moefy-canvas/utils', '@moefy-canvas/core'],
     },
   },
   resolve: {
