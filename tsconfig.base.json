@@ -21,6 +21,8 @@
       "@moefy-canvas/theme-sparkler": ["theme-sparkler/src"],
       "@moefy-canvas/theme-popper/*": ["theme-popper/src/*"],
       "@moefy-canvas/theme-popper": ["theme-popper/src"],
+      "@moefy-canvas/theme-ribbon/*": ["theme-ribbon/src/*"],
+      "@moefy-canvas/theme-ribbon": ["theme-ribbon/src"],
       "@moefy-canvas/utils/*": ["utils/src/*"],
       "@moefy-canvas/utils": ["utils/src"],
       "@moefy-canvas/core/*": ["core/src/*"],

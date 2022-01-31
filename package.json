@@ -6,8 +6,9 @@
   "scripts": {
     "dev:sparkler": "pnpm --filter @moefy-canvas/theme-sparkler dev",
     "dev:popper": "pnpm --filter @moefy-canvas/theme-popper dev",
+    "dev:ribbon": "pnpm --filter @moefy-canvas/theme-ribbon dev",
     "build": "pnpm -r run build",
-    "pub": "pnpm -r publish --no-git-checks --access public"
+    "pub": "pnpm build && pnpm -r publish --no-git-checks --access public"
   },
   "devDependencies": {
     "@types/node": "^17.0.13",

@@ -92,24 +92,10 @@ export class Canvas {
   static clearCanvas(ctx: CanvasRenderingContext2D, canvasSize: [number, number]) {
     ctx.clearRect(0, 0, canvasSize[0], canvasSize[1])
   }
-
-  // static makeCanvasHighResolution(canvas: HTMLCanvasElement, ctx: CanvasRenderingContext2D) {
-  //   const dpr = window.devicePixelRatio || 1
-
-  //   const oldWidth = canvas.width
-  //   const oldHeight = canvas.height
-
-  //   canvas.width = Math.round(oldWidth * dpr)
-  //   canvas.height = Math.round(oldHeight * dpr)
-  //   canvas.style.width = oldWidth + 'px'
-  //   canvas.style.height = oldHeight + 'px'
-
-  //   ctx.scale(dpr, dpr)
-  // }
 }
 
 export class DrawBoard {
-  private canvas: Canvas
+  public canvas: Canvas
   private offscreenCanvas: Canvas | null
   public drawingContext: CanvasRenderingContext2D
   constructor(
