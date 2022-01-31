@@ -1,24 +1,29 @@
 {
-  "name": "@moefy-canvas/utils",
+  "name": "@moefy-canvas/theme-utils",
   "version": "0.0.1",
+  "author": "Nyakku Shigure",
+  "license": "MIT",
   "keywords": [
     "moefyit",
-    "moefy-canvas-utils"
+    "moefy-canvas-theme"
   ],
-  "main": "./dist/utils.cjs.js",
-  "module": "./dist/utils.es.js",
+  "main": "./dist/index.cjs.js",
+  "module": "./dist/index.es.js",
+  "types": "./dist/src/index.d.ts",
   "files": [
     "dist"
   ],
   "exports": {
     ".": {
-      "import": "./dist/utils.es.js",
-      "require": "./dist/utils.cjs.js"
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.cjs.js"
     }
   },
   "scripts": {
+    "dev": "vite --config vite.config.ts playground",
     "build": "vite build"
   },
-  "author": "Nyakku Shigure",
-  "license": "MIT"
+  "dependencies": {
+    "@moefy-canvas/core": "workspace:^"
+  }
 }
