@@ -15,14 +15,14 @@
     "docs:serve": "pnpm docs:build && pnpx -y serve docs/.vitepress/dist/"
   },
   "dependencies": {
-    "@moefy-canvas/core": "workspace:^",
-    "@moefy-canvas/theme-popper": "workspace:^",
-    "@moefy-canvas/theme-ribbon": "workspace:^",
-    "@moefy-canvas/theme-sparkler": "workspace:^",
-    "@moefy-canvas/utils": "workspace:^"
+    "@moefy-canvas/core": "workspace:^0.0.7",
+    "@moefy-canvas/theme-popper": "workspace:^0.0.7",
+    "@moefy-canvas/theme-ribbon": "workspace:^0.0.7",
+    "@moefy-canvas/theme-sparkler": "workspace:^0.0.7",
+    "@moefy-canvas/utils": "workspace:^0.0.7"
   },
   "devDependencies": {
-    "@types/node": "^17.0.13",
+    "@types/node": "^17.0.14",
     "cheap-watch": "^1.0.4",
     "typescript": "^4.5.5",
     "vite": "^2.7.13",
