@@ -4,13 +4,26 @@ importers:
 
   .:
     specifiers:
+      '@moefy-canvas/core': workspace:^
+      '@moefy-canvas/theme-popper': workspace:^
+      '@moefy-canvas/theme-ribbon': workspace:^
+      '@moefy-canvas/theme-sparkler': workspace:^
+      '@moefy-canvas/utils': workspace:^
       '@types/node': ^17.0.13
+      cheap-watch: ^1.0.4
       typescript: ^4.5.5
       vite: ^2.7.13
       vite-plugin-dts: ^0.9.9
       vitepress: ^0.21.6
+    dependencies:
+      '@moefy-canvas/core': link:packages/core
+      '@moefy-canvas/theme-popper': link:packages/theme-popper
+      '@moefy-canvas/theme-ribbon': link:packages/theme-ribbon
+      '@moefy-canvas/theme-sparkler': link:packages/theme-sparkler
+      '@moefy-canvas/utils': link:packages/utils
     devDependencies:
       '@types/node': 17.0.13
+      cheap-watch: 1.0.4
       typescript: 4.5.5
       vite: 2.7.13
       vite-plugin-dts: 0.9.9_vite@2.7.13
@@ -369,6 +382,11 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       fill-range: 7.0.1
+    dev: true
+
+  /cheap-watch/1.0.4:
+    resolution: {integrity: sha512-QR/9FrtRL5fjfUJBhAKCdi0lSRQ3rVRRum3GF9wDKp2TJbEIMGhUEr2yU8lORzm9Isdjx7/k9S0DFDx+z5VGtw==}
+    engines: {node: '>=8'}
     dev: true
 
   /code-block-writer/11.0.0:

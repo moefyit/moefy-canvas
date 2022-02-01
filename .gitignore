@@ -1,4 +1,4 @@
-# Mac
+# macOS
 .DS_Store
 
 # .vscode
@@ -12,3 +12,8 @@ dist
 
 # pnpm
 .pnpm-store
+
+# copied readme
+docs/packages/sparkler.md
+docs/packages/popper.md
+docs/packages/ribbon.md
