@@ -14,6 +14,6 @@ dist
 .pnpm-store
 
 # copied readme
-docs/packages/sparkler.md
-docs/packages/popper.md
-docs/packages/ribbon.md
+docs/themes/sparkler.md
+docs/themes/popper.md
+docs/themes/ribbon.md

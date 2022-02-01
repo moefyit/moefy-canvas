@@ -10,25 +10,25 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Guide', link: '/packages' },
+      { text: 'Themes', link: '/themes' },
     ],
     sidebar: {
-      '/packages': [
+      '/themes': [
         {
           text: '开始～',
-          link: '/packages/',
+          link: '/themes/',
         },
         {
           text: 'sparkler',
-          link: '/packages/sparkler.html',
+          link: '/themes/sparkler.html',
         },
         {
           text: 'popper',
-          link: '/packages/popper.html',
+          link: '/themes/popper.html',
         },
         {
           text: 'ribbon',
-          link: '/packages/ribbon.html',
+          link: '/themes/ribbon.html',
         },
       ],
     },

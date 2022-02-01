@@ -1,7 +1,7 @@
 # @moefy-canvas/theme-popper
 
 <script setup>
-import { watch, toRefs } from 'vue'
+import { watch, toRefs, onMounted } from 'vue'
 import { useRoute } from 'vitepress'
 import { MAX_Z_INDEX } from '@moefy-canvas/core'
 import { Popper, PopperShape } from '@moefy-canvas/theme-popper'
@@ -13,8 +13,11 @@ const popper = new Popper({
    opacity: 1,
    zIndex: MAX_Z_INDEX,
 })
-document.body.appendChild(elPopper)
-popper.mount(elPopper)
+
+onMounted(() => {
+   document.body.appendChild(elPopper)
+   popper.mount(elPopper)
+})
 
 const route = useRoute()
 const path = toRefs(route).path
