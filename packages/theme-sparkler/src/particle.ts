@@ -23,25 +23,7 @@ export class Particle {
       x: Math.cos(this.angle) * this.distance,
       y: Math.sin(this.angle) * this.distance,
     }
-    this.position = Object.assign({}, this.startPosition)
-
-    // // TODO
-    // const ptr = Random.randomFloat(0, Math.PI * 2)
-    // this.color =
-    //   '#' +
-    //   (
-    //     ((Math.cos(ptr) * 127 + 128) << 16) |
-    //     ((Math.cos(ptr + (Math.PI * 2) / 3) * 127 + 128) << 8) |
-    //     (Math.cos(ptr + (Math.PI * 4) / 3) * 127 + 128)
-    //   )
-    //     .toString(16)
-    //     .padStart(6, '0')
-
-    // this.canvasContext.fillStyle = `hsla(${Random.randomInt(0, 12) * 30}, 100%, 50%, ${
-    //   this.opacity
-    // })`
-
-    // this.color = Random.choice(['yellow', 'pink', 'red', 'orange', 'purple', 'cyan'])
+    this.position = { ...this.startPosition }
   }
 
   move(currentTime: number) {

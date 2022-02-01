@@ -7,6 +7,7 @@
     "dev:sparkler": "pnpm --filter @moefy-canvas/theme-sparkler dev",
     "dev:popper": "pnpm --filter @moefy-canvas/theme-popper dev",
     "dev:ribbon": "pnpm --filter @moefy-canvas/theme-ribbon dev",
+    "dev:sakura": "pnpm --filter @moefy-canvas/theme-sakura dev",
     "build": "pnpm -r run build",
     "pub": "pnpm build && pnpm -r publish --no-git-checks --access public",
     "docs:dev": "vitepress dev docs",

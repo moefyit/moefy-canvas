@@ -30,6 +30,10 @@ export default defineConfig({
           text: 'ribbon',
           link: '/themes/ribbon.html',
         },
+        {
+          text: 'sakura',
+          link: '/themes/sakura.html',
+        },
       ],
     },
     repo: 'moefyit/moefy-canvas',
@@ -55,6 +59,10 @@ export default defineConfig({
         '@moefy-canvas/theme-ribbon': path.resolve(
           __dirname,
           '../../packages/theme-ribbon/src/index.ts'
+        ),
+        '@moefy-canvas/theme-sakura': path.resolve(
+          __dirname,
+          '../../packages/theme-sakura/src/index.ts'
         ),
       },
     },

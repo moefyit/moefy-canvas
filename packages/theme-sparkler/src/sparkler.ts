@@ -175,7 +175,7 @@ export class Sparkler implements Theme<SparklerConfig> {
     })
     this.board.render()
 
-    // 收集结束的粒子并添加新的粒子
+    // 添加新的粒子
     while (this.particles.size < this.numParticles) {
       this.particles.add(
         new Particle(

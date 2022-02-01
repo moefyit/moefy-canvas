@@ -1,7 +1,7 @@
 import * as path from 'path'
 import { promises as fs } from 'fs'
 
-const themes = ['sparkler', 'popper', 'ribbon']
+const themes = ['sparkler', 'popper', 'ribbon', 'sakura']
 
 async function copyReadme() {
   console.log('Copy...')
