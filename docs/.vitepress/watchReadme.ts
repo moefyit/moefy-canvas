@@ -5,11 +5,11 @@ const themes = ['sparkler', 'popper', 'ribbon', 'sakura']
 
 async function copyReadme() {
   console.log('Copy...')
+  await fs.mkdir(path.resolve(__dirname, `../themes/`)).catch((_) => {})
   await fs.copyFile(
     path.resolve(__dirname, '../../README.md'),
     path.resolve(__dirname, '../themes/index.md')
   )
-  await fs.mkdir(path.resolve(__dirname, `../themes/`)).catch((_) => {})
   for (const theme of themes) {
     await fs.copyFile(
       path.resolve(__dirname, `../../packages/theme-${theme}/README.md`),
