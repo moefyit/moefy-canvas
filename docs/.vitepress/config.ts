@@ -7,6 +7,7 @@ startWatch()
 export default defineConfig({
   title: 'moefy-canvas',
   description: '用可可爱爱的 canvas 动效装饰你的网页吧～',
+  base: '/moefy-canvas/',
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
