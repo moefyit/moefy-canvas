@@ -11,7 +11,7 @@
     "build": "pnpm -r run build",
     "pub": "pnpm build && pnpm -r publish --no-git-checks --access public",
     "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
+    "docs:build": "bash scripts/copyReadmeOnce.sh && vitepress build docs",
     "docs:serve": "pnpm docs:build && pnpx -y serve docs/.vitepress/dist/"
   },
   "dependencies": {
