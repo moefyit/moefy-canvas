@@ -143,13 +143,8 @@ export class Sparkler implements Theme<SparklerConfig> {
   }
 
   private animate(currentTime: number) {
-    if (!this.board) {
-      console.error('No board!')
-      return
-    }
-
     if (this.stopped) {
-      this.board.clear()
+      this.board!.clear()
       return
     }
 
@@ -165,7 +160,7 @@ export class Sparkler implements Theme<SparklerConfig> {
     }
 
     // 绘制与渲染
-    this.board.draw((ctx, canvasSize) => {
+    this.board!.draw((ctx, canvasSize) => {
       for (const particle of this.particles) {
         particle.draw(ctx, currentTime)
         if (particle.shouldRemove(currentTime)) {
@@ -173,7 +168,7 @@ export class Sparkler implements Theme<SparklerConfig> {
         }
       }
     })
-    this.board.render()
+    this.board!.render()
 
     // 添加新的粒子
     while (this.particles.size < this.numParticles) {

@@ -5,10 +5,9 @@ import { PopperShape } from './popper'
 
 export class Boom {
   public stopped: boolean = false
-  private particles: Array<Particle> = []
+  private particles: Set<Particle> = new Set()
   constructor(
     private origin: Vector2D,
-    private context: CanvasRenderingContext2D,
     private shape: PopperShape,
     private size: number,
     private numParticles: number,
@@ -21,32 +20,29 @@ export class Boom {
         this.size,
         Random.range(1, 6),
         Random.color('89ABCDEF'),
-        Random.range(Math.PI - 1, Math.PI + 1),
-        context
+        Random.range(Math.PI - 1, Math.PI + 1)
       )
-      this.particles.push(particle)
+      this.particles.add(particle)
     }
   }
 
   move() {
-    this.particles.forEach((particle, index) => {
-      if (
-        particle.position.x < 0 ||
-        particle.position.x > this.canvasSize.width ||
-        particle.position.y > this.canvasSize.height
-      ) {
-        this.particles.splice(index, 1)
-        return
+    for (const particle of this.particles) {
+      if (particle.shouleRemove(this.canvasSize)) {
+        this.particles.delete(particle)
+        continue
       }
       particle.move()
-    })
-    if (this.particles.length == 0) {
+    }
+    if (this.particles.size === 0) {
       this.stopped = true
     }
   }
 
-  draw() {
-    this.particles.forEach((particle) => particle.draw())
+  draw(ctx: CanvasRenderingContext2D, canvasSize: Size2D) {
+    for (const particle of this.particles) {
+      particle.draw(ctx, canvasSize)
+    }
   }
 }
 

@@ -61,7 +61,7 @@ export class Canvas {
   static setCanvasStyle(
     canvas: HTMLCanvasElement,
     canvasOptions: CanvasOptions,
-    canvasSize?: [number, number]
+    canvasSize?: Size2D
   ) {
     const style = canvas.style
     const { zIndex = 0, opacity = 1 } = canvasOptions
@@ -69,8 +69,8 @@ export class Canvas {
     style.top = '0'
     style.left = '0'
     style.zIndex = zIndex.toString()
-    style.width = (canvasSize ? canvasSize[0] : canvas.width).toString() + 'px'
-    style.height = (canvasSize ? canvasSize[1] : canvas.height).toString() + 'px'
+    style.width = (canvasSize ? canvasSize.width : canvas.width).toString() + 'px'
+    style.height = (canvasSize ? canvasSize.height : canvas.height).toString() + 'px'
     opacity !== 1 && (style.opacity = opacity.toString())
     style.pointerEvents = 'none'
   }
@@ -99,7 +99,7 @@ export class Canvas {
 export class DrawBoard {
   public canvas: Canvas
   private offscreenCanvas: Canvas | null
-  public drawingContext: CanvasRenderingContext2D
+  private drawingContext: CanvasRenderingContext2D
   constructor(
     el: HTMLCanvasElement,
     width: number,
@@ -112,16 +112,16 @@ export class DrawBoard {
     }
   ) {
     this.canvas = new Canvas(el, width, height, hd)
-    Canvas.setCanvasStyle(this.canvas.el, canvasOptions, [width, height])
+    Canvas.setCanvasStyle(this.canvas.el, canvasOptions, { width, height })
     this.offscreenCanvas = useOffscreenCanvas ? new Canvas(undefined, width, height, hd) : null
     this.drawingContext = this.offscreenCanvas ? this.offscreenCanvas.ctx : this.canvas.ctx
   }
 
   draw(callback: (ctx: CanvasRenderingContext2D, canvasSize: Size2D) => void) {
-    const canvas = this.offscreenCanvas ? this.offscreenCanvas : this.canvas
-    canvas.clear()
-    callback(canvas.ctx, {
-      ...canvas.size,
+    const drawingCanvas = this.offscreenCanvas ? this.offscreenCanvas : this.canvas
+    drawingCanvas.clear()
+    callback(drawingCanvas.ctx, {
+      ...drawingCanvas.size,
     })
   }
 

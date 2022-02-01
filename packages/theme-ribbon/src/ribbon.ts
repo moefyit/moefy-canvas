@@ -2,7 +2,7 @@ import { Random, EventsHandler } from '@moefy-canvas/utils'
 import { isMobile } from '@moefy-canvas/utils'
 import { debounce } from 'ts-debounce'
 import { Theme, ThemeConfig, CanvasOptions } from '@moefy-canvas/core'
-import { Vector2D, DrawBoard } from '@moefy-canvas/core'
+import { Vector2D, DrawBoard, Size2D } from '@moefy-canvas/core'
 
 export interface RibbonConfig extends ThemeConfig {
   size?: number
@@ -33,6 +33,7 @@ export class Ribbon implements Theme<RibbonConfig> {
   }
 
   unmount() {
+    this.board!.clear()
     this.unlisten()
   }
 
@@ -60,18 +61,22 @@ export class Ribbon implements Theme<RibbonConfig> {
   }
 
   private redraw() {
-    const { width, height } = this.board!.canvas.size!
+    this.board!.draw((ctx, canvasSize) => {
+      this.draw(ctx, canvasSize)
+    })
+    this.board!.render()
+  }
+
+  private draw(ctx: CanvasRenderingContext2D, canvasSize: Size2D) {
+    const { width, height } = canvasSize
     const foldMark: [Vector2D, Vector2D] = [
       { x: 0, y: height * 0.7 + this.size },
       { x: 0, y: height * 0.7 - this.size },
     ]
-    this.board!.clear()
-    while (foldMark[1].x < width + this.size) this.drawFold(foldMark)
-    this.board!.render()
+    while (foldMark[1].x < width + this.size) this.drawFold(ctx, foldMark)
   }
 
-  private drawFold(foldMark: [Vector2D, Vector2D]) {
-    const ctx = this.board!.drawingContext!
+  private drawFold(ctx: CanvasRenderingContext2D, foldMark: [Vector2D, Vector2D]) {
     const size = this.size
     const p1 = foldMark[0]
     const p2 = foldMark[1]

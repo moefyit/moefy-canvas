@@ -21,7 +21,7 @@ export class Popper implements Theme<PopperConfig> {
   private size: number
   private numParticles: number
   private board: DrawBoard | null
-  private booms: Array<Boom> = []
+  private booms: Set<Boom> = new Set()
   private running: boolean = false
   private canvasSize: Size2D = { width: window.innerWidth, height: window.innerHeight }
   private eventsHandler: EventsHandler = new EventsHandler()
@@ -74,46 +74,50 @@ export class Popper implements Theme<PopperConfig> {
     }
     const boom = new Boom(
       { ...currentPosition },
-      this.board?.drawingContext!,
       this.shape,
       this.size,
       this.numParticles,
       this.canvasSize
     )
-    this.booms.push(boom)
+    this.booms.add(boom)
     this.running || this.startAnimation()
   }
 
   private handleResize(event: UIEvent) {
-    this.board?.handleResize(event)
+    this.board!.handleResize(event)
     this.canvasSize.width = window.innerWidth
     this.canvasSize.height = window.innerHeight
   }
 
   private handleVisibilityChange(event: any) {
-    this.booms = []
+    this.booms.clear()
     this.running = false
   }
 
   private animate() {
     this.running = true
-    this.board?.clear()
-    if (this.booms.length == 0) {
+    if (this.booms.size === 0) {
       this.running = false
+      this.board!.clear()
       return
     }
 
     requestAnimationFrame(this.animate)
 
-    this.booms.forEach((boom, index) => {
+    for (const boom of this.booms) {
       if (boom.stopped) {
-        this.booms.splice(index, 1)
+        this.booms.delete(boom)
         return
       }
       boom.move()
-      boom.draw()
+    }
+
+    this.board!.draw((ctx, canvasSize) => {
+      for (const boom of this.booms) {
+        boom.draw(ctx, canvasSize)
+      }
     })
-    this.board?.render()
+    this.board!.render()
   }
 
   private startAnimation() {

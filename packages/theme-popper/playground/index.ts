@@ -4,7 +4,9 @@ import { MAX_Z_INDEX } from '@moefy-canvas/core'
 import { CanvasOptions } from '@moefy-canvas/core'
 
 const themeConfig: PopperConfig = {
-  mode: PopperShape.Star,
+  shape: PopperShape.Star,
+  size: 1.75,
+  numParticles: 10,
 }
 
 const canvasOptions: CanvasOptions = {
@@ -13,7 +15,7 @@ const canvasOptions: CanvasOptions = {
 }
 
 const el = document.getElementById('moefy-canvas')
-const sparkler = new Popper(themeConfig, canvasOptions)
-sparkler.mount(el as HTMLCanvasElement)
+const popper = new Popper(themeConfig, canvasOptions)
+popper.mount(el as HTMLCanvasElement)
 // @ts-ignore
-window.sp = sparkler
+window.sp = popper
