@@ -2,6 +2,8 @@
 
 用可可爱爱的 canvas 动效装饰你的网页吧～
 
+前往文档 -> <https://moefyit.github.io/moefy-canvas/>
+
 ## Install
 
 这里以 Sparkler 为例
