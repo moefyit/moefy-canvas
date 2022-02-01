@@ -135,7 +135,7 @@ export class Sparkler implements Theme<SparklerConfig> {
   }
 
   private handleResize(event: UIEvent) {
-    this.board?.handleResize(event)
+    this.board!.handleResize(event)
   }
 
   private handleVisibilityChange(event: any) {
@@ -165,7 +165,7 @@ export class Sparkler implements Theme<SparklerConfig> {
     }
 
     // 绘制与渲染
-    this.board.draw((ctx) => {
+    this.board.draw((ctx, canvasSize) => {
       for (const particle of this.particles) {
         particle.draw(ctx, currentTime)
         if (particle.shouldRemove(currentTime)) {

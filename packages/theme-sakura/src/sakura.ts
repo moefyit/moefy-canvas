@@ -1,7 +1,6 @@
 import { Theme, ThemeConfig, CanvasOptions } from '@moefy-canvas/core'
-import { DrawBoard, Size2D } from '@moefy-canvas/core'
+import { DrawBoard } from '@moefy-canvas/core'
 import { EventsHandler, Random } from '@moefy-canvas/utils'
-import { isMobile, isTouchEvent } from '@moefy-canvas/utils'
 import { debounce } from 'ts-debounce'
 import { Patel } from './patel'
 import sakuraImgUrl from './assets/sakura.png'
@@ -58,7 +57,7 @@ export class Sakura implements Theme<SakuraConfig> {
   }
 
   private handleResize(event: UIEvent) {
-    this.board?.handleResize(event)
+    this.board!.handleResize(event)
   }
 
   private handleVisibilityChange(event: any) {
@@ -83,8 +82,7 @@ export class Sakura implements Theme<SakuraConfig> {
         patel.draw(ctx, canvasSize)
         if (
           patel.shouleRemove({
-            width: this.board!.canvas.size[0],
-            height: this.board!.canvas.size[1],
+            ...this.board!.canvas.size,
           })
         ) {
           this.patels.delete(patel)
@@ -92,10 +90,10 @@ export class Sakura implements Theme<SakuraConfig> {
       }
     })
 
-    this.board?.render()
+    this.board!.render()
 
     while (this.patels.size < this.numPatels) {
-      const [width, height] = this.board!.canvas.size
+      const { width, height } = this.board!.canvas.size
       this.patels.add(
         new Patel(
           { x: width * Random.range(0, 1), y: height * Random.range(-0.05, -1.4) },

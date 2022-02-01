@@ -51,7 +51,7 @@ export class Ribbon implements Theme<RibbonConfig> {
   }
 
   private handleResize(event: UIEvent) {
-    this.board?.handleResize(event)
+    this.board!.handleResize(event)
     this.redraw()
   }
 
@@ -60,18 +60,18 @@ export class Ribbon implements Theme<RibbonConfig> {
   }
 
   private redraw() {
-    const [width, height] = this.board?.canvas.size!
+    const { width, height } = this.board!.canvas.size!
     const foldMark: [Vector2D, Vector2D] = [
       { x: 0, y: height * 0.7 + this.size },
       { x: 0, y: height * 0.7 - this.size },
     ]
-    this.board?.clear()
+    this.board!.clear()
     while (foldMark[1].x < width + this.size) this.drawFold(foldMark)
-    this.board?.render()
+    this.board!.render()
   }
 
   private drawFold(foldMark: [Vector2D, Vector2D]) {
-    const ctx = this.board?.drawingContext!
+    const ctx = this.board!.drawingContext!
     const size = this.size
     const p1 = foldMark[0]
     const p2 = foldMark[1]
@@ -104,7 +104,7 @@ export class Ribbon implements Theme<RibbonConfig> {
   }
 
   private nextY(y: number) {
-    const [_, height] = this.board?.canvas.size!
+    const { width: _, height } = this.board!.canvas.size!
     const t = y + Random.range(-1.1, 0.9) * this.size
     return t > height || t < 0 ? this.nextY(y) : t
   }

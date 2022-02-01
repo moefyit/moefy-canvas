@@ -18,43 +18,44 @@ export interface CanvasOptions {
 export class Canvas {
   public el: HTMLCanvasElement
   public ctx: CanvasRenderingContext2D
-  public rawWidth: number = 0
-  public rawHeight: number = 0
+  private rawSize: Size2D = { width: 0, height: 0 }
   constructor(el?: HTMLCanvasElement, width?: number, height?: number, private hd: boolean = true) {
     const { el: el_, ctx } = Canvas.initCanvas(el)
     this.el = el_
     this.ctx = ctx
-    this.size = [width || window.innerWidth, height || window.innerHeight]
+    this.size = { width: width || window.innerWidth, height: height || window.innerHeight }
   }
 
-  public get size(): [number, number] {
-    return [this.rawWidth, this.rawHeight]
+  public get size(): Size2D {
+    return {
+      ...this.rawSize,
+    }
   }
 
-  public set size([newWidth, newHeight]: [number, number]) {
-    if (this.rawWidth === newWidth && this.rawHeight === newHeight) {
+  public set size({ width: newWidth, height: newHeight }: Size2D) {
+    if (this.rawSize.width === newWidth && this.rawSize.height === newHeight) {
       return
     }
-    this.rawWidth = newWidth
-    this.rawHeight = newHeight
+    this.rawSize.width = newWidth
+    this.rawSize.height = newHeight
     const dpr = (this.hd ? window.devicePixelRatio : 1) ?? 1
-    this.el.width = Math.round(this.rawWidth * dpr)
-    this.el.height = Math.round(this.rawHeight * dpr)
-    this.el.style.width = this.rawWidth + 'px'
-    this.el.style.height = this.rawHeight + 'px'
+    this.el.width = Math.round(this.rawSize.width * dpr)
+    this.el.height = Math.round(this.rawSize.height * dpr)
+    this.el.style.width = this.rawSize.width + 'px'
+    this.el.style.height = this.rawSize.height + 'px'
     this.hd && this.ctx.scale(dpr, dpr)
   }
 
   clear() {
-    Canvas.clearCanvas(this.ctx, [this.rawWidth, this.rawHeight])
+    Canvas.clearCanvas(this.ctx, { ...this.rawSize })
   }
 
   to(canvas: Canvas) {
-    canvas.ctx.drawImage(this.el, 0, 0, this.rawWidth, this.rawHeight)
+    canvas.ctx.drawImage(this.el, 0, 0, this.rawSize.width, this.rawSize.height)
   }
 
   handleResize(_: UIEvent) {
-    this.size = [window.innerWidth, window.innerHeight]
+    this.size = { width: window.innerWidth, height: window.innerHeight }
   }
 
   static setCanvasStyle(
@@ -89,8 +90,9 @@ export class Canvas {
     return new Canvas()
   }
 
-  static clearCanvas(ctx: CanvasRenderingContext2D, canvasSize: [number, number]) {
-    ctx.clearRect(0, 0, canvasSize[0], canvasSize[1])
+  static clearCanvas(ctx: CanvasRenderingContext2D, canvasSize: Size2D) {
+    const { width, height } = canvasSize
+    ctx.clearRect(0, 0, width, height)
   }
 }
 
@@ -119,8 +121,7 @@ export class DrawBoard {
     const canvas = this.offscreenCanvas ? this.offscreenCanvas : this.canvas
     canvas.clear()
     callback(canvas.ctx, {
-      width: canvas.size[0],
-      height: canvas.size[1],
+      ...canvas.size,
     })
   }
 
