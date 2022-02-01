@@ -38,7 +38,7 @@ jobs:
         run: pnpm i --frozen-lockfile
 
       - name: Build VitePress site
-        run: pnpm build
+        run: pnpm docs:build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
