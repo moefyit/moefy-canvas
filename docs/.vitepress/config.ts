@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress'
 import * as path from 'path'
 import startWatch from './watchReadme'
+import taskListsMdPlugin from 'markdown-it-task-lists'
 
 startWatch()
 
@@ -40,8 +41,12 @@ export default defineConfig({
     repo: 'moefyit/moefy-canvas',
     docsDir: 'docs',
     docsBranch: 'main',
-    editLinks: true,
-    editLinkText: 'Suggest changes to this page',
+  },
+
+  markdown: {
+    config(md) {
+      md.use(taskListsMdPlugin)
+    },
   },
 
   vite: {

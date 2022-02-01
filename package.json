@@ -18,13 +18,14 @@
     "@moefy-canvas/core": "workspace:^",
     "@moefy-canvas/theme-popper": "workspace:^",
     "@moefy-canvas/theme-ribbon": "workspace:^",
-    "@moefy-canvas/theme-sparkler": "workspace:^",
     "@moefy-canvas/theme-sakura": "workspace:^",
+    "@moefy-canvas/theme-sparkler": "workspace:^",
     "@moefy-canvas/utils": "workspace:^"
   },
   "devDependencies": {
     "@types/node": "^17.0.14",
     "cheap-watch": "^1.0.4",
+    "markdown-it-task-lists": "^2.1.1",
     "typescript": "^4.5.5",
     "vite": "^2.7.13",
     "vite-plugin-dts": "^0.9.9",

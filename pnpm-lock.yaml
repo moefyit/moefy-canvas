@@ -12,6 +12,7 @@ importers:
       '@moefy-canvas/utils': workspace:^
       '@types/node': ^17.0.14
       cheap-watch: ^1.0.4
+      markdown-it-task-lists: ^2.1.1
       typescript: ^4.5.5
       vite: ^2.7.13
       vite-plugin-dts: ^0.9.9
@@ -26,6 +27,7 @@ importers:
     devDependencies:
       '@types/node': 17.0.14
       cheap-watch: 1.0.4
+      markdown-it-task-lists: 2.1.1
       typescript: 4.5.5
       vite: 2.7.13
       vite-plugin-dts: 0.9.9_vite@2.7.13
@@ -681,6 +683,10 @@ packages:
     resolution: {integrity: sha512-4CrMT5DOHTDk4HYDlzmwu4FVCcIYI8gauveasrdCu2IKIFOJ3f0v/8MDGJCDL9oD2ppz/Av1b0Nj345H9M+XIA==}
     dependencies:
       sourcemap-codec: 1.4.8
+    dev: true
+
+  /markdown-it-task-lists/2.1.1:
+    resolution: {integrity: sha512-TxFAc76Jnhb2OUu+n3yz9RMu4CwGfaT788br6HhEDlvWfdeJcLUsxk1Hgw2yJio0OXsxv7pyIPmvECY7bMbluA==}
     dev: true
 
   /merge2/1.4.1:
