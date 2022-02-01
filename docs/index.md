@@ -9,40 +9,13 @@ actionLink: /themes/
 footer: MIT Licensed 2022
 ---
 
+<Sakura v-if="theme === 'sakura'"/>
+<Sparkler v-else-if="theme === 'sparkler'"/>
+<Ribbon v-else-if="theme === 'ribbon'"/>
+<popper v-else="theme === 'popper'"/>
+
 <script setup>
-import { watch, toRefs, onMounted } from 'vue'
-import { useRoute } from 'vitepress'
-import { MAX_Z_INDEX } from '@moefy-canvas/core'
-import { Sparkler, SparklerMode } from '@moefy-canvas/theme-sparkler'
-import { Ribbon } from '@moefy-canvas/theme-ribbon'
-
-const elSparkler = document.createElement('canvas')
-const sparkler = new Sparkler({
-   mode: SparklerMode.TRAIL,
-}, {
-   opacity: 1,
-   zIndex: MAX_Z_INDEX,
-})
-
-const elRibbon = document.createElement('canvas')
-const ribbon = new Ribbon({}, {
-   opacity: 1,
-   zIndex: -MAX_Z_INDEX,
-})
-
-onMounted(() => {
-   document.body.appendChild(elSparkler)
-   sparkler.mount(elSparkler)
-   document.body.appendChild(elRibbon)
-   ribbon.mount(elRibbon)
-})
-
-const route = useRoute()
-const path = toRefs(route).path
-watch(path, (path, prevPath) => {
-   elSparkler.remove()
-   sparkler.unmount()
-   elRibbon.remove()
-   ribbon.unmount()
-})
+const themes = ["sakura", "sparkler", "popper", "ribbon"]
+const idx = Math.floor(Math.random() * 4)
+const theme = themes[idx]
 </script>

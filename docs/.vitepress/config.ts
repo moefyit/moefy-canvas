@@ -6,11 +6,11 @@ startWatch()
 
 export default defineConfig({
   title: 'moefy-canvas',
-  description: 'xxx',
+  description: '用可可爱爱的 canvas 动效装饰你的网页吧～',
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Themes', link: '/themes' },
+      { text: 'Themes', link: '/themes/' },
     ],
     sidebar: {
       '/themes': [

@@ -23,7 +23,8 @@
   "extensions": [
     "esbenp.prettier-vscode",
     "editorconfig.editorconfig",
-    "seatonjiang.gitmoji-vscode"
+    "seatonjiang.gitmoji-vscode",
+    "johnsoncodehk.volar"
   ]
 
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
