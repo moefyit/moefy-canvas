@@ -23,7 +23,6 @@ export class Popper implements Theme<PopperConfig> {
   private board: DrawBoard | null
   private booms: Set<Boom> = new Set()
   private running: boolean = false
-  private canvasSize: Size2D = { width: window.innerWidth, height: window.innerHeight }
   private eventsHandler: EventsHandler = new EventsHandler()
   constructor(
     { shape = PopperShape.Star, size = 2, numParticles = 10 }: PopperConfig,
@@ -36,6 +35,7 @@ export class Popper implements Theme<PopperConfig> {
 
     this.animate = this.animate.bind(this)
   }
+
   mount(el: HTMLCanvasElement) {
     this.board = new DrawBoard(
       el,
@@ -47,6 +47,7 @@ export class Popper implements Theme<PopperConfig> {
     )
     this.listen()
   }
+
   unmount() {
     this.unlisten()
     this.running = false
@@ -72,21 +73,13 @@ export class Popper implements Theme<PopperConfig> {
       x: isTouchEvent(event) ? event.touches[0].clientX : event.clientX,
       y: isTouchEvent(event) ? event.touches[0].clientY : event.clientY,
     }
-    const boom = new Boom(
-      { ...currentPosition },
-      this.shape,
-      this.size,
-      this.numParticles,
-      this.canvasSize
-    )
+    const boom = new Boom({ ...currentPosition }, this.shape, this.size, this.numParticles)
     this.booms.add(boom)
     this.running || this.startAnimation()
   }
 
   private handleResize(event: UIEvent) {
     this.board!.handleResize(event)
-    this.canvasSize.width = window.innerWidth
-    this.canvasSize.height = window.innerHeight
   }
 
   private handleVisibilityChange(event: any) {
@@ -109,7 +102,7 @@ export class Popper implements Theme<PopperConfig> {
         this.booms.delete(boom)
         return
       }
-      boom.move()
+      boom.move(this.board!.canvas.size)
     }
 
     this.board!.draw((ctx, canvasSize) => {

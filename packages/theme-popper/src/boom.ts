@@ -10,8 +10,7 @@ export class Boom {
     private origin: Vector2D,
     private shape: PopperShape,
     private size: number,
-    private numParticles: number,
-    private canvasSize: Size2D
+    private numParticles: number
   ) {
     for (let i = 0; i < this.numParticles; i++) {
       const Shape = getShape(this.shape)
@@ -26,9 +25,9 @@ export class Boom {
     }
   }
 
-  move() {
+  move(canvasSize: Size2D) {
     for (const particle of this.particles) {
-      if (particle.shouleRemove(this.canvasSize)) {
+      if (particle.shouleRemove(canvasSize)) {
         this.particles.delete(particle)
         continue
       }
