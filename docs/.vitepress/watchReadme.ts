@@ -10,12 +10,14 @@ async function copyReadme() {
     path.resolve(__dirname, '../../README.md'),
     path.resolve(__dirname, '../themes/index.md')
   )
-  for (const theme of themes) {
-    await fs.copyFile(
-      path.resolve(__dirname, `../../packages/theme-${theme}/README.md`),
-      path.resolve(__dirname, `../themes/${theme}.md`)
+  await Promise.all(
+    themes.map((theme) =>
+      fs.copyFile(
+        path.resolve(__dirname, `../../packages/theme-${theme}/README.md`),
+        path.resolve(__dirname, `../themes/${theme}.md`)
+      )
     )
-  }
+  )
 }
 
 let hasWatched = false
