@@ -1,8 +1,9 @@
 <script setup>
-import { watch, onMounted, onBeforeUnmount } from 'vue'
+import { ref, onMounted, onBeforeUnmount } from 'vue'
 import { MAX_Z_INDEX } from '@moefy-canvas/core'
 import { Sakura } from '@moefy-canvas/theme-sakura'
 
+const el = ref(null)
 const sakura = new Sakura(
   {
     numPatel: 30,
@@ -14,8 +15,7 @@ const sakura = new Sakura(
 )
 
 onMounted(() => {
-  const el = document.querySelector('.sakura')
-  sakura.mount(el)
+  sakura.mount(el.value)
 })
 
 onBeforeUnmount(() => {
@@ -24,5 +24,5 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <canvas class="sakura"></canvas>
+  <canvas ref="el"></canvas>
 </template>

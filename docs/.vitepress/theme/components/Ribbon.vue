@@ -1,8 +1,9 @@
 <script setup>
-import { watch, onMounted, onBeforeUnmount } from 'vue'
+import { ref, onMounted, onBeforeUnmount } from 'vue'
 import { MAX_Z_INDEX } from '@moefy-canvas/core'
 import { Ribbon } from '@moefy-canvas/theme-ribbon'
 
+const el = ref(null)
 const ribbon = new Ribbon(
   {},
   {
@@ -12,8 +13,7 @@ const ribbon = new Ribbon(
 )
 
 onMounted(() => {
-  const el = document.querySelector('.ribbon')
-  ribbon.mount(el)
+  ribbon.mount(el.value)
 })
 
 onBeforeUnmount(() => {
@@ -22,5 +22,5 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <canvas class="ribbon"></canvas>
+  <canvas ref="el"></canvas>
 </template>

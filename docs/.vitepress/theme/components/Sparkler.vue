@@ -1,8 +1,9 @@
 <script setup>
-import { watch, onMounted, onBeforeUnmount } from 'vue'
+import { ref, onMounted, onBeforeUnmount } from 'vue'
 import { MAX_Z_INDEX } from '@moefy-canvas/core'
 import { Sparkler, SparklerMode } from '@moefy-canvas/theme-sparkler'
 
+const el = ref(null)
 const sparkler = new Sparkler(
   {
     mode: SparklerMode.TRAIL,
@@ -14,8 +15,7 @@ const sparkler = new Sparkler(
 )
 
 onMounted(() => {
-  const el = document.querySelector('.sparkler')
-  sparkler.mount(el)
+  sparkler.mount(el.value)
 })
 
 onBeforeUnmount(() => {
@@ -24,5 +24,5 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <canvas class="sparkler"></canvas>
+  <canvas ref="el"></canvas>
 </template>

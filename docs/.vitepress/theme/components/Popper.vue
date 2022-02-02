@@ -1,8 +1,9 @@
 <script setup>
-import { watch, onMounted, onBeforeUnmount } from 'vue'
+import { ref, onMounted, onBeforeUnmount } from 'vue'
 import { MAX_Z_INDEX } from '@moefy-canvas/core'
 import { Popper, PopperShape } from '@moefy-canvas/theme-popper'
 
+const el = ref(null)
 const popper = new Popper(
   {
     mode: PopperShape.Star,
@@ -14,8 +15,7 @@ const popper = new Popper(
 )
 
 onMounted(() => {
-  const el = document.querySelector('.popper')
-  popper.mount(el)
+  popper.mount(el.value)
 })
 
 onBeforeUnmount(() => {
@@ -24,5 +24,5 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <canvas class="popper"></canvas>
+  <canvas ref="el"></canvas>
 </template>
