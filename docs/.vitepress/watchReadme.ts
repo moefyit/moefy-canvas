@@ -39,3 +39,9 @@ export default async function start() {
   watcher.on('+', copyReadme)
   watcher.on('-', copyReadme)
 }
+
+const pathSplited = process.argv[1].split('/')
+const programName = pathSplited[pathSplited.length - 1]
+if (programName === 'vite-node.mjs') {
+  copyReadme()
+}
