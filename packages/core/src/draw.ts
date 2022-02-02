@@ -118,7 +118,7 @@ export class DrawBoard {
   }
 
   draw(callback: (ctx: CanvasRenderingContext2D, canvasSize: Size2D) => void) {
-    const drawingCanvas = this.offscreenCanvas ? this.offscreenCanvas : this.canvas
+    const drawingCanvas = this.offscreenCanvas ?? this.canvas
     drawingCanvas.clear()
     callback(drawingCanvas.ctx, {
       ...drawingCanvas.size,

@@ -177,9 +177,7 @@ export class Sparkler implements Theme<SparklerConfig> {
       this.particles.add(
         new Particle(
           currentTime + Random.randomInt(0, 300 / this.sparkleFactor),
-          this.mode === SparklerMode.TRAIL
-            ? Object.assign({}, this.mousePosition as Vector2D)
-            : (this.mousePosition as Vector2D),
+          this.mode === SparklerMode.TRAIL ? { ...this.mousePosition! } : this.mousePosition!,
           Random.randomFloat(
             this.particleDurationRange[0],
             this.particleDurationRange[1] / this.sparkleFactor
