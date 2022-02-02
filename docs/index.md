@@ -9,10 +9,12 @@ actionLink: /themes/
 footer: MIT Licensed 2022
 ---
 
-<Sakura v-if="theme === 'sakura'"/>
-<Sparkler v-else-if="theme === 'sparkler'"/>
-<Ribbon v-else-if="theme === 'ribbon'"/>
-<popper v-else="theme === 'popper'"/>
+<ClientOnly>
+   <Sakura v-if="theme === 'sakura'"/>
+   <Sparkler v-else-if="theme === 'sparkler'"/>
+   <Ribbon v-else-if="theme === 'ribbon'"/>
+   <popper v-else="theme === 'popper'"/>
+</ClientOnly>
 
 <script setup>
 const themes = ["sakura", "sparkler", "popper", "ribbon"]
