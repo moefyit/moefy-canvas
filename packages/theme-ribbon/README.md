@@ -5,7 +5,7 @@
    <a href="https://www.npmjs.com/package/@moefy-canvas/theme-ribbon" target="_blank"><img alt="npm" src="https://img.shields.io/npm/v/@moefy-canvas/theme-ribbon.svg?style=for-the-badge&logo=npm"></a>
    <a href="https://www.npmjs.com/package/@moefy-canvas/theme-ribbon" target="_blank"><img alt="downloads" src="https://img.shields.io/npm/dt/@moefy-canvas/theme-ribbon.svg?style=for-the-badge"></a>
    <a href="https://www.npmjs.com/package/@moefy-canvas/theme-ribbon" target="_blank"><img alt="downloads" src="https://img.shields.io/npm/dm/@moefy-canvas/theme-ribbon.svg?style=for-the-badge"></a>
-   <a href="https://github.com/moefyit/moefy-canvas/blob/master/LICENSE" target="_blank"><img alt="GitHub license" src="https://img.shields.io/github/license/moefyit/moefy-canvas?style=for-the-badge"></a>
+   <a href="https://github.com/moefyit/moefy-canvas/blob/main/LICENSE" target="_blank"><img alt="GitHub license" src="https://img.shields.io/github/license/moefyit/moefy-canvas?style=for-the-badge"></a>
 </p>
 
 :reminder_ribbon: 背景的彩带效果～
