@@ -54,6 +54,7 @@ export class Sakura implements Theme<SakuraConfig> {
 
   private unlisten() {
     this.eventsHandler.stopAll()
+    this.eventsHandler.clear()
   }
 
   private handleResize(event: UIEvent) {

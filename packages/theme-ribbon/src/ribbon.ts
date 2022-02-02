@@ -39,7 +39,7 @@ export class Ribbon implements Theme<RibbonConfig> {
 
   private listen() {
     if (isMobile()) {
-      this.eventsHandler.add('touchmove', this.handleMouseDown.bind(this))
+      this.eventsHandler.add('touchstart', this.handleMouseDown.bind(this))
     } else {
       this.eventsHandler.add('mousedown', this.handleMouseDown.bind(this))
     }
@@ -49,6 +49,7 @@ export class Ribbon implements Theme<RibbonConfig> {
 
   private unlisten() {
     this.eventsHandler.stopAll()
+    this.eventsHandler.clear()
   }
 
   private handleResize(event: UIEvent) {

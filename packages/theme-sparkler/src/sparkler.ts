@@ -79,8 +79,8 @@ export class Sparkler implements Theme<SparklerConfig> {
 
   private listen() {
     if (isMobile()) {
-      this.eventsHandler.add('touchmove', this.handleMouseDown.bind(this))
-      this.eventsHandler.add('touchstart', this.handleMouseMove.bind(this))
+      this.eventsHandler.add('touchstart', this.handleMouseDown.bind(this))
+      this.eventsHandler.add('touchmove', this.handleMouseMove.bind(this))
       this.eventsHandler.add('touchend', this.handleMouseUp.bind(this))
     } else {
       this.eventsHandler.add('mousedown', this.handleMouseDown.bind(this))
@@ -94,6 +94,7 @@ export class Sparkler implements Theme<SparklerConfig> {
 
   private unlisten() {
     this.eventsHandler.stopAll()
+    this.eventsHandler.clear()
   }
 
   private startAnimation() {

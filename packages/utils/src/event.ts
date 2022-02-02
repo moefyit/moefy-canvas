@@ -42,4 +42,8 @@ export class EventsHandler {
       this.stop(type)
     }
   }
+
+  public clear() {
+    this.eventMap.clear()
+  }
 }

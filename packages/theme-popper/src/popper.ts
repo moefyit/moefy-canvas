@@ -55,7 +55,7 @@ export class Popper implements Theme<PopperConfig> {
 
   private listen() {
     if (isMobile()) {
-      this.eventsHandler.add('touchmove', this.handleMouseDown.bind(this))
+      this.eventsHandler.add('touchstart', this.handleMouseDown.bind(this))
     } else {
       this.eventsHandler.add('mousedown', this.handleMouseDown.bind(this))
     }
@@ -66,6 +66,7 @@ export class Popper implements Theme<PopperConfig> {
 
   private unlisten() {
     this.eventsHandler.stopAll()
+    this.eventsHandler.clear()
   }
 
   private handleMouseDown(event: MouseEvent | TouchEvent) {
