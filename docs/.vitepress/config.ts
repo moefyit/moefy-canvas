@@ -2,6 +2,7 @@ import { defineConfig } from 'vitepress'
 import * as path from 'path'
 import startWatch from './watchReadme'
 import taskListsMdPlugin from 'markdown-it-task-lists'
+import baseViteConfig from '../../vite.config.base'
 
 startWatch()
 
@@ -50,27 +51,28 @@ export default defineConfig({
   },
 
   vite: {
-    resolve: {
-      alias: {
-        '@moefy-canvas/utils': path.resolve(__dirname, '../../packages/utils/src/index.ts'),
-        '@moefy-canvas/core': path.resolve(__dirname, '../../packages/core/src/index.ts'),
-        '@moefy-canvas/theme-sparkler': path.resolve(
-          __dirname,
-          '../../packages/theme-sparkler/src/index.ts'
-        ),
-        '@moefy-canvas/theme-popper': path.resolve(
-          __dirname,
-          '../../packages/theme-popper/src/index.ts'
-        ),
-        '@moefy-canvas/theme-ribbon': path.resolve(
-          __dirname,
-          '../../packages/theme-ribbon/src/index.ts'
-        ),
-        '@moefy-canvas/theme-sakura': path.resolve(
-          __dirname,
-          '../../packages/theme-sakura/src/index.ts'
-        ),
-      },
-    },
+    ...baseViteConfig,
+    // resolve: {
+    //   alias: {
+    //     '@moefy-canvas/utils': path.resolve(__dirname, '../../packages/utils/src/index.ts'),
+    //     '@moefy-canvas/core': path.resolve(__dirname, '../../packages/core/src/index.ts'),
+    //     '@moefy-canvas/theme-sparkler': path.resolve(
+    //       __dirname,
+    //       '../../packages/theme-sparkler/src/index.ts'
+    //     ),
+    //     '@moefy-canvas/theme-popper': path.resolve(
+    //       __dirname,
+    //       '../../packages/theme-popper/src/index.ts'
+    //     ),
+    //     '@moefy-canvas/theme-ribbon': path.resolve(
+    //       __dirname,
+    //       '../../packages/theme-ribbon/src/index.ts'
+    //     ),
+    //     '@moefy-canvas/theme-sakura': path.resolve(
+    //       __dirname,
+    //       '../../packages/theme-sakura/src/index.ts'
+    //     ),
+    //   },
+    // },
   },
 })

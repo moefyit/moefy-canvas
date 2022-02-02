@@ -1,8 +1,10 @@
 import type { UserConfig } from 'vite'
 import dts from 'vite-plugin-dts'
 import * as path from 'path'
+import baseConfig from '../../vite.config.base'
 
 const config: UserConfig = {
+  ...baseConfig,
   plugins: [dts()],
   build: {
     lib: {

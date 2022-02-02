@@ -1,4 +1,4 @@
-import { Random, EventsHandler } from '@moefy-canvas/utils'
+import { Random, EventsHandler, showBadge } from '@moefy-canvas/utils'
 import { isMobile, isTouchEvent } from '@moefy-canvas/utils'
 import { Particle } from './particle'
 import { debounce } from 'ts-debounce'
@@ -69,6 +69,7 @@ export class Sparkler implements Theme<SparklerConfig> {
       this.canvasOptions
     )
     this.listen()
+    showBadge('Theme Sparkler 🎇', { leftBgColor: '#989900' })
   }
 
   unmount() {

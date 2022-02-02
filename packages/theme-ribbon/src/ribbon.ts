@@ -1,5 +1,5 @@
 import { Random, EventsHandler } from '@moefy-canvas/utils'
-import { isMobile } from '@moefy-canvas/utils'
+import { isMobile, showBadge } from '@moefy-canvas/utils'
 import { debounce } from 'ts-debounce'
 import { Theme, ThemeConfig, CanvasOptions } from '@moefy-canvas/core'
 import { Vector2D, DrawBoard, Size2D } from '@moefy-canvas/core'
@@ -30,6 +30,7 @@ export class Ribbon implements Theme<RibbonConfig> {
     )
     this.listen()
     this.redraw()
+    showBadge('Theme Ribbon 🎗️', { leftBgColor: '#b300b2' })
   }
 
   unmount() {

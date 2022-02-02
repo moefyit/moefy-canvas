@@ -1,6 +1,6 @@
 import { Theme, ThemeConfig, CanvasOptions } from '@moefy-canvas/core'
 import { DrawBoard } from '@moefy-canvas/core'
-import { EventsHandler, Random } from '@moefy-canvas/utils'
+import { EventsHandler, Random, showBadge } from '@moefy-canvas/utils'
 import { debounce } from 'ts-debounce'
 import { Patel } from './patel'
 import sakuraImgUrl from './assets/sakura.png'
@@ -38,6 +38,9 @@ export class Sakura implements Theme<SakuraConfig> {
     )
     this.listen()
     this.startAnimation()
+    showBadge('Theme Sakura 🌸', {
+      leftBgColor: '#ff80ff',
+    })
   }
 
   unmount() {

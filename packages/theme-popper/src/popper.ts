@@ -1,6 +1,6 @@
 import { Theme, ThemeConfig, CanvasOptions } from '@moefy-canvas/core'
-import { DrawBoard, Size2D } from '@moefy-canvas/core'
-import { EventsHandler } from '@moefy-canvas/utils'
+import { DrawBoard } from '@moefy-canvas/core'
+import { EventsHandler, showBadge } from '@moefy-canvas/utils'
 import { isMobile, isTouchEvent } from '@moefy-canvas/utils'
 import { debounce } from 'ts-debounce'
 import { Boom } from './boom'
@@ -46,6 +46,7 @@ export class Popper implements Theme<PopperConfig> {
       this.canvasOptions
     )
     this.listen()
+    showBadge('Theme Popper 🎉', { leftBgColor: '#ffb366' })
   }
 
   unmount() {
