@@ -1,5 +1,3 @@
-import { resolve } from 'path'
-import { execSync } from 'child_process'
 import { readFileSync, writeFileSync } from 'fs'
 
 const packages = ['core', 'theme-popper', 'theme-ribbon', 'theme-sakura', 'theme-sparkler', 'utils']
