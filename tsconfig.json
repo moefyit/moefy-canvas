@@ -1,4 +1,4 @@
 {
-  "include": ["./docs"],
+  "include": ["./docs/.vitepress/**/*", "docs/.vitepress/env.d.ts", "./vite.config.base.ts"],
   "extends": "./tsconfig.base.json"
 }

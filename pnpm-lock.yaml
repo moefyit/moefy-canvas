@@ -15,9 +15,10 @@ importers:
       markdown-it-task-lists: ^2.1.1
       typescript: ^4.5.5
       vite: ^2.7.13
-      vite-node: ^0.2.5
+      vite-node: ^0.2.6
       vite-plugin-dts: ^0.9.9
       vitepress: ^0.21.6
+      vue: ^3.2.29
     dependencies:
       '@moefy-canvas/core': link:packages/core
       '@moefy-canvas/theme-popper': link:packages/theme-popper
@@ -31,9 +32,10 @@ importers:
       markdown-it-task-lists: 2.1.1
       typescript: 4.5.5
       vite: 2.7.13
-      vite-node: 0.2.5
+      vite-node: 0.2.6
       vite-plugin-dts: 0.9.9_vite@2.7.13
       vitepress: 0.21.6
+      vue: 3.2.29
 
   packages/core:
     specifiers: {}
@@ -857,8 +859,8 @@ packages:
     engines: {node: '>= 10.0.0'}
     dev: true
 
-  /vite-node/0.2.5:
-    resolution: {integrity: sha512-7Ppz9ZQUfbN8i7nvvUt8xvPNtQtNy25Sth4r2A9GyccjPq+Ef3iPL1ZtVpM81sGOMkFj4rNIIJmnwdvTefHeNA==}
+  /vite-node/0.2.6:
+    resolution: {integrity: sha512-v5aMRHpCuBtHAcza0IOxIOkj7rBi2sts02WIQgf3ocrLLCaN4TWqSmoJI9EMX4EquoNlNQPjlKNeX7gz4TZhvA==}
     engines: {node: '>=14.14.0'}
     hasBin: true
     dependencies:
