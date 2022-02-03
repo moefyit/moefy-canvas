@@ -1,23 +1,21 @@
 {
   "name": "@moefy-canvas/theme-ribbon",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "author": "Nyakku Shigure",
   "license": "MIT",
   "keywords": [
     "moefyit",
     "moefy-canvas-theme"
   ],
-  "main": "./dist/index.cjs.js",
+  "type": "module",
+  "main": "./dist/index.es.js",
   "module": "./dist/index.es.js",
   "types": "./dist/src/index.d.ts",
   "files": [
     "dist"
   ],
   "exports": {
-    ".": {
-      "import": "./dist/index.es.js",
-      "require": "./dist/index.cjs.js"
-    }
+    ".": "./dist/index.es.js"
   },
   "scripts": {
     "dev": "vite --config vite.config.ts playground",

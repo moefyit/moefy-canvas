@@ -10,7 +10,7 @@ const config: UserConfig = {
     lib: {
       fileName: 'index',
       entry: path.resolve(__dirname, './src/index.ts'),
-      formats: ['es', 'cjs'],
+      formats: ['es'],
     },
     rollupOptions: {
       external: ['@moefy-canvas/core'],
