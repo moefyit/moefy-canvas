@@ -17,9 +17,9 @@ export class Boom {
       const particle = new Shape(
         this.origin,
         this.size,
-        Random.range(1, 6),
+        Random.randomFloat(1, 6),
         Random.color('89ABCDEF'),
-        Random.range(Math.PI - 1, Math.PI + 1)
+        Random.randomFloat(Math.PI - 1, Math.PI + 1)
       )
       this.particles.add(particle)
     }

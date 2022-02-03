@@ -10,6 +10,7 @@
     "dev:ribbon": "pnpm --filter @moefy-canvas/theme-ribbon dev",
     "dev:sakura": "pnpm --filter @moefy-canvas/theme-sakura dev",
     "build": "pnpm -r run build",
+    "test": "vitest --run",
     "pub": "node scripts/updateVersion.mjs && pnpm build && pnpm -r publish --no-git-checks --access public",
     "docs:dev": "vitepress dev docs",
     "docs:build": "pnpm vite-node docs/.vitepress/watchReadme.ts && vitepress build docs",
@@ -32,6 +33,7 @@
     "vite-node": "^0.2.6",
     "vite-plugin-dts": "^0.9.9",
     "vitepress": "^0.21.6",
+    "vitest": "^0.2.6",
     "vue": "^3.2.29"
   }
 }

@@ -82,7 +82,7 @@ export class Ribbon implements Theme<RibbonConfig> {
     const size = this.size
     const p1 = foldMark[0]
     const p2 = foldMark[1]
-    const p3 = { x: p2.x + Random.range(-0.25, 1.75) * size, y: this.nextY(p2.y) }
+    const p3 = { x: p2.x + Random.randomFloat(-0.25, 1.75) * size, y: this.nextY(p2.y) }
     ctx.beginPath()
     ctx.moveTo(p1.x, p1.y)
     ctx.lineTo(p2.x, p2.y)
@@ -112,7 +112,7 @@ export class Ribbon implements Theme<RibbonConfig> {
 
   private nextY(y: number) {
     const { width: _, height } = this.board!.canvas.size!
-    const t = y + Random.range(-1.1, 0.9) * this.size
+    const t = y + Random.randomFloat(-1.1, 0.9) * this.size
     return t > height || t < 0 ? this.nextY(y) : t
   }
 }

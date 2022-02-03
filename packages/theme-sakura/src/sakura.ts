@@ -100,11 +100,11 @@ export class Sakura implements Theme<SakuraConfig> {
       const { width, height } = this.board!.canvas.size
       this.patels.add(
         new Patel(
-          { x: width * Random.range(0, 1), y: height * Random.range(-0.05, -1.4) },
+          { x: width * Random.randomFloat(0, 1), y: height * Random.randomFloat(-0.05, -1.4) },
           Random.randomInt(20, 30),
-          Random.range(0.6, 0.9),
+          Random.randomFloat(0.6, 0.9),
           Random.choice([Random.randomInt(40, 50), Random.randomInt(-50, -40)]),
-          Random.range(0.9999, 1.0001),
+          Random.randomFloat(0.9999, 1.0001),
           this.imgElement!
         )
       )

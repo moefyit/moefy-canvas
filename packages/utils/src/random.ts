@@ -13,10 +13,6 @@ export class Random {
     return range[randomIndex]
   }
 
-  static range(start: number, end: number) {
-    return (end - start) * Math.random() + start
-  }
-
   static color(colorHexStringOrArray: string | Array<string> = '0123456789ABCDEF') {
     return (
       '#' +
