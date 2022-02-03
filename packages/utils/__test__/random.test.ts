@@ -1,5 +1,5 @@
 import { describe, test, expect } from 'vitest'
-import { Random } from '@moefy-canvas/utils'
+import { Random } from '../src/random'
 
 describe.concurrent('test Random', () => {
   for (let i = 0; i < 10000; i++) {
