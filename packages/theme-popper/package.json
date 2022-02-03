@@ -22,7 +22,7 @@
     "build": "vite build"
   },
   "dependencies": {
-    "ts-debounce": "^2.3.0",
+    "ts-debounce": "^4.0.0",
     "@moefy-canvas/core": "workspace:^",
     "@moefy-canvas/utils": "workspace:^"
   }

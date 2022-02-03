@@ -44,43 +44,43 @@ importers:
     specifiers:
       '@moefy-canvas/core': workspace:^
       '@moefy-canvas/utils': workspace:^
-      ts-debounce: ^2.3.0
+      ts-debounce: ^4.0.0
     dependencies:
       '@moefy-canvas/core': link:../core
       '@moefy-canvas/utils': link:../utils
-      ts-debounce: 2.3.0
+      ts-debounce: 4.0.0
 
   packages/theme-ribbon:
     specifiers:
       '@moefy-canvas/core': workspace:^
       '@moefy-canvas/utils': workspace:^
-      ts-debounce: ^2.3.0
+      ts-debounce: ^4.0.0
     dependencies:
       '@moefy-canvas/core': link:../core
       '@moefy-canvas/utils': link:../utils
-      ts-debounce: 2.3.0
+      ts-debounce: 4.0.0
 
   packages/theme-sakura:
     specifiers:
       '@moefy-canvas/core': workspace:^
       '@moefy-canvas/utils': workspace:^
-      ts-debounce: ^2.3.0
+      ts-debounce: ^4.0.0
     dependencies:
       '@moefy-canvas/core': link:../core
       '@moefy-canvas/utils': link:../utils
-      ts-debounce: 2.3.0
+      ts-debounce: 4.0.0
 
   packages/theme-sparkler:
     specifiers:
       '@moefy-canvas/core': workspace:^
       '@moefy-canvas/utils': workspace:^
       color2k: ^1.2.5
-      ts-debounce: ^2.3.0
+      ts-debounce: ^4.0.0
     dependencies:
       '@moefy-canvas/core': link:../core
       '@moefy-canvas/utils': link:../utils
       color2k: 1.2.5
-      ts-debounce: 2.3.0
+      ts-debounce: 4.0.0
 
   packages/utils:
     specifiers:
@@ -833,8 +833,8 @@ packages:
       is-number: 7.0.0
     dev: true
 
-  /ts-debounce/2.3.0:
-    resolution: {integrity: sha512-j63IP7/unAzovrhVHE7U+fNkvDKwIaLH11dCO9TcRbYOZw1chPL054poqq3ZloyRJ5KwJMeB8csN/vGPPpQJjw==}
+  /ts-debounce/4.0.0:
+    resolution: {integrity: sha512-+1iDGY6NmOGidq7i7xZGA4cm8DAa6fqdYcvO5Z6yBevH++Bdo9Qt/mN0TzHUgcCcKv1gmh9+W5dHqz8pMWbCbg==}
     dev: false
 
   /ts-morph/13.0.3:

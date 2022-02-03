@@ -24,6 +24,6 @@
   "dependencies": {
     "@moefy-canvas/core": "workspace:^",
     "@moefy-canvas/utils": "workspace:^",
-    "ts-debounce": "^2.3.0"
+    "ts-debounce": "^4.0.0"
   }
 }
