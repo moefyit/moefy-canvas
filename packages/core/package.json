@@ -5,8 +5,16 @@
   "license": "MIT",
   "keywords": [
     "moefyit",
-    "moefy-canvas-theme"
+    "moefy-canvas-core"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/moefyit/moefy-canvas.git"
+  },
+  "bugs": {
+    "url": "https://github.com/moefyit/moefy-canvas/issues"
+  },
+  "homepage": "https://github.com/moefyit/moefy-canvas#readme",
   "type": "module",
   "main": "./dist/index.es.js",
   "module": "./dist/index.es.js",

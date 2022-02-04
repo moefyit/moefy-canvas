@@ -4,6 +4,14 @@
   "private": true,
   "author": "SigureMo <sigure.qaq@gmail.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/moefyit/moefy-canvas.git"
+  },
+  "bugs": {
+    "url": "https://github.com/moefyit/moefy-canvas/issues"
+  },
+  "homepage": "https://github.com/moefyit/moefy-canvas#readme",
   "scripts": {
     "dev:sparkler": "pnpm --filter @moefy-canvas/theme-sparkler dev",
     "dev:popper": "pnpm --filter @moefy-canvas/theme-popper dev",
