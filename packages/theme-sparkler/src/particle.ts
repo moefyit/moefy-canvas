@@ -7,41 +7,55 @@ function normalize(x: number, MIN: number, MAX: number) {
 }
 
 export class Particle {
-  private direction: Vector2D
-  private opacity: number = 1
-  private position: Vector2D
+  #startTime: number
+  #startPosition: Vector2D
+  #duration: number
+  #distance: number
+  #angle: number
+  #size: number
+  #color: string
+  #direction: Vector2D
+  #opacity: number = 1
+  #position: Vector2D
   constructor(
-    private startTime = 0,
-    private startPosition = { x: 0, y: 0 },
-    private duration = Random.randomInt(50, 500),
-    private distance = Random.randomInt(40, 100),
-    private angle = Random.randomFloat(0, Math.PI * 2),
-    private size = Random.randomInt(1, 3),
-    private color = Random.choice(['yellow', 'pink', 'red', 'orange', 'purple', 'cyan'])
+    startTime = 0,
+    startPosition = { x: 0, y: 0 },
+    duration = Random.randomInt(50, 500),
+    distance = Random.randomInt(40, 100),
+    angle = Random.randomFloat(0, Math.PI * 2),
+    size = Random.randomInt(1, 3),
+    color = Random.choice(['yellow', 'pink', 'red', 'orange', 'purple', 'cyan'])
   ) {
-    this.direction = {
-      x: Math.cos(this.angle) * this.distance,
-      y: Math.sin(this.angle) * this.distance,
+    this.#startTime = startTime
+    this.#startPosition = startPosition
+    this.#duration = duration
+    this.#distance = distance
+    this.#angle = angle
+    this.#size = size
+    this.#color = color
+    this.#direction = {
+      x: Math.cos(this.#angle) * this.#distance,
+      y: Math.sin(this.#angle) * this.#distance,
     }
-    this.position = { ...this.startPosition }
+    this.#position = { ...this.#startPosition }
   }
 
   move(currentTime: number) {
-    const step = normalize(currentTime, this.startTime, this.startTime + this.duration)
-    this.position.x = this.startPosition.x + this.direction.x * step
-    this.position.y = this.startPosition.y + this.direction.y * step
-    this.opacity = 1 - step
+    const step = normalize(currentTime, this.#startTime, this.#startTime + this.#duration)
+    this.#position.x = this.#startPosition.x + this.#direction.x * step
+    this.#position.y = this.#startPosition.y + this.#direction.y * step
+    this.#opacity = 1 - step
   }
 
   draw(canvasContext: CanvasRenderingContext2D, currentTime: number) {
-    canvasContext.fillStyle = opacify(this.color, this.opacity)
+    canvasContext.fillStyle = opacify(this.#color, this.#opacity)
 
     canvasContext.beginPath()
-    canvasContext.arc(this.position.x, this.position.y, this.size, 0, Math.PI * 2)
+    canvasContext.arc(this.#position.x, this.#position.y, this.#size, 0, Math.PI * 2)
     canvasContext.fill()
   }
 
   shouldRemove(currentTime: number) {
-    return currentTime > this.startTime + this.duration
+    return currentTime > this.#startTime + this.#duration
   }
 }

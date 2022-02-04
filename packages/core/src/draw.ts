@@ -15,43 +15,45 @@ export interface CanvasOptions {
   zIndex?: number
 }
 
-export class Canvas {
-  public el: HTMLCanvasElement
-  public ctx: CanvasRenderingContext2D
-  private rawSize: Size2D = { width: 0, height: 0 }
-  constructor(el?: HTMLCanvasElement, width?: number, height?: number, private hd: boolean = true) {
+class Canvas {
+  el: HTMLCanvasElement
+  ctx: CanvasRenderingContext2D
+  #rawSize: Size2D = { width: 0, height: 0 }
+  #hd: boolean
+  constructor(el?: HTMLCanvasElement, width?: number, height?: number, hd: boolean = true) {
     const { el: el_, ctx } = Canvas.initCanvas(el)
     this.el = el_
     this.ctx = ctx
+    this.#hd = hd
     this.size = { width: width || window.innerWidth, height: height || window.innerHeight }
   }
 
-  public get size(): Size2D {
+  get size(): Size2D {
     return {
-      ...this.rawSize,
+      ...this.#rawSize,
     }
   }
 
-  public set size({ width: newWidth, height: newHeight }: Size2D) {
-    if (this.rawSize.width === newWidth && this.rawSize.height === newHeight) {
+  set size({ width: newWidth, height: newHeight }: Size2D) {
+    if (this.#rawSize.width === newWidth && this.#rawSize.height === newHeight) {
       return
     }
-    this.rawSize.width = newWidth
-    this.rawSize.height = newHeight
-    const dpr = (this.hd ? window.devicePixelRatio : 1) ?? 1
-    this.el.width = Math.round(this.rawSize.width * dpr)
-    this.el.height = Math.round(this.rawSize.height * dpr)
-    this.el.style.width = this.rawSize.width + 'px'
-    this.el.style.height = this.rawSize.height + 'px'
-    this.hd && this.ctx.scale(dpr, dpr)
+    this.#rawSize.width = newWidth
+    this.#rawSize.height = newHeight
+    const dpr = (this.#hd ? window.devicePixelRatio : 1) ?? 1
+    this.el.width = Math.round(this.#rawSize.width * dpr)
+    this.el.height = Math.round(this.#rawSize.height * dpr)
+    this.el.style.width = this.#rawSize.width + 'px'
+    this.el.style.height = this.#rawSize.height + 'px'
+    this.#hd && this.ctx.scale(dpr, dpr)
   }
 
   clear() {
-    Canvas.clearCanvas(this.ctx, { ...this.rawSize })
+    Canvas.clearCanvas(this.ctx, { ...this.#rawSize })
   }
 
   to(canvas: Canvas) {
-    canvas.ctx.drawImage(this.el, 0, 0, this.rawSize.width, this.rawSize.height)
+    canvas.ctx.drawImage(this.el, 0, 0, this.#rawSize.width, this.#rawSize.height)
   }
 
   handleResize(_: UIEvent) {
@@ -97,9 +99,8 @@ export class Canvas {
 }
 
 export class DrawBoard {
-  public canvas: Canvas
-  private offscreenCanvas: Canvas | null
-  private drawingContext: CanvasRenderingContext2D
+  #canvas: Canvas
+  #offscreenCanvas: Canvas | null
   constructor(
     el: HTMLCanvasElement,
     width: number,
@@ -111,14 +112,17 @@ export class DrawBoard {
       opacity: 1,
     }
   ) {
-    this.canvas = new Canvas(el, width, height, hd)
-    Canvas.setCanvasStyle(this.canvas.el, canvasOptions, { width, height })
-    this.offscreenCanvas = useOffscreenCanvas ? new Canvas(undefined, width, height, hd) : null
-    this.drawingContext = this.offscreenCanvas ? this.offscreenCanvas.ctx : this.canvas.ctx
+    this.#canvas = new Canvas(el, width, height, hd)
+    Canvas.setCanvasStyle(this.#canvas.el, canvasOptions, { width, height })
+    this.#offscreenCanvas = useOffscreenCanvas ? new Canvas(undefined, width, height, hd) : null
+  }
+
+  get size(): Size2D {
+    return this.#canvas.size
   }
 
   draw(callback: (ctx: CanvasRenderingContext2D, canvasSize: Size2D) => void) {
-    const drawingCanvas = this.offscreenCanvas ?? this.canvas
+    const drawingCanvas = this.#offscreenCanvas ?? this.#canvas
     drawingCanvas.clear()
     callback(drawingCanvas.ctx, {
       ...drawingCanvas.size,
@@ -126,20 +130,20 @@ export class DrawBoard {
   }
 
   render() {
-    if (!this.offscreenCanvas) {
+    if (!this.#offscreenCanvas) {
       return
     }
-    this.canvas.clear()
-    this.offscreenCanvas.to(this.canvas)
+    this.#canvas.clear()
+    this.#offscreenCanvas.to(this.#canvas)
   }
 
   handleResize(event: UIEvent) {
-    this.canvas.handleResize(event)
-    this.offscreenCanvas && this.offscreenCanvas.handleResize(event)
+    this.#canvas.handleResize(event)
+    this.#offscreenCanvas && this.#offscreenCanvas.handleResize(event)
   }
 
   clear() {
-    this.canvas.clear()
-    this.offscreenCanvas && this.offscreenCanvas.clear()
+    this.#canvas.clear()
+    this.#offscreenCanvas && this.#offscreenCanvas.clear()
   }
 }
