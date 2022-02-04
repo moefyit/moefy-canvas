@@ -42,8 +42,8 @@ export class Sparkler implements Theme<SparklerConfig> {
       particleDurationRange = [50, 500],
       particleDistanceRange = [40, 100],
       particleSizeRange = [1, 3],
-    }: SparklerConfig,
-    canvasOptions: CanvasOptions
+    }: SparklerConfig = {},
+    canvasOptions: CanvasOptions = {}
   ) {
     this.#mode = mode
     this.#numParticles = numParticles

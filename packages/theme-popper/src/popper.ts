@@ -26,8 +26,8 @@ export class Popper implements Theme<PopperConfig> {
   #canvasOptions: CanvasOptions
   #eventsHandler: EventsHandler = new EventsHandler()
   constructor(
-    { shape = PopperShape.Star, size = 2, numParticles = 10 }: PopperConfig,
-    canvasOptions: CanvasOptions
+    { shape = PopperShape.Star, size = 2, numParticles = 10 }: PopperConfig = {},
+    canvasOptions: CanvasOptions = {}
   ) {
     this.#shape = shape
     this.#size = size

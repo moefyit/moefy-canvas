@@ -18,7 +18,7 @@ export class Sakura implements Theme<SakuraConfig> {
   #stopped: boolean = false
   #imgElement: HTMLImageElement | null = null
   #eventsHandler: EventsHandler = new EventsHandler()
-  constructor({ numPatels = 30 }: SakuraConfig, canvasOptions: CanvasOptions) {
+  constructor({ numPatels = 30 }: SakuraConfig = {}, canvasOptions: CanvasOptions = {}) {
     this.#numPatels = numPatels
     this.#canvasOptions = canvasOptions
 

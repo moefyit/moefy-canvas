@@ -14,7 +14,7 @@ export class Ribbon implements Theme<RibbonConfig> {
   #eventsHandler: EventsHandler = new EventsHandler()
   #board: DrawBoard | null = null
   #angle: number = 0
-  constructor({ size = 90 }: RibbonConfig, canvasOptions: CanvasOptions) {
+  constructor({ size = 90 }: RibbonConfig = {}, canvasOptions: CanvasOptions = {}) {
     this.#size = size
     this.#canvasOptions = canvasOptions
   }

@@ -18,6 +18,18 @@ pnpm add @moefy-canvas/theme-sparkler
 <canvas id="moefy-canvas"></canvas>
 ```
 
+零配置就可以快速创建一个动效～
+
+```ts
+import { Sparkler } from '@moefy-canvas/theme-sparkler'
+
+const el = document.getElementById('moefy-canvas')
+const sparkler = new Sparkler()
+sparkler.mount(el as HTMLCanvasElement)
+```
+
+如果需要对其进行配置，只需要这样就可以啦～
+
 ```ts
 import {
    Sparkler,
@@ -52,7 +64,7 @@ export interface CanvasOptions {
 export type ThemeConfig = Record<string, any>
 
 export abstract class Theme<T extends ThemeConfig> {
-   constructor(themeConfig: T, canvasOptions: CanvasOptions) {}
+   constructor(themeConfig?: T, canvasOptions?: CanvasOptions) {}
    abstract mount(el: HTMLCanvasElement): void
    abstract unmount(): void
 }
@@ -76,3 +88,4 @@ export abstract class Theme<T extends ThemeConfig> {
 -  [ ] theme popper :tada:, 添加新形状 Confetti🎊，ref: <https://github.com/catdad/canvas-confetti>
 -  [ ] port to deno 🦕, ref: <https://github.com/denoland/dnt>
 -  [ ] 利用 Web Worker
+-  [ ] 尝试 wasm
