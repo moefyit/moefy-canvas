@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 import { MAX_Z_INDEX } from '@moefy-canvas/core'
 import { Sakura } from '@moefy-canvas/theme-sakura'
@@ -15,7 +15,7 @@ const sakura = new Sakura(
 )
 
 onMounted(() => {
-  sakura.mount(el.value)
+  sakura.mount(el.value!)
 })
 
 onBeforeUnmount(() => {

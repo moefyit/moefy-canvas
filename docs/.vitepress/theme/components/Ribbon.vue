@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 import { MAX_Z_INDEX } from '@moefy-canvas/core'
 import { Ribbon } from '@moefy-canvas/theme-ribbon'
@@ -13,7 +13,7 @@ const ribbon = new Ribbon(
 )
 
 onMounted(() => {
-  ribbon.mount(el.value)
+  ribbon.mount(el.value!)
 })
 
 onBeforeUnmount(() => {

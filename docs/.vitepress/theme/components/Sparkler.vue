@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 import { MAX_Z_INDEX } from '@moefy-canvas/core'
 import { Sparkler, SparklerMode } from '@moefy-canvas/theme-sparkler'
@@ -15,7 +15,7 @@ const sparkler = new Sparkler(
 )
 
 onMounted(() => {
-  sparkler.mount(el.value)
+  sparkler.mount(el.value!)
 })
 
 onBeforeUnmount(() => {

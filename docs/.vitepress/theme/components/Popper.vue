@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 import { MAX_Z_INDEX } from '@moefy-canvas/core'
 import { Popper, PopperShape } from '@moefy-canvas/theme-popper'
@@ -15,7 +15,7 @@ const popper = new Popper(
 )
 
 onMounted(() => {
-  popper.mount(el.value)
+  popper.mount(el.value!)
 })
 
 onBeforeUnmount(() => {
