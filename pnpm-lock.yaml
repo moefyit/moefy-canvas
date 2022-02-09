@@ -15,7 +15,7 @@ importers:
       markdown-it-task-lists: ^2.1.1
       typescript: ^4.5.5
       vite: ^2.7.13
-      vite-node: ^0.2.6
+      vite-node: 0.3.0
       vite-plugin-dts: ^0.9.9
       vitepress: ^0.21.6
       vitest: ^0.2.6
@@ -33,7 +33,7 @@ importers:
       markdown-it-task-lists: 2.1.1
       typescript: 4.5.5
       vite: 2.7.13
-      vite-node: 0.2.6
+      vite-node: 0.3.0
       vite-plugin-dts: 0.9.9_vite@2.7.13
       vitepress: 0.21.6
       vitest: 0.2.6
@@ -781,8 +781,8 @@ packages:
     hasBin: true
     dev: true
 
-  /mlly/0.4.1:
-    resolution: {integrity: sha512-MMJfTYwiasPah+Tx1s948OWd/+dnSxMpwPDgIt4uhnsGRuKgWG6RxUA1SzQI7Tvv0WCcpdast7htAuLU6J7YcA==}
+  /mlly/0.4.2:
+    resolution: {integrity: sha512-mjEgqNOHkDqzx+hIroJ7W8N9WzF+uRd9G/EIBdD8HdNx4sysQHZP1EUO/es5K9mZiutWZz34JG1MUsEbzmJ3kg==}
     dev: true
 
   /nanoid/3.2.0:
@@ -933,14 +933,14 @@ packages:
     engines: {node: '>= 10.0.0'}
     dev: true
 
-  /vite-node/0.2.6:
-    resolution: {integrity: sha512-v5aMRHpCuBtHAcza0IOxIOkj7rBi2sts02WIQgf3ocrLLCaN4TWqSmoJI9EMX4EquoNlNQPjlKNeX7gz4TZhvA==}
+  /vite-node/0.3.0:
+    resolution: {integrity: sha512-RW05CDhJLb9ZfDtQ2WWmNNNpkahyfa3kaFoYL6EZZnAI6BrmKL0ypUF3acDelXDP6BMjdFtqrB0L9+uaI/k0Hg==}
     engines: {node: '>=14.14.0'}
     hasBin: true
     dependencies:
       kolorist: 1.5.1
       minimist: 1.2.5
-      mlly: 0.4.1
+      mlly: 0.4.2
       pathe: 0.2.0
       vite: 2.7.13
     transitivePeerDependencies:
