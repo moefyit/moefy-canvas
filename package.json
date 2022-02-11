@@ -40,7 +40,7 @@
     "vite": "^2.7.13",
     "vite-node": "0.3.2",
     "vite-plugin-dts": "^0.9.9",
-    "vitepress": "^0.21.6",
+    "vitepress": "0.22.0",
     "vitest": "0.3.2",
     "vue": "^3.2.29"
   }
