@@ -76,12 +76,12 @@ importers:
     specifiers:
       '@moefy-canvas/core': workspace:^
       '@moefy-canvas/utils': workspace:^
-      color2k: ^1.2.5
+      color2k: ^2.0.0
       ts-debounce: ^4.0.0
     dependencies:
       '@moefy-canvas/core': link:../core
       '@moefy-canvas/utils': link:../utils
-      color2k: 1.2.5
+      color2k: 2.0.0
       ts-debounce: 4.0.0
 
   packages/utils:
@@ -529,8 +529,8 @@ packages:
       tslib: 2.3.1
     dev: true
 
-  /color2k/1.2.5:
-    resolution: {integrity: sha512-G39qNMGyM/fhl8hcy1YqpfXzQ810zSGyiJAgdMFlreCI7Hpwu3Jpu4tuBM/Oxu1Bek1FwyaBbtrtdkTr4HDhLA==}
+  /color2k/2.0.0:
+    resolution: {integrity: sha512-DWX9eXOC4fbJNiuvdH4QSHvvfLWyFo9TuFp7V9OzdsbPAdrWAuYc8qvFP2bIQ/LKh4LrAVnJ6vhiQYPvAHdtTg==}
     dev: false
 
   /concat-map/0.0.1:
