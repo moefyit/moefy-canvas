@@ -43,5 +43,15 @@
     "vitepress": "0.22.1",
     "vitest": "0.3.4",
     "vue": "^3.2.29"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "@algolia/client-search",
+        "react",
+        "react-dom",
+        "@types/react"
+      ]
+    }
   }
 }
