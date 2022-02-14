@@ -33,7 +33,7 @@
   "dependencies": {
     "@moefy-canvas/core": "workspace:^",
     "@moefy-canvas/utils": "workspace:^",
-    "color2k": "^1.2.5",
+    "color2k": "^2.0.0",
     "ts-debounce": "^4.0.0"
   }
 }
