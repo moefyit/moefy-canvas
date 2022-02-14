@@ -46,6 +46,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: docs/.vitepress/dist
           publish_branch: gh-pages
+          force_orphan: true
           commit_message: ':rocket: deploy: '
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'
