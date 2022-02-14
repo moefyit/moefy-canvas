@@ -42,9 +42,6 @@ export default defineConfig({
     repo: 'moefyit/moefy-canvas',
     docsDir: 'docs',
     docsBranch: 'main',
-    editLinks: true,
-    editLinkText: '一起编辑文档吧～',
-    lastUpdated: '让我想想，上次更新本页面好像是在',
   },
 
   markdown: {
