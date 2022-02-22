@@ -15,10 +15,10 @@ importers:
       markdown-it-task-lists: ^2.1.1
       typescript: ^4.5.5
       vite: ^2.8.4
-      vite-node: 0.5.0
+      vite-node: 0.5.1
       vite-plugin-dts: ^0.9.9
-      vitepress: 0.22.2
-      vitest: 0.5.0
+      vitepress: 0.22.3
+      vitest: 0.5.1
       vue: ^3.2.31
     dependencies:
       '@moefy-canvas/core': link:packages/core
@@ -33,10 +33,10 @@ importers:
       markdown-it-task-lists: 2.1.1
       typescript: 4.5.5
       vite: 2.8.4
-      vite-node: 0.5.0
+      vite-node: 0.5.1
       vite-plugin-dts: 0.9.9_vite@2.8.4
-      vitepress: 0.22.2
-      vitest: 0.5.0
+      vitepress: 0.22.3
+      vitest: 0.5.1
       vue: 3.2.31
 
   packages/core:
@@ -981,8 +981,8 @@ packages:
     engines: {node: '>= 10.0.0'}
     dev: true
 
-  /vite-node/0.5.0:
-    resolution: {integrity: sha512-Y+PdOKkJTJ3u7jJwO3AkMh1PPq2hhcrSbzwpE45iTvccOG0ma+U2ss5c8R3k+ZhV+0igZXiCMpboPfk1JpERgw==}
+  /vite-node/0.5.1:
+    resolution: {integrity: sha512-TNEcaFG+aTAo7PvKHjF51p+B3w05y5H1SGEHo41+t8xrvn8XqV7iu55T1Jj7xLUtmFvpF2GGVgTG2TQIggHNnQ==}
     engines: {node: '>=14.14.0'}
     hasBin: true
     dependencies:
@@ -1033,9 +1033,9 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitepress/0.22.2:
-    resolution: {integrity: sha512-L6ykQzBXKzLTSU3zZbILeF1TONO6juV/RrL0DsA9OayomVQjEOoFY7cVdKOpIBb3T5Jy/GAAVxcvWtU/XJ5k4g==}
-    engines: {node: '>=12.0.0'}
+  /vitepress/0.22.3:
+    resolution: {integrity: sha512-Yfvu/rent2vp/TXIDZMutS6ft2TJPn4xngS48PYFWDEbuFI2ccUAXM481lF1qVVnCKxfh4g8e/KPvevSJdg1Bw==}
+    engines: {node: '>=14.0.0'}
     hasBin: true
     dependencies:
       '@docsearch/css': 3.0.0-alpha.50
@@ -1054,8 +1054,8 @@ packages:
       - stylus
     dev: true
 
-  /vitest/0.5.0:
-    resolution: {integrity: sha512-vgEej0Tl0VHztDKFQlC8wItPoszUMjac9rgHyw2uIZv9DK+4NMckxfnvhBHOvsnZXxWHOvk2sXmy80e95c820A==}
+  /vitest/0.5.1:
+    resolution: {integrity: sha512-s1iP3QYf4J7pHmOd2rRRrG+06XX6uBXmnqqbhyd7cZUj+pmR4gwbF8K1+V6I2SqM4/jRBbcxJMt6xoNjgD2I1Q==}
     engines: {node: '>=14.14.0'}
     hasBin: true
     peerDependencies:
