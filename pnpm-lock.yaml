@@ -15,7 +15,7 @@ importers:
       markdown-it-task-lists: ^2.1.1
       typescript: ^4.5.5
       vite: ^2.8.4
-      vite-node: 0.5.4
+      vite-node: 0.5.5
       vite-plugin-dts: ^0.9.9
       vitepress: 0.22.3
       vitest: 0.5.4
@@ -33,7 +33,7 @@ importers:
       markdown-it-task-lists: 2.1.1
       typescript: 4.5.5
       vite: 2.8.4
-      vite-node: 0.5.4
+      vite-node: 0.5.5
       vite-plugin-dts: 0.9.9_vite@2.8.4
       vitepress: 0.22.3
       vitest: 0.5.4
@@ -981,8 +981,8 @@ packages:
     engines: {node: '>= 10.0.0'}
     dev: true
 
-  /vite-node/0.5.4:
-    resolution: {integrity: sha512-X8V2XpZO07R3f8A/YfVIcnnpzOhRvyUdv76/mWbEgJGupVG1ba5++EG6SCGSYp2hTpANg9pnlQ/LMfzz1YgWtw==}
+  /vite-node/0.5.5:
+    resolution: {integrity: sha512-EnLhrImremmyIwj7kSM2PirbN271fhuM08ngCkODjtWQzizR6Bhz1N4LmS2+vZZc1PZQ3bEOPdXmiuSJnLzQEw==}
     engines: {node: '>=14.14.0'}
     hasBin: true
     dependencies:
