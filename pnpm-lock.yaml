@@ -18,7 +18,7 @@ importers:
       vite-node: 0.5.5
       vite-plugin-dts: ^0.9.9
       vitepress: 0.22.3
-      vitest: 0.5.4
+      vitest: 0.5.5
       vue: ^3.2.31
     dependencies:
       '@moefy-canvas/core': link:packages/core
@@ -36,7 +36,7 @@ importers:
       vite-node: 0.5.5
       vite-plugin-dts: 0.9.9_vite@2.8.4
       vitepress: 0.22.3
-      vitest: 0.5.4
+      vitest: 0.5.5
       vue: 3.2.31
 
   packages/core:
@@ -1054,8 +1054,8 @@ packages:
       - stylus
     dev: true
 
-  /vitest/0.5.4:
-    resolution: {integrity: sha512-mQ6Wj5vczFybtb/kZ419gLqQRroLgqRdkVkNyC4Dz6XWDGBhBNEVP/KryLGgovEGvs9nlJBacaFXWt+6Cgdstg==}
+  /vitest/0.5.5:
+    resolution: {integrity: sha512-oBKIXpFOGN7jDdK0MO4uWcB+UOPRyEJveB8XDx74XsFNbjGF7vHmHqwAomNE8MGtDW8hBKvSSbr58hibFiQc5Q==}
     engines: {node: '>=14.14.0'}
     hasBin: true
     peerDependencies:
