@@ -2,7 +2,7 @@
 
 用可可爱爱的 canvas 动效装饰你的网页吧～
 
-前往文档 -> <https://moefyit.github.io/moefy-canvas/>
+前往文档 → <https://moefyit.github.io/moefy-canvas/>
 
 ## Install
 
@@ -86,7 +86,8 @@ export abstract class Theme<T extends ThemeConfig> {
 
 -  [x] theme sakara :cherry_blossom:, ref: <https://github.com/jhammann/sakura>
 -  [ ] 优化 sakura 的效果
--  [ ] theme popper :tada:, 添加新形状 Confetti🎊，ref: <https://github.com/catdad/canvas-confetti>
+-  [ ] 增加非全屏支持
+-  [ ] theme popper :tada:, 添加新形状 Confetti 🎊，ref: <https://github.com/catdad/canvas-confetti>
 -  [ ] 增加动态的 Ribbon，ref: <https://gist.github.com/imaegoo/074b5842d9cd8d80ecfa0d3fa4ecd556>
 -  [ ] 尝试在 deno 🦕 中使用与发布, ref: <https://github.com/denoland/dnt>
 -  [ ] 尝试利用 Web Worker 进行离屏渲染
