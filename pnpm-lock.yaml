@@ -15,10 +15,10 @@ importers:
       markdown-it-task-lists: ^2.1.1
       typescript: ^4.5.5
       vite: ^2.8.4
-      vite-node: 0.6.0
+      vite-node: 0.6.1
       vite-plugin-dts: ^0.9.9
       vitepress: 0.22.3
-      vitest: 0.6.0
+      vitest: 0.6.1
       vue: ^3.2.31
     dependencies:
       '@moefy-canvas/core': link:packages/core
@@ -33,10 +33,10 @@ importers:
       markdown-it-task-lists: 2.1.1
       typescript: 4.5.5
       vite: 2.8.4
-      vite-node: 0.6.0
+      vite-node: 0.6.1
       vite-plugin-dts: 0.9.9_vite@2.8.4
       vitepress: 0.22.3
-      vitest: 0.6.0
+      vitest: 0.6.1
       vue: 3.2.31
 
   packages/core:
@@ -981,8 +981,8 @@ packages:
     engines: {node: '>= 10.0.0'}
     dev: true
 
-  /vite-node/0.6.0:
-    resolution: {integrity: sha512-0Yxprr03+UFKjkD2gsI405k8HrcV/RTspTTKeZLIk6J2vpwO26FrzXmUfgf17I+z5Z0oYmrFuTej/o0R8NAXMw==}
+  /vite-node/0.6.1:
+    resolution: {integrity: sha512-d5WJU2OaxpC/0op2SeDmjNDElLwVmCOQvitl4uZKjsIw+Qsc6w4CkA6pGvp7SIsxclIg1g7UMX0ka7Tuqy3Udg==}
     engines: {node: '>=14.14.0'}
     hasBin: true
     dependencies:
@@ -1054,8 +1054,8 @@ packages:
       - stylus
     dev: true
 
-  /vitest/0.6.0:
-    resolution: {integrity: sha512-FuIkLHCQxz6rO35MQROUtVdwcBaYnt198YpPGIrJXmuNHGolfPbrZIiwpD7bek0OiETxuphK3+KR5oJ5Qi1g5A==}
+  /vitest/0.6.1:
+    resolution: {integrity: sha512-rgHgTO3xHCrbgmqYdUz4ViO0g2ekHeOfV60J6+1c6Ypzk1EqCE2sN8IpF4TDGs6BOvWIsVd/ob5c6U4Ozzu92g==}
     engines: {node: '>=14.14.0'}
     hasBin: true
     peerDependencies:
