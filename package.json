@@ -41,7 +41,7 @@
     "vite-node": "0.7.7",
     "vite-plugin-dts": "^0.9.9",
     "vitepress": "0.22.3",
-    "vitest": "0.7.6",
+    "vitest": "0.7.7",
     "vue": "^3.2.31"
   },
   "pnpm": {
