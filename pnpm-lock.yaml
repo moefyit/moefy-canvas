@@ -16,7 +16,7 @@ importers:
       typescript: ^4.5.5
       vite: ^2.8.4
       vite-node: 0.7.10
-      vite-plugin-dts: 1.0.1
+      vite-plugin-dts: 1.0.2
       vitepress: 0.22.3
       vitest: 0.7.10
       vue: ^3.2.31
@@ -34,7 +34,7 @@ importers:
       typescript: 4.5.5
       vite: 2.8.4
       vite-node: 0.7.10
-      vite-plugin-dts: 1.0.1_vite@2.8.4
+      vite-plugin-dts: 1.0.2_vite@2.8.4
       vitepress: 0.22.3
       vitest: 0.7.10
       vue: 3.2.31
@@ -1047,8 +1047,8 @@ packages:
       - stylus
     dev: true
 
-  /vite-plugin-dts/1.0.1_vite@2.8.4:
-    resolution: {integrity: sha512-2p5XDt4NqUZeZUC6TupWo2YSwmee+JHT4BoM9x3WGPzAq08Qw5Rr39+fsQbgKC3iRKRuvMHpZUbFuz1NpQftSA==}
+  /vite-plugin-dts/1.0.2_vite@2.8.4:
+    resolution: {integrity: sha512-Pk/jOEZ2gLkl8u2tjsUMUr/cm88gaM+IgQjFjT05bkXtrIufK3r3qv097a0S7EvqgRk2bwluw17jyCgt32kbjQ==}
     engines: {node: '>=12.0.0'}
     peerDependencies:
       vite: '>=2.4.4'
