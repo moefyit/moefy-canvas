@@ -19,7 +19,7 @@
     "dev:sakura": "pnpm --filter @moefy-canvas/theme-sakura dev",
     "build": "pnpm -r run build",
     "test": "vitest --run",
-    "pub": "node scripts/updateVersion.mjs && pnpm build && pnpm -r publish --no-git-checks --access public",
+    "release": "bumpp package.json packages/*/package.json --commit --push --tag && pnpm -r publish --access public",
     "docs:dev": "vitepress dev docs",
     "docs:build": "pnpm vite-node docs/.vitepress/watchReadme.ts && vitepress build docs",
     "docs:serve": "pnpm docs:build && pnpm dlx serve docs/.vitepress/dist/"
@@ -34,6 +34,7 @@
   },
   "devDependencies": {
     "@types/node": "^17.0.18",
+    "bumpp": "^7.1.1",
     "cheap-watch": "^1.0.4",
     "markdown-it-task-lists": "^2.1.1",
     "typescript": "^4.5.5",
