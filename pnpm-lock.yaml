@@ -16,10 +16,10 @@ importers:
       markdown-it-task-lists: ^2.1.1
       typescript: ^4.5.5
       vite: ^2.8.4
-      vite-node: 0.10.2
+      vite-node: 0.10.4
       vite-plugin-dts: 1.1.1
       vitepress: 0.22.3
-      vitest: 0.10.2
+      vitest: 0.10.4
       vue: ^3.2.31
     dependencies:
       '@moefy-canvas/core': link:packages/core
@@ -35,10 +35,10 @@ importers:
       markdown-it-task-lists: 2.1.1
       typescript: 4.5.5
       vite: 2.8.4
-      vite-node: 0.10.2
+      vite-node: 0.10.4
       vite-plugin-dts: 1.1.1_vite@2.8.4
       vitepress: 0.22.3
-      vitest: 0.10.2
+      vitest: 0.10.4
       vue: 3.2.31
 
   packages/core:
@@ -420,7 +420,7 @@ packages:
       '@vue/shared': 3.2.31
       estree-walker: 2.0.2
       magic-string: 0.25.7
-      postcss: 8.4.12
+      postcss: 8.4.13
       source-map: 0.6.1
     dev: true
 
@@ -1355,8 +1355,8 @@ packages:
     resolution: {integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==}
     dev: true
 
-  /nanoid/3.3.1:
-    resolution: {integrity: sha512-n6Vs/3KGyxPQd6uO0eH4Bv0ojGSUvuLlIHtC3Y0kEO23YRge8H9x1GCzLn28YX0H66pMkxuaeESFq4tKISKwdw==}
+  /nanoid/3.3.4:
+    resolution: {integrity: sha512-MqBkQh/OHTS2egovRtLk45wEyNXwF+cokD+1YPf9u5VfJiRdAiRwB2froX5Co9Rh20xs4siNPm8naNotSD6RBw==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
     dev: true
@@ -1404,11 +1404,11 @@ packages:
       pathe: 0.2.0
     dev: true
 
-  /postcss/8.4.12:
-    resolution: {integrity: sha512-lg6eITwYe9v6Hr5CncVbK70SoioNQIq81nsaG86ev5hAidQvmOeETBqs7jm43K2F5/Ley3ytDtriImV6TpNiSg==}
+  /postcss/8.4.13:
+    resolution: {integrity: sha512-jtL6eTBrza5MPzy8oJLFuUscHDXTV5KcLlqAWHl5q5WYRfnNRGSmOZmOZ1T6Gy7A99mOZfqungmZMpMmCVJ8ZA==}
     engines: {node: ^10 || ^12 || >=14}
     dependencies:
-      nanoid: 3.3.1
+      nanoid: 3.3.4
       picocolors: 1.0.0
       source-map-js: 1.0.2
     dev: true
@@ -1417,7 +1417,7 @@ packages:
     resolution: {integrity: sha512-OovjwIzs9Te46vlEx7+uXB0PLijpwjXGKXjVGGPIGubGpq7uh5Xgf6D6FiJ/SzJMBosHDp6a2hiXOS97iBXcaA==}
     engines: {node: ^10 || ^12 || >=14}
     dependencies:
-      nanoid: 3.3.1
+      nanoid: 3.3.4
       picocolors: 1.0.0
       source-map-js: 1.0.2
     dev: true
@@ -1631,8 +1631,8 @@ packages:
     engines: {node: '>= 0.10'}
     dev: true
 
-  /vite-node/0.10.2:
-    resolution: {integrity: sha512-G9zIP+TqGP5EodBA7z+MLgLFpstlawcGfwOuQOei/QunhaglaIJykaN0/AZpkPTZSSzVryEnGcvMDPJ3fOXilg==}
+  /vite-node/0.10.4:
+    resolution: {integrity: sha512-h/hLd31UxqWPWH8aFKYP91quQm512NdcUjMXSMumLh2PM7S9jxuQpDEt7OeKwVpKabsUsMPZICG+H4i/YPT7Sg==}
     engines: {node: '>=v14.16.0'}
     hasBin: true
     dependencies:
@@ -1640,7 +1640,7 @@ packages:
       minimist: 1.2.6
       mlly: 0.5.2
       pathe: 0.2.0
-      vite: 2.9.5
+      vite: 2.9.8
     transitivePeerDependencies:
       - less
       - sass
@@ -1689,8 +1689,8 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vite/2.9.5:
-    resolution: {integrity: sha512-dvMN64X2YEQgSXF1lYabKXw3BbN6e+BL67+P3Vy4MacnY+UzT1AfkHiioFSi9+uiDUiaDy7Ax/LQqivk6orilg==}
+  /vite/2.9.8:
+    resolution: {integrity: sha512-zsBGwn5UT3YS0NLSJ7hnR54+vUKfgzMUh/Z9CxF1YKEBVIe213+63jrFLmZphgGI5zXwQCSmqIdbPuE8NJywPw==}
     engines: {node: '>=12.2.0'}
     hasBin: true
     peerDependencies:
@@ -1706,7 +1706,7 @@ packages:
         optional: true
     dependencies:
       esbuild: 0.14.32
-      postcss: 8.4.12
+      postcss: 8.4.13
       resolve: 1.22.0
       rollup: 2.67.3
     optionalDependencies:
@@ -1734,8 +1734,8 @@ packages:
       - stylus
     dev: true
 
-  /vitest/0.10.2:
-    resolution: {integrity: sha512-41D+nhswCco5vy1NXmpAjZX11Aj+HMnyhjWQD12piwHibf4bvdTGtni56UcFWcvONVoIForgDuLrKSohHJjwQA==}
+  /vitest/0.10.4:
+    resolution: {integrity: sha512-FJ2av2PVozmyz9nqHRoC3H8j2z0OQXj8P8jS5oyMY9mfPWB06GS5k/1Ot++TkVBLQRHZCcVzjbK4BO7zqAJZGQ==}
     engines: {node: '>=v14.16.0'}
     hasBin: true
     peerDependencies:
@@ -1759,7 +1759,7 @@ packages:
       local-pkg: 0.4.1
       tinypool: 0.1.3
       tinyspy: 0.3.2
-      vite: 2.9.5
+      vite: 2.9.8
     transitivePeerDependencies:
       - less
       - sass
