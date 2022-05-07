@@ -16,10 +16,10 @@ importers:
       markdown-it-task-lists: ^2.1.1
       typescript: ^4.5.5
       vite: ^2.8.4
-      vite-node: 0.10.5
+      vite-node: 0.11.0
       vite-plugin-dts: 1.1.1
       vitepress: 0.22.4
-      vitest: 0.10.5
+      vitest: 0.11.0
       vue: ^3.2.31
     dependencies:
       '@moefy-canvas/core': link:packages/core
@@ -35,10 +35,10 @@ importers:
       markdown-it-task-lists: 2.1.1
       typescript: 4.5.5
       vite: 2.8.4
-      vite-node: 0.10.5
+      vite-node: 0.11.0
       vite-plugin-dts: 1.1.1_vite@2.8.4
       vitepress: 0.22.4
-      vitest: 0.10.5
+      vitest: 0.11.0
       vue: 3.2.31
 
   packages/core:
@@ -207,10 +207,25 @@ packages:
       '@algolia/requester-common': 4.12.1
     dev: true
 
+  /@babel/helper-validator-identifier/7.16.7:
+    resolution: {integrity: sha512-hsEnFemeiW4D08A5gUAZxLBTXpZ39P+a+DGDsHw1yxqyQ/jzFEnxf5uTEGp+3bzAbNOxU1paTgYS4ECU/IgfDw==}
+    engines: {node: '>=6.9.0'}
+    dev: true
+
   /@babel/parser/7.17.3:
     resolution: {integrity: sha512-7yJPvPV+ESz2IUTPbOL+YkIGyCqOyNIzdguKQuJGnH7bg1WTIifuM21YqokFt/THWh1AkCRn9IgoykTRCBVpzA==}
     engines: {node: '>=6.0.0'}
     hasBin: true
+    dependencies:
+      '@babel/types': 7.17.10
+    dev: true
+
+  /@babel/types/7.17.10:
+    resolution: {integrity: sha512-9O26jG0mBYfGkUYCYZRnBwbVLd1UZOICEr2Em6InB6jVfsAv1GKgwXHmrSg+WFWDmeKTA6vyTZiN8tCSM5Oo3A==}
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      '@babel/helper-validator-identifier': 7.16.7
+      to-fast-properties: 2.0.0
     dev: true
 
   /@docsearch/css/3.0.0:
@@ -1413,10 +1428,6 @@ packages:
       brace-expansion: 2.0.1
     dev: true
 
-  /minimist/1.2.6:
-    resolution: {integrity: sha512-Jsjnk4bw3YJqYzbdyBiNsPWHPfO++UGG749Cxs6peCu5Xg4nrena6OVxOYxrQTqww0Jmwt+Ref8rggumkTLz9Q==}
-    dev: true
-
   /mkdirp/1.0.4:
     resolution: {integrity: sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==}
     engines: {node: '>=10'}
@@ -1655,6 +1666,11 @@ packages:
     engines: {node: '>=14.0.0'}
     dev: true
 
+  /to-fast-properties/2.0.0:
+    resolution: {integrity: sha1-3F5pjL0HkmW8c+A3doGk5Og/YW4=}
+    engines: {node: '>=4'}
+    dev: true
+
   /to-regex-range/5.0.1:
     resolution: {integrity: sha512-65P7iz6X5yEr1cwcgvQxbbIw7Uk3gOy5dIdtZ4rDveLqhrdJP+Li/Hx6tyK0NEb+2GCyneCMJiGqrADCSNk8sQ==}
     engines: {node: '>=8.0'}
@@ -1714,13 +1730,12 @@ packages:
     engines: {node: '>= 0.10'}
     dev: true
 
-  /vite-node/0.10.5:
-    resolution: {integrity: sha512-U9znHoNKC7gYFYM/jb22SubRA0mKL8Tyb3cE27u3cvghk4oZB3uSGpb7a/GEhCQwax8cOrrq8OlnV+BZB17pnQ==}
+  /vite-node/0.11.0:
+    resolution: {integrity: sha512-b+LUTF+BzlzV1rBV5/qYQDJ65/0V60GPbd3id6iWr2Idq1RUMjRUJ3IdgSqAujXlKsdixR7rhV4lbO2T+rjp4g==}
     engines: {node: '>=v14.16.0'}
     hasBin: true
     dependencies:
       kolorist: 1.5.1
-      minimist: 1.2.6
       mlly: 0.5.2
       pathe: 0.2.0
       vite: 2.9.8
@@ -1817,8 +1832,8 @@ packages:
       - stylus
     dev: true
 
-  /vitest/0.10.5:
-    resolution: {integrity: sha512-4qXdNbHwAd9YcsztJoVMWUQGcMATVlY9Xd95I3KQ2JJwDLTL97f/jgfGRotqptvNxdlmme5TBY0Gv+l6+JSYvA==}
+  /vitest/0.11.0:
+    resolution: {integrity: sha512-QHhlmfBDseotUlHLQ7OTSKIDmpOt1Vqt5Djqsp5mOzmY9UNqwKkRs/Ys2Jy5rvRNfasVRbnw1MXQKdBPQYUIcw==}
     engines: {node: '>=v14.16.0'}
     hasBin: true
     peerDependencies:
