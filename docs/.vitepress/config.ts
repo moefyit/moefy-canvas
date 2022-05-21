@@ -17,31 +17,35 @@ export default defineConfig({
     sidebar: {
       '/themes': [
         {
-          text: '开始～',
-          link: '/themes/',
-        },
-        {
-          text: 'sparkler',
-          link: '/themes/sparkler.html',
-        },
-        {
-          text: 'popper',
-          link: '/themes/popper.html',
-        },
-        {
-          text: 'ribbon',
-          link: '/themes/ribbon.html',
-        },
-        {
-          text: 'sakura',
-          link: '/themes/sakura.html',
+          text: '',
+          items: [
+            {
+              text: '开始～',
+              link: '/themes/',
+            },
+            {
+              text: 'sparkler',
+              link: '/themes/sparkler.html',
+            },
+            {
+              text: 'popper',
+              link: '/themes/popper.html',
+            },
+            {
+              text: 'ribbon',
+              link: '/themes/ribbon.html',
+            },
+            {
+              text: 'sakura',
+              link: '/themes/sakura.html',
+            },
+          ],
         },
       ],
     },
-
-    repo: 'moefyit/moefy-canvas',
-    docsDir: 'docs',
-    docsBranch: 'main',
+    // repo: 'moefyit/moefy-canvas',
+    // docsDir: 'docs',
+    // docsBranch: 'main',
   },
 
   markdown: {
