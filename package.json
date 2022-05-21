@@ -39,10 +39,10 @@
     "markdown-it-task-lists": "^2.1.1",
     "typescript": "^4.6.4",
     "vite": "^2.9.9",
-    "vite-node": "0.12.8",
+    "vite-node": "0.12.9",
     "vite-plugin-dts": "1.1.1",
     "vitepress": "0.22.4",
-    "vitest": "0.12.8",
+    "vitest": "0.12.9",
     "vue": "^3.2.35"
   },
   "pnpm": {
