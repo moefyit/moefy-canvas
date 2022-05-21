@@ -33,17 +33,17 @@
     "@moefy-canvas/utils": "workspace:^"
   },
   "devDependencies": {
-    "@types/node": "^17.0.18",
+    "@types/node": "^17.0.35",
     "bumpp": "^7.1.1",
     "cheap-watch": "^1.0.4",
     "markdown-it-task-lists": "^2.1.1",
-    "typescript": "^4.5.5",
-    "vite": "^2.8.4",
+    "typescript": "^4.6.4",
+    "vite": "^2.9.9",
     "vite-node": "0.12.7",
     "vite-plugin-dts": "1.1.1",
     "vitepress": "0.22.4",
     "vitest": "0.12.7",
-    "vue": "^3.2.31"
+    "vue": "^3.2.35"
   },
   "pnpm": {
     "peerDependencyRules": {
