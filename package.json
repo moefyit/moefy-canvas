@@ -19,7 +19,7 @@
     "dev:sakura": "pnpm --filter @moefy-canvas/theme-sakura dev",
     "build": "pnpm -r run build",
     "test": "vitest --run",
-    "release": "bumpp package.json packages/*/package.json --commit --push --tag && pnpm -r publish --access public",
+    "release": "bumpp package.json packages/*/package.json --commit --push --tag && pnpm build && pnpm -r publish --access public",
     "docs:dev": "vitepress dev docs",
     "docs:build": "pnpm vite-node docs/.vitepress/watchReadme.ts && vitepress build docs",
     "docs:serve": "pnpm docs:build && pnpm dlx serve docs/.vitepress/dist/"
