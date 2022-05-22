@@ -19,7 +19,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '17'
+          node-version: '16'
 
       - name: Install pnpm
         run: npm install -g pnpm
@@ -43,9 +43,10 @@ jobs:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          personal_token: ${{ secrets.PERSONAL_TOKEN }}
           publish_dir: docs/.vitepress/dist
-          publish_branch: gh-pages
+          external_repository: SigureMo/docs # 编译后直接转发到个人账户的 vercel-docs
+          publish_branch: moefy-canvas
           force_orphan: true
           commit_message: ':rocket: deploy: '
           user_name: 'github-actions[bot]'
