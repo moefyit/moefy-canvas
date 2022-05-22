@@ -9,7 +9,7 @@ startWatch()
 export default defineConfig({
   title: 'moefy-canvas',
   description: '用可可爱爱的 canvas 动效装饰你的网页吧～',
-  base: '/moefy-canvas/',
+  // base: '/moefy-canvas/',
   themeConfig: {
     // 由于目前文档内容是构建时 copy 过去的，所以无法通过配置 editLink 的方式来配置文档内容的编辑链接
     // editLink: {
