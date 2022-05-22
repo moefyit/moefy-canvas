@@ -1,12 +1,16 @@
 ---
-home: true
-title: 'moefy canvas'
-heroText: 'Moefy Canvas'
-tagline: '🎉 用 canvas 装饰你的网页吧～'
-actionText: Get Started
-actionLink: /themes/
+layout: home
 
-footer: MIT Licensed 2022
+hero:
+   name: Moefy Canvas
+   text: 🎉 用 canvas 装饰你的网页吧～
+   actions:
+      - theme: brand
+        text: Get Started
+        link: /themes/
+      - theme: alt
+        text: View on GitHub
+        link: https://github.com/moefyit/moefy-canvas
 ---
 
 <ClientOnly>
