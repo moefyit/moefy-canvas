@@ -10,6 +10,13 @@ export default defineConfig({
   description: '用可可爱爱的 canvas 动效装饰你的网页吧～',
   base: '/moefy-canvas/',
   themeConfig: {
+    editLink: {
+      repo: 'moefyit/moefy-canvas',
+      branch: 'main',
+      dir: 'docs',
+      text: 'Suggest changes to this page',
+    },
+    socialLinks: [{ icon: 'github', link: 'https://github.com/moefyit/moefy-canvas' }],
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Themes', link: '/themes/' },
@@ -43,9 +50,6 @@ export default defineConfig({
         },
       ],
     },
-    // repo: 'moefyit/moefy-canvas',
-    // docsDir: 'docs',
-    // docsBranch: 'main',
   },
 
   markdown: {
