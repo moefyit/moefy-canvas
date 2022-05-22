@@ -1,3 +1,11 @@
-a > img {
+/* Home title */
+:root {
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #34fefe 30%, #452bee);
+}
+
+/* Pages */
+p img {
+  display: inline;
   margin: 0 2px;
 }
