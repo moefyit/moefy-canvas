@@ -1,20 +1,19 @@
-import * as path from 'path'
 import { promises as fs } from 'fs'
+import { dirname, resolve } from 'path'
+import { fileURLToPath } from 'url'
 
 const themes = ['sparkler', 'popper', 'ribbon', 'sakura']
+const dir = dirname(fileURLToPath(import.meta.url))
 
 async function copyReadme() {
   console.log('Copy...')
-  await fs.mkdir(path.resolve(__dirname, '../themes/')).catch((_) => {})
-  await fs.copyFile(
-    path.resolve(__dirname, '../../README.md'),
-    path.resolve(__dirname, '../themes/index.md')
-  )
+  await fs.mkdir(resolve(dir, '../themes/')).catch((_) => {})
+  await fs.copyFile(resolve(dir, '../../README.md'), resolve(dir, '../themes/index.md'))
   await Promise.all(
     themes.map((theme) =>
       fs.copyFile(
-        path.resolve(__dirname, `../../packages/theme-${theme}/README.md`),
-        path.resolve(__dirname, `../themes/${theme}.md`)
+        resolve(dir, `../../packages/theme-${theme}/README.md`),
+        resolve(dir, `../themes/${theme}.md`)
       )
     )
   )
@@ -32,7 +31,7 @@ export default async function start() {
   const CheapWatch = (await import('cheap-watch')).default
   // @ts-ignore
   const watcher = new CheapWatch({
-    dir: path.resolve(__dirname, '../../packages/'),
+    dir: resolve(dir, '../../packages/'),
     debounce: 50,
   })
   await watcher.init()

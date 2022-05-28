@@ -1,18 +1,19 @@
-import type { UserConfig } from 'vite'
+import { dirname, resolve } from 'path'
+import { fileURLToPath } from 'url'
+import { defineConfig } from 'vite'
 import dts from 'vite-plugin-dts'
-import * as path from 'path'
 import baseConfig from '../../vite.config.base'
 
-const config: UserConfig = {
+const dir = dirname(fileURLToPath(import.meta.url))
+
+export default defineConfig({
   ...baseConfig,
   plugins: [dts()],
   build: {
     lib: {
       fileName: 'index',
-      entry: path.resolve(__dirname, './src/index.ts'),
+      entry: resolve(dir, './src/index.ts'),
       formats: ['es'],
     },
   },
-}
-
-export default config
+})

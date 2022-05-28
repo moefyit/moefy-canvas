@@ -85,7 +85,7 @@ export abstract class Theme<T extends ThemeConfig> {
 ## TODO
 
 -  [x] theme sakara :cherry_blossom:, ref: <https://github.com/jhammann/sakura>
--  [ ] 优化 sakura 的效果
+-  [ ] 优化 sakura 的效果（目前效果只是简单能看，尚需仔细调优）
 -  [ ] 增加非全屏支持
 -  [ ] theme popper :tada:, 添加新形状 Confetti 🎊，ref: <https://github.com/catdad/canvas-confetti>
 -  [ ] 增加动态的 Ribbon，ref: <https://gist.github.com/imaegoo/074b5842d9cd8d80ecfa0d3fa4ecd556>

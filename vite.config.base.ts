@@ -1,7 +1,10 @@
 import type { UserConfig } from 'vite'
-import { resolve } from 'path'
+import { dirname, resolve } from 'path'
+import { fileURLToPath } from 'url'
 import { execSync } from 'child_process'
 import { readFileSync } from 'fs'
+
+const dir = dirname(fileURLToPath(import.meta.url))
 
 const config: UserConfig = {
   define: {
@@ -10,12 +13,12 @@ const config: UserConfig = {
   },
   resolve: {
     alias: {
-      '@moefy-canvas/core': resolve(__dirname, './packages/core/src/index.ts'),
-      '@moefy-canvas/utils': resolve(__dirname, './packages/utils/src/index.ts'),
-      '@moefy-canvas/theme-sparkler': resolve(__dirname, './packages/theme-sparkler/src/index.ts'),
-      '@moefy-canvas/theme-sakura': resolve(__dirname, './packages/theme-sakura/src/index.ts'),
-      '@moefy-canvas/theme-popper': resolve(__dirname, './packages/theme-popper/src/index.ts'),
-      '@moefy-canvas/theme-ribbon': resolve(__dirname, './packages/theme-ribbon/src/index.ts'),
+      '@moefy-canvas/core': resolve(dir, './packages/core/src/index.ts'),
+      '@moefy-canvas/utils': resolve(dir, './packages/utils/src/index.ts'),
+      '@moefy-canvas/theme-sparkler': resolve(dir, './packages/theme-sparkler/src/index.ts'),
+      '@moefy-canvas/theme-sakura': resolve(dir, './packages/theme-sakura/src/index.ts'),
+      '@moefy-canvas/theme-popper': resolve(dir, './packages/theme-popper/src/index.ts'),
+      '@moefy-canvas/theme-ribbon': resolve(dir, './packages/theme-ribbon/src/index.ts'),
     },
   },
 }
@@ -25,7 +28,7 @@ function getGitHash() {
 }
 
 function getAppVersion() {
-  return JSON.parse(readFileSync(resolve(__dirname, './package.json')).toString())['version']
+  return JSON.parse(readFileSync(resolve(dir, './package.json')).toString())['version']
 }
 
 export default config
