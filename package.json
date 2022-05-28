@@ -41,7 +41,7 @@
     "vite": "^2.9.9",
     "vite-node": "0.12.9",
     "vite-plugin-dts": "1.2.0",
-    "vitepress": "1.0.0-draft.6",
+    "vitepress": "1.0.0-draft.7",
     "vitest": "0.12.9",
     "vue": "^3.2.35"
   },

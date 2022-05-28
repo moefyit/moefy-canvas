@@ -18,7 +18,7 @@ importers:
       vite: ^2.9.9
       vite-node: 0.12.9
       vite-plugin-dts: 1.2.0
-      vitepress: 1.0.0-draft.6
+      vitepress: 1.0.0-draft.7
       vitest: 0.12.9
       vue: ^3.2.35
     dependencies:
@@ -37,7 +37,7 @@ importers:
       vite: 2.9.9
       vite-node: 0.12.9
       vite-plugin-dts: 1.2.0_vite@2.9.9
-      vitepress: 1.0.0-draft.6
+      vitepress: 1.0.0-draft.7
       vitest: 0.12.9
       vue: 3.2.36
 
@@ -1614,8 +1614,8 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitepress/1.0.0-draft.6:
-    resolution: {integrity: sha512-l5V9Z31+D9EBFy4na7aNhAQ4MKRGVuwjBlFKDkY4kSRHPDPUC9XcNbH1mbWepeYaauJc9IDniWj7uVU6ZqJ53g==}
+  /vitepress/1.0.0-draft.7:
+    resolution: {integrity: sha512-x140EIfsZ+SukKUG4PH7Z8MIxeZXxUAjOB/FOkdDxjXFzEm4vk8C2zRhECY0Gqf153Dacm0x+xnftnkclUPIEQ==}
     engines: {node: '>=14.6.0'}
     hasBin: true
     dependencies:
