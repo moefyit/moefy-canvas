@@ -18,7 +18,7 @@ importers:
       vite: ^2.9.9
       vite-node: 0.12.9
       vite-plugin-dts: 1.2.0
-      vitepress: 1.0.0-draft.4
+      vitepress: 1.0.0-draft.5
       vitest: 0.12.9
       vue: ^3.2.35
     dependencies:
@@ -37,7 +37,7 @@ importers:
       vite: 2.9.9
       vite-node: 0.12.9
       vite-plugin-dts: 1.2.0_vite@2.9.9
-      vitepress: 1.0.0-draft.4
+      vitepress: 1.0.0-draft.5
       vitest: 0.12.9
       vue: 3.2.35
 
@@ -1336,11 +1336,6 @@ packages:
     resolution: {integrity: sha512-GLjn0I3r6ka+NvxJUppsVFqb4V0qDTEHT/QxHlidPuClGaxF/4AI2Qti4a0cv3XMh5n1+D3hLScW10LRIm5msQ==}
     dev: true
 
-  /prismjs/1.28.0:
-    resolution: {integrity: sha512-8aaXdYvl1F7iC7Xm1spqSaY/OJBpYW3v+KJ+F17iYxvdc8sfjW194COK5wVhMZX45tGteiBQgdvD/nhxcRwylw==}
-    engines: {node: '>=6'}
-    dev: true
-
   /prompts/2.4.2:
     resolution: {integrity: sha512-NxNv/kLguCA7p3jE8oL2aEBsrJWgAakBpgmgK6lpPWV+WuOmY6r2/zbAVnP+T8bQlA0nzHXSJSJW0Hq7ylaD2Q==}
     engines: {node: '>= 6'}
@@ -1417,6 +1412,14 @@ packages:
   /shebang-regex/3.0.0:
     resolution: {integrity: sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==}
     engines: {node: '>=8'}
+    dev: true
+
+  /shiki/0.10.1:
+    resolution: {integrity: sha512-VsY7QJVzU51j5o1+DguUd+6vmCmZ5v/6gYu4vyYAhzjuNQU6P/vmSy4uQaOhvje031qQMiW0d2BwgMH52vqMng==}
+    dependencies:
+      jsonc-parser: 3.0.0
+      vscode-oniguruma: 1.6.2
+      vscode-textmate: 5.2.0
     dev: true
 
   /sisteransi/1.0.5:
@@ -1605,9 +1608,9 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitepress/1.0.0-draft.4:
-    resolution: {integrity: sha512-ViWGXaNFdILpCtC0iOiyNT8zsNYoWZTwZIK7rCrPJWyDD2sIeYuI9uK87pPGJo2XN+OuP7u68Ui86CJRuTtqpw==}
-    engines: {node: '>=14.0.0'}
+  /vitepress/1.0.0-draft.5:
+    resolution: {integrity: sha512-JCQgDVedVqczHR0iB3N6tl6ZnU6VdSCzEhGciot9k/JJioWEbVs+47g55BFf8XPqB95X6DuX1cedu/OPYhGyng==}
+    engines: {node: '>=14.6.0'}
     hasBin: true
     dependencies:
       '@docsearch/css': 3.1.0
@@ -1615,7 +1618,7 @@ packages:
       '@vitejs/plugin-vue': 2.3.3_vite@2.9.9+vue@3.2.33
       '@vueuse/core': 8.5.0_vue@3.2.33
       body-scroll-lock: 4.0.0-beta.0
-      prismjs: 1.28.0
+      shiki: 0.10.1
       vite: 2.9.9
       vue: 3.2.33
     transitivePeerDependencies:
@@ -1660,6 +1663,14 @@ packages:
       - sass
       - stylus
       - supports-color
+    dev: true
+
+  /vscode-oniguruma/1.6.2:
+    resolution: {integrity: sha512-KH8+KKov5eS/9WhofZR8M8dMHWN2gTxjMsG4jd04YhpbPR91fUj7rYQ2/XjeHCJWbg7X++ApRIU9NUwM2vTvLA==}
+    dev: true
+
+  /vscode-textmate/5.2.0:
+    resolution: {integrity: sha512-Uw5ooOQxRASHgu6C7GVvUxisKXfSgW4oFlO+aa+PAkgmH89O3CXxEEzNRNtHSqtXFTl0nAC1uYj0GMSH27uwtQ==}
     dev: true
 
   /vue-demi/0.12.5_vue@3.2.33:
