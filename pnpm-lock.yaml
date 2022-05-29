@@ -16,10 +16,10 @@ importers:
       markdown-it-task-lists: ^2.1.1
       typescript: ^4.6.4
       vite: ^2.9.9
-      vite-node: 0.12.9
+      vite-node: 0.13.0
       vite-plugin-dts: 1.2.0
-      vitepress: 1.0.0-draft.7
-      vitest: 0.12.9
+      vitepress: 1.0.0-draft.8
+      vitest: 0.13.0
       vue: ^3.2.35
     dependencies:
       '@moefy-canvas/core': link:packages/core
@@ -35,10 +35,10 @@ importers:
       markdown-it-task-lists: 2.1.1
       typescript: 4.7.2
       vite: 2.9.9
-      vite-node: 0.12.9
+      vite-node: 0.13.0
       vite-plugin-dts: 1.2.0_vite@2.9.9
-      vitepress: 1.0.0-draft.7
-      vitest: 0.12.9
+      vitepress: 1.0.0-draft.8
+      vitest: 0.13.0
       vue: 3.2.36
 
   packages/core:
@@ -1079,7 +1079,7 @@ packages:
     dev: true
 
   /get-func-name/2.0.0:
-    resolution: {integrity: sha1-6td0q+5y4gQJQzoGY2YCPdaIekE=}
+    resolution: {integrity: sha512-Hm0ixYtaSZ/V7C8FJrtZIuBBI+iSgL+1Aq82zSu8VQNB4S3Gk8e7Qs3VwBDJAhmRZcFqkl3tQu36g/Foh5I5ig==}
     dev: true
 
   /glob-parent/5.1.2:
@@ -1555,8 +1555,8 @@ packages:
     engines: {node: '>= 0.10'}
     dev: true
 
-  /vite-node/0.12.9:
-    resolution: {integrity: sha512-TghOBHI2sZ+vIXF3YqgNnvhKmiQkW2xcuAXI65d4O5Wr414fRPFaSd+skdvmXzM7StoJt2A5qJ5u1WYDA6eGMQ==}
+  /vite-node/0.13.0:
+    resolution: {integrity: sha512-zBzdcjxgleumdtzbSAX8t55VI65es+D6hNQfQy4OUPoJ1kSYiQNhtXFBvKMy/6eu6m3R2cQtO7xlnsunyJfyCA==}
     engines: {node: '>=v14.16.0'}
     hasBin: true
     dependencies:
@@ -1614,8 +1614,8 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitepress/1.0.0-draft.7:
-    resolution: {integrity: sha512-x140EIfsZ+SukKUG4PH7Z8MIxeZXxUAjOB/FOkdDxjXFzEm4vk8C2zRhECY0Gqf153Dacm0x+xnftnkclUPIEQ==}
+  /vitepress/1.0.0-draft.8:
+    resolution: {integrity: sha512-r1cphHgtJ/KFwtph3cyusGWjRyX0NHvwfBboKnG5mRJpOP/JyvX5q5+NIiRYElPgdFXU7Roxkl8BcJbxWht56Q==}
     engines: {node: '>=14.6.0'}
     hasBin: true
     dependencies:
@@ -1637,8 +1637,8 @@ packages:
       - stylus
     dev: true
 
-  /vitest/0.12.9:
-    resolution: {integrity: sha512-1NtyUANS72Qw5PwYvoztk067NX4fSiis2xQxhByOWS33eL2er/yupHyLxlBCOkF2ANe0dLFRvT1GVb+nczL5aw==}
+  /vitest/0.13.0:
+    resolution: {integrity: sha512-vuYt3+G25MMnANgyMHHG3VK86C9K/VFi/8uH5myQ2v660W4WArv99ElakPlVFxxSXXM1jqQPiPj2ht35Bod9LQ==}
     engines: {node: '>=v14.16.0'}
     hasBin: true
     peerDependencies:
