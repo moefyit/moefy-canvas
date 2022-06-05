@@ -2,7 +2,9 @@
 
 用可可爱爱的 canvas 动效装饰你的网页吧～
 
-前往文档 → <https://moefy-canvas.nyakku.moe/>
+<HideInDoc>
+前往文档 → <a href="https://moefy-canvas.nyakku.moe">https://moefy-canvas.nyakku.moe</a>
+</HideInDoc>
 
 ## Install
 
