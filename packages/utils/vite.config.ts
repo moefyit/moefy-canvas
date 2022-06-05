@@ -8,7 +8,11 @@ const dir = dirname(fileURLToPath(import.meta.url))
 
 export default defineConfig({
   ...baseConfig,
-  plugins: [dts()],
+  plugins: [
+    dts({
+      entryRoot: dir,
+    }),
+  ],
   build: {
     lib: {
       fileName: 'index',
