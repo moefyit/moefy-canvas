@@ -26,8 +26,8 @@ pnpm add @moefy-canvas/theme-sparkler
 import {
    Sparkler,
    SparklerMode,
-   SparklerConfig,
-   CanvasOptions,
+   type SparklerConfig,
+   type CanvasOptions,
    MAX_Z_INDEX,
 } from '@moefy-canvas/theme-sparkler'
 

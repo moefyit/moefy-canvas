@@ -1,4 +1,4 @@
-import { CanvasOptions } from './draw'
+import { type CanvasOptions } from './draw'
 
 export type ThemeConfig = Record<string, any>
 

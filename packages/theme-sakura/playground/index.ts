@@ -1,7 +1,7 @@
 import { Sakura } from '../src/'
-import { SakuraConfig } from '../src/'
+import { type SakuraConfig } from '../src/'
 import { MAX_Z_INDEX } from '@moefy-canvas/core'
-import { CanvasOptions } from '@moefy-canvas/core'
+import { type CanvasOptions } from '@moefy-canvas/core'
 
 const themeConfig: SakuraConfig = {
   numPatels: 30,

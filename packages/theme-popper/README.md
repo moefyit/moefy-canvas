@@ -26,9 +26,9 @@ pnpm add @moefy-canvas/theme-popper
 import {
    Popper,
    PopperShape,
-   PopperConfig,
+   type PopperConfig,
    MAX_Z_INDEX,
-   CanvasOptions,
+   type CanvasOptions,
 } from '@moefy-canvas/theme-popper'
 
 const themeConfig: PopperConfig = {

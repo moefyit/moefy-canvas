@@ -1,4 +1,4 @@
-import { Theme, ThemeConfig, CanvasOptions } from '@moefy-canvas/core'
+import { Theme, type ThemeConfig, type CanvasOptions } from '@moefy-canvas/core'
 import { DrawBoard } from '@moefy-canvas/core'
 import { EventsHandler, Random, showBadge } from '@moefy-canvas/utils'
 import { debounce } from 'ts-debounce'

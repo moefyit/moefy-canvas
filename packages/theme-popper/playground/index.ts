@@ -1,7 +1,7 @@
 import { Popper } from '../src/'
-import { PopperShape, PopperConfig } from '../src/'
+import { PopperShape, type PopperConfig } from '../src/'
 import { MAX_Z_INDEX } from '@moefy-canvas/core'
-import { CanvasOptions } from '@moefy-canvas/core'
+import { type CanvasOptions } from '@moefy-canvas/core'
 
 const themeConfig: PopperConfig = {
   shape: PopperShape.Star,

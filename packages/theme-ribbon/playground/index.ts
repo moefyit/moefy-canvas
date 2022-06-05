@@ -1,4 +1,9 @@
-import { Ribbon, RibbonConfig, CanvasOptions, MAX_Z_INDEX } from '@moefy-canvas/theme-ribbon'
+import {
+  Ribbon,
+  type RibbonConfig,
+  type CanvasOptions,
+  MAX_Z_INDEX,
+} from '@moefy-canvas/theme-ribbon'
 
 const themeConfig: RibbonConfig = {
   size: 90,

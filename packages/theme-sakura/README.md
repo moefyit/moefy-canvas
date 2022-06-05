@@ -23,7 +23,12 @@ pnpm add @moefy-canvas/theme-sakura
 ```
 
 ```ts
-import { Sakura, SakuraConfig, MAX_Z_INDEX, CanvasOptions } from '@moefy-canvas/theme-sakura'
+import {
+   Sakura,
+   type SakuraConfig,
+   MAX_Z_INDEX,
+   type CanvasOptions,
+} from '@moefy-canvas/theme-sakura'
 
 const themeConfig: SakuraConfig = {
    numPatels: 30,

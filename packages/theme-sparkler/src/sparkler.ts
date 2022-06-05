@@ -2,7 +2,7 @@ import { Random, EventsHandler, showBadge } from '@moefy-canvas/utils'
 import { isMobile, isTouchEvent } from '@moefy-canvas/utils'
 import { Particle } from './particle'
 import { debounce } from 'ts-debounce'
-import { Theme, ThemeConfig, CanvasOptions } from '@moefy-canvas/core'
+import { Theme, type ThemeConfig, type CanvasOptions } from '@moefy-canvas/core'
 import { Vector2D, DrawBoard } from '@moefy-canvas/core'
 
 export enum SparklerMode {
