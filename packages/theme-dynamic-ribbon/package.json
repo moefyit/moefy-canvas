@@ -1,0 +1,38 @@
+{
+  "name": "@moefy-canvas/theme-dynamic-ribbon",
+  "version": "0.3.3",
+  "author": "Nyakku Shigure",
+  "license": "MIT",
+  "keywords": [
+    "moefyit",
+    "moefy-canvas-theme",
+    "dynamic-ribbon"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/moefyit/moefy-canvas.git"
+  },
+  "bugs": {
+    "url": "https://github.com/moefyit/moefy-canvas/issues"
+  },
+  "homepage": "https://github.com/moefyit/moefy-canvas#readme",
+  "type": "module",
+  "main": "./dist/index.es.js",
+  "module": "./dist/index.es.js",
+  "types": "./dist/src/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": "./dist/index.es.js"
+  },
+  "scripts": {
+    "dev": "vite --config vite.config.ts playground",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@moefy-canvas/core": "workspace:^",
+    "@moefy-canvas/utils": "workspace:^",
+    "ts-debounce": "^4.0.0"
+  }
+}

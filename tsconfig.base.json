@@ -26,6 +26,8 @@
       "@moefy-canvas/theme-ribbon": ["theme-ribbon/src"],
       "@moefy-canvas/theme-sakura/*": ["theme-sakura/src/*"],
       "@moefy-canvas/theme-sakura": ["theme-sakura/src"],
+      "@moefy-canvas/theme-dynamic-ribbon/*": ["theme-dynamic-ribbon/src/*"],
+      "@moefy-canvas/theme-dynamic-ribbon": ["theme-dynamic-ribbon/src"],
       "@moefy-canvas/utils/*": ["utils/src/*"],
       "@moefy-canvas/utils": ["utils/src"],
       "@moefy-canvas/core/*": ["core/src/*"],

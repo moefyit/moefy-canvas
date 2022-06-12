@@ -44,6 +44,16 @@ importers:
   packages/core:
     specifiers: {}
 
+  packages/theme-dynamic-ribbon:
+    specifiers:
+      '@moefy-canvas/core': workspace:^
+      '@moefy-canvas/utils': workspace:^
+      ts-debounce: ^4.0.0
+    dependencies:
+      '@moefy-canvas/core': link:../core
+      '@moefy-canvas/utils': link:../utils
+      ts-debounce: 4.0.0
+
   packages/theme-popper:
     specifiers:
       '@moefy-canvas/core': workspace:^
