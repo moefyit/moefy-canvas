@@ -18,7 +18,7 @@ importers:
       vite: ^2.9.12
       vite-node: 0.14.2
       vite-plugin-dts: 1.2.0
-      vitepress: 1.0.0-alpha.2
+      vitepress: 1.0.0-alpha.1
       vitest: 0.14.2
       vue: ^3.2.37
     dependencies:
@@ -37,7 +37,7 @@ importers:
       vite: 2.9.12
       vite-node: 0.14.2
       vite-plugin-dts: 1.2.0_vite@2.9.12
-      vitepress: 1.0.0-alpha.2
+      vitepress: 1.0.0-alpha.1
       vitest: 0.14.2
       vue: 3.2.37
 
@@ -427,10 +427,6 @@ packages:
     dependencies:
       '@vue/compiler-dom': 3.2.37
       '@vue/shared': 3.2.37
-    dev: true
-
-  /@vue/devtools-api/6.1.4:
-    resolution: {integrity: sha512-IiA0SvDrJEgXvVxjNkHPFfDx6SXw0b/TUkqMcDZWNg9fnCAHbTpoo59YfJ9QLFkwa3raau5vSlRVzMSLDnfdtQ==}
     dev: true
 
   /@vue/reactivity-transform/3.2.37:
@@ -1535,15 +1531,14 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitepress/1.0.0-alpha.2:
-    resolution: {integrity: sha512-twSsmx2DI/3XgZZ8KLyRAH8RgK2Zj4kJx/kwhZhimwndYqQDrtcIaAcuV+P3FKukZ+cYtm9yt9qohz631jKx4A==}
+  /vitepress/1.0.0-alpha.1:
+    resolution: {integrity: sha512-yA0QIl+mB3fQ2j+keQVa0DTT0waP2AeWM/p9VYfUAT9vOkQEGass4/oYmMGPCQrBwCaO3cpOxJL3ZFVooyvybQ==}
     engines: {node: '>=14.6.0'}
     hasBin: true
     dependencies:
       '@docsearch/css': 3.1.0
       '@docsearch/js': 3.1.0
       '@vitejs/plugin-vue': 2.3.3_vite@2.9.12+vue@3.2.37
-      '@vue/devtools-api': 6.1.4
       '@vueuse/core': 8.6.0_vue@3.2.37
       body-scroll-lock: 4.0.0-beta.0
       shiki: 0.10.1
