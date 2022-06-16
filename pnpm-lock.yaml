@@ -11,7 +11,7 @@ importers:
       '@moefy-canvas/theme-sparkler': workspace:^
       '@moefy-canvas/utils': workspace:^
       '@types/node': ^17.0.42
-      bumpp: 8.1.0
+      bumpp: 8.2.0
       cheap-watch: ^1.0.4
       markdown-it-task-lists: ^2.1.1
       typescript: ^4.7.3
@@ -30,7 +30,7 @@ importers:
       '@moefy-canvas/utils': link:packages/utils
     devDependencies:
       '@types/node': 17.0.42
-      bumpp: 8.1.0
+      bumpp: 8.2.0
       cheap-watch: 1.0.4
       markdown-it-task-lists: 2.1.1
       typescript: 4.7.3
@@ -580,8 +580,8 @@ packages:
       fill-range: 7.0.1
     dev: true
 
-  /bumpp/8.1.0:
-    resolution: {integrity: sha512-USNqoYA+xM50vJGDoChjG9J7IeZeyymi7OUC9WT58pUF9l2Ue0Q6f8ec5vdai2dD70C+bs1d5WRe/JHNNXiMGg==}
+  /bumpp/8.2.0:
+    resolution: {integrity: sha512-DhFa4DSREOwnHJQyQ+Qhj9pUJAIZKMEtuHN7BuQij4CoxSBc6n4bBZnlvFWuLXNMr0aCtsMXnkQWC/7GyGypYw==}
     engines: {node: '>=10'}
     hasBin: true
     dependencies:
