@@ -12,7 +12,7 @@
     "url": "https://github.com/moefyit/moefy-canvas/issues"
   },
   "homepage": "https://github.com/moefyit/moefy-canvas#readme",
-  "packageManager": "pnpm@7.2.1",
+  "packageManager": "pnpm@7.3.0",
   "scripts": {
     "dev:sparkler": "pnpm --filter @moefy-canvas/theme-sparkler dev",
     "dev:popper": "pnpm --filter @moefy-canvas/theme-popper dev",
