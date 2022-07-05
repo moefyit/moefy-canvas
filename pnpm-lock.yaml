@@ -17,7 +17,7 @@ importers:
       typescript: ^4.7.3
       vite: ^2.9.12
       vite-node: 0.17.0
-      vite-plugin-dts: 1.2.0
+      vite-plugin-dts: 1.2.1
       vitepress: 1.0.0-alpha.4
       vitest: 0.17.0
       vue: ^3.2.37
@@ -36,7 +36,7 @@ importers:
       typescript: 4.7.3
       vite: 2.9.12
       vite-node: 0.17.0
-      vite-plugin-dts: 1.2.0_vite@2.9.12
+      vite-plugin-dts: 1.2.1_vite@2.9.12
       vitepress: 1.0.0-alpha.4
       vitest: 0.17.0
       vue: 3.2.37
@@ -1433,8 +1433,8 @@ packages:
       - supports-color
     dev: true
 
-  /vite-plugin-dts/1.2.0_vite@2.9.12:
-    resolution: {integrity: sha512-dg0x2VKHDnpNQvx0iPKkPpX+aJNBqzusMJv1l7SwzTV8J62eLhIKzE2FKOp4oYkPlN/vi+MqNEDKvv+XE70lzA==}
+  /vite-plugin-dts/1.2.1_vite@2.9.12:
+    resolution: {integrity: sha512-V59rsKQnPI6FTGybh/ED4+dyK3UeSkvC1CJzpuDNoXb7mKNUcWmg66EM0N5Ijoc8xDAfZIXYxQjg675YHIDvFw==}
     engines: {node: '>=12.0.0'}
     peerDependencies:
       vite: '>=2.4.4'
