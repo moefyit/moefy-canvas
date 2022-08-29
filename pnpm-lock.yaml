@@ -18,7 +18,7 @@ importers:
       vite: ^3.0.8
       vite-node: 0.22.1
       vite-plugin-dts: 1.4.1
-      vitepress: 1.0.0-alpha.9
+      vitepress: 1.0.0-alpha.12
       vitest: 0.22.1
       vue: ^3.2.37
     dependencies:
@@ -37,7 +37,7 @@ importers:
       vite: 3.0.8
       vite-node: 0.22.1
       vite-plugin-dts: 1.4.1_vite@3.0.8
-      vitepress: 1.0.0-alpha.9
+      vitepress: 1.0.0-alpha.12
       vitest: 0.22.1
       vue: 3.2.37
 
@@ -1500,8 +1500,8 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitepress/1.0.0-alpha.9:
-    resolution: {integrity: sha512-+VxgjflIcssbuyUBRYjZRpQ8w25v6XnIbXFmm9qwLVaqZdC0rN6qViEp7oRwA3HUlrGxj7GEzqQjW7xj4+E83w==}
+  /vitepress/1.0.0-alpha.12:
+    resolution: {integrity: sha512-++e7p9oxqk7RKz2fMNtrOAWmZSWVPozDuOG1owwntPRincC8/pIhPkJ9ojNHcHCHBylszJBsjkRqbseurZ7vCg==}
     hasBin: true
     dependencies:
       '@docsearch/css': 3.2.1
