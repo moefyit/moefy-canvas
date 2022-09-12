@@ -44,8 +44,8 @@ const canvasOptions: CanvasOptions = {
 }
 
 const el = document.getElementById('moefy-canvas')
-const metor = new Meteor(themeConfig, canvasOptions)
-metor.mount(el as HTMLCanvasElement)
+const meteor = new Meteor(themeConfig, canvasOptions)
+meteor.mount(el as HTMLCanvasElement)
 ```
 
 ## ThemeConfig
