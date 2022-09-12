@@ -23,7 +23,7 @@
     "dist"
   ],
   "exports": {
-    ".": "./dist/index.es.js"
+    ".": "./dist/index.js"
   },
   "scripts": {
     "dev": "vite --config vite.config.ts playground",
