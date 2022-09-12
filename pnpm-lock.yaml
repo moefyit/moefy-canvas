@@ -16,10 +16,10 @@ importers:
       markdown-it-task-lists: ^2.1.1
       typescript: ^4.7.4
       vite: ^3.0.8
-      vite-node: 0.23.0
-      vite-plugin-dts: 1.4.1
+      vite-node: 0.23.2
+      vite-plugin-dts: 1.5.0
       vitepress: 1.0.0-alpha.13
-      vitest: 0.23.0
+      vitest: 0.23.2
       vue: ^3.2.37
     dependencies:
       '@moefy-canvas/core': link:packages/core
@@ -35,10 +35,10 @@ importers:
       markdown-it-task-lists: 2.1.1
       typescript: 4.7.4
       vite: 3.0.8
-      vite-node: 0.23.0
-      vite-plugin-dts: 1.4.1_vite@3.0.8
+      vite-node: 0.23.2
+      vite-plugin-dts: 1.5.0_vite@3.0.8
       vitepress: 1.0.0-alpha.13
-      vitest: 0.23.0
+      vitest: 0.23.2
       vue: 3.2.37
 
   packages/core:
@@ -1375,13 +1375,12 @@ packages:
     resolution: {integrity: sha512-qsdtZH+vMoCARQtyod4imc2nIJwg9Cc7lPRrw9CzF8ZKR0khdr8+2nX80PBhET3tcyTtJDxAffGh2rXH4tyU8A==}
     dev: true
 
-  /tinybench/2.1.4:
-    resolution: {integrity: sha512-NFWIw2Gg7EUPdeE8nL1Dc7AMVlk7sOr2PmSNKVuQrZ0YwTOFoshPQ+hcLrgnhK8dTP3FWMCJaf4N+/hXp6lKPw==}
-    engines: {node: '>=16.0.0'}
+  /tinybench/2.1.5:
+    resolution: {integrity: sha512-ak+PZZEuH3mw6CCFOgf5S90YH0MARnZNhxjhjguAmoJimEMAJuNip/rJRd6/wyylHItomVpKTzZk9zrhTrQCoQ==}
     dev: true
 
-  /tinypool/0.2.4:
-    resolution: {integrity: sha512-Vs3rhkUH6Qq1t5bqtb816oT+HeJTXfwt2cbPH17sWHIYKTotQIFPk3tf2fgqRrVyMDVOc1EnPgzIxfIulXVzwQ==}
+  /tinypool/0.3.0:
+    resolution: {integrity: sha512-NX5KeqHOBZU6Bc0xj9Vr5Szbb1j8tUHIeD18s41aDJaPeC5QTdEhK0SpdpUrZlj2nv5cctNcSjaKNanXlfcVEQ==}
     engines: {node: '>=14.0.0'}
     dev: true
 
@@ -1449,8 +1448,8 @@ packages:
     engines: {node: '>= 0.10'}
     dev: true
 
-  /vite-node/0.23.0:
-    resolution: {integrity: sha512-anoezAl62eUs1H0sMDmm6dFA2az+5zqeBo07pYgqZ+xLOlXd6Yliheohcl4g2dZzLcTKjYhH5oKiQrSEtrMXzA==}
+  /vite-node/0.23.2:
+    resolution: {integrity: sha512-LRkcAu0oQYNp+2LX84Z8NkYXzISdeLi9NxL8cWgJPxxYcv8Lv9VpqU4kNzAqTIWzgIQFnVkf5mZarcoLgQXInQ==}
     engines: {node: '>=v14.16.0'}
     hasBin: true
     dependencies:
@@ -1466,8 +1465,8 @@ packages:
       - terser
     dev: true
 
-  /vite-plugin-dts/1.4.1_vite@3.0.8:
-    resolution: {integrity: sha512-jo7E4ZeheD2o48oGiI3EygPbej7ZkGFHg3GVTt7Wuo6NgzThLvuzGGuduaFpnhJOGi1piDFsu6oui/wDKIIORQ==}
+  /vite-plugin-dts/1.5.0_vite@3.0.8:
+    resolution: {integrity: sha512-O78YnwomiEu+vKMdj1gvJfi2PnSOdB/RKWSOaNDjzr5bGvB6G7AskSczy+74sLwj3hkh0qO0L0U1UuLSjAqtqA==}
     engines: {node: '>=12.0.0'}
     peerDependencies:
       vite: '>=2.4.4'
@@ -1536,8 +1535,8 @@ packages:
       - terser
     dev: true
 
-  /vitest/0.23.0:
-    resolution: {integrity: sha512-I3ctlfiXYprA2tID1qP+m6pmgmKx3HYfRe66MetGOHKCHLY7hz74ihiwIEtN7LReJgF3U5cM735iYPkn/Go1iQ==}
+  /vitest/0.23.2:
+    resolution: {integrity: sha512-kTBKp3ROPDkYC+x2zWt4znkDtnT08W1FQ6ngRFuqxpBGNuNVS+eWZKfffr8y2JGvEzZ9EzMAOcNaiqMj/FZqMw==}
     engines: {node: '>=v14.16.0'}
     hasBin: true
     peerDependencies:
@@ -1565,8 +1564,8 @@ packages:
       debug: 4.3.4
       local-pkg: 0.4.2
       strip-literal: 0.4.0
-      tinybench: 2.1.4
-      tinypool: 0.2.4
+      tinybench: 2.1.5
+      tinypool: 0.3.0
       tinyspy: 1.0.2
       vite: 3.0.8
     transitivePeerDependencies:
