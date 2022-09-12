@@ -24,15 +24,18 @@ pnpm add @moefy-canvas/theme-meteor
 
 ```ts
 import {
-   Sparkler,
-   SparklerMode,
-   type SparklerConfig,
+   Meteor,
+   type MeteorConfig,
    type CanvasOptions,
    MAX_Z_INDEX,
-} from '@moefy-canvas/theme-sparkler'
+} from '@moefy-canvas/theme-meteor'
 
-const themeConfig: SparklerConfig = {
-   mode: SparklerMode.TRAIL,
+const themeConfig: MeteorConfig = {
+   numParticles: null,
+   particleColor: {
+      light: 'rgba(102, 175, 239, .2)',
+      dark: 'rgba(245, 236, 66, .2)',
+   },
 }
 
 const canvasOptions: CanvasOptions = {
@@ -41,25 +44,21 @@ const canvasOptions: CanvasOptions = {
 }
 
 const el = document.getElementById('moefy-canvas')
-const sparkler = new Sparkler(themeConfig, canvasOptions)
-sparkler.mount(el as HTMLCanvasElement)
+const metor = new Meteor(themeConfig, canvasOptions)
+metor.mount(el as HTMLCanvasElement)
 ```
 
 ## ThemeConfig
 
 ```ts
-export enum SparklerMode {
-   FOLLOW = 'follow',
-   TRAIL = 'trail',
+export interface ColorTheme {
+   light: string
+   dark: string
 }
 
-export interface SparklerConfig extends ThemeConfig {
-   mode?: SparklerMode
-   numParticles?: number
-   sparkleFactor?: number
-   particleDurationRange?: [number, number]
-   particleDistanceRange?: [number, number]
-   particleSizeRange?: [number, number]
+export interface MeteorConfig extends ThemeConfig {
+   numParticles?: number | null
+   particleColor?: string | ColorTheme
 }
 ```
 

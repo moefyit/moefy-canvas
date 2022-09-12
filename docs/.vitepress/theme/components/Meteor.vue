@@ -7,6 +7,10 @@ const el = ref(null)
 const meteor = new Meteor(
   {
     numParticles: null,
+    particleColor: {
+      light: 'rgba(102, 175, 239, .2)',
+      dark: 'rgba(245, 236, 66, .2)',
+    },
   },
   {
     opacity: 1,

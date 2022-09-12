@@ -7,7 +7,10 @@ import {
 
 const themeConfig: MeteorConfig = {
   numParticles: null,
-  particleColor: 'rgba(102,175,239,.2)',
+  particleColor: {
+    light: 'rgba(102, 175, 239, .2)',
+    dark: 'rgba(245, 236, 66, .2)',
+  },
 }
 
 const canvasOptions: CanvasOptions = {
@@ -16,7 +19,7 @@ const canvasOptions: CanvasOptions = {
 }
 
 const el = document.getElementById('moefy-canvas')
-const sparkler = new Meteor(themeConfig, canvasOptions)
-sparkler.mount(el as HTMLCanvasElement)
+const metor = new Meteor(themeConfig, canvasOptions)
+metor.mount(el as HTMLCanvasElement)
 // @ts-ignore
-window.sp = sparkler
+window.sp = metor

@@ -1,5 +1,11 @@
 import { EventsHandler, showBadge } from '@moefy-canvas/utils'
-import { isMobile, isTouchEvent } from '@moefy-canvas/utils'
+import {
+  isMobile,
+  isTouchEvent,
+  isString,
+  isDarkMode,
+  getColorSchemeMediaList,
+} from '@moefy-canvas/utils'
 import { Particle, GlobalSpeed } from './particle'
 import { debounce } from 'ts-debounce'
 import { Theme, type ThemeConfig, type CanvasOptions } from '@moefy-canvas/core'
@@ -7,12 +13,17 @@ import { Vector2D, DrawBoard } from '@moefy-canvas/core'
 
 export interface MeteorConfig extends ThemeConfig {
   numParticles?: number | null
-  particleColor?: string
+  particleColor?: string | ColorTheme
+}
+
+export interface ColorTheme {
+  light: string
+  dark: string
 }
 
 export class Meteor implements Theme<MeteorConfig> {
   #numParticles: number | null
-  #particleColor: string
+  #particleColor: ColorTheme
   #canvasOptions: CanvasOptions
   #board: DrawBoard | null = null
   #particles: Set<Particle> = new Set()
@@ -22,10 +33,13 @@ export class Meteor implements Theme<MeteorConfig> {
   #stopped: boolean = false
   #eventsHandler: EventsHandler = new EventsHandler()
   constructor(
-    { numParticles = null, particleColor = 'rgba(102,175,239,.2)' }: MeteorConfig = {},
+    { numParticles = null, particleColor = 'rgba(102, 175, 239, .2)' }: MeteorConfig = {},
     canvasOptions: CanvasOptions = {}
   ) {
     this.#numParticles = numParticles
+    if (isString(particleColor)) {
+      particleColor = { light: particleColor, dark: particleColor } as ColorTheme
+    }
     this.#particleColor = particleColor
     this.#canvasOptions = canvasOptions
 
@@ -57,9 +71,12 @@ export class Meteor implements Theme<MeteorConfig> {
 
   #initParticles() {
     const numParticles = this.#numParticles ?? (window.innerWidth + window.innerHeight) / 8
+    const particleColor: string = isDarkMode()
+      ? this.#particleColor.dark
+      : this.#particleColor.light
     for (let i = 0; i < numParticles; i++) {
       const particle = new Particle(0, 0, 0)
-        .bindColor(this.#particleColor)
+        .bindColor(particleColor)
         .bindGlobalSpeed(this.#globalSpeed)
       particle.reset(this.#board!.size, false)
       this.#particles.add(particle)
@@ -79,6 +96,11 @@ export class Meteor implements Theme<MeteorConfig> {
       this.#eventsHandler.add('mouseleave', this.#handleMouseLeave.bind(this))
     }
     this.#eventsHandler.add('visibilitychange', this.#handleVisibilityChange.bind(this))
+    this.#eventsHandler.add(
+      'change',
+      this.#handleColorSchemeChange.bind(this),
+      getColorSchemeMediaList()
+    )
     this.#eventsHandler.add('resize', debounce(this.#handleResize.bind(this), 500))
     this.#eventsHandler.startAll()
   }
@@ -116,6 +138,15 @@ export class Meteor implements Theme<MeteorConfig> {
     this.#board!.handleResize(event)
     for (const particle of this.#particles) {
       particle.reset(this.#board!.size, false)
+    }
+  }
+
+  #handleColorSchemeChange(event: any) {
+    const particleColor: string = isDarkMode()
+      ? this.#particleColor.dark
+      : this.#particleColor.light
+    for (const particle of this.#particles) {
+      particle.bindColor(particleColor)
     }
   }
 
