@@ -11,6 +11,7 @@ export default defineConfig({
   plugins: [
     dts({
       entryRoot: dir,
+      copyDtsFiles: false,
     }),
   ],
   build: {
