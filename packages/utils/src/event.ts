@@ -1,49 +1,52 @@
 type EventType = keyof DocumentEventMap | keyof WindowEventMap
 type Listener = (event: any) => void
+type ListenedMap = Map<Listenable, EventMap>
 type EventMap = Map<EventType, Set<Listener>>
 
+interface Listenable {
+  addEventListener(type: EventType, listener: Listener): void
+  removeEventListener(type: EventType, listener: Listener): void
+}
+
 export class EventsHandler {
-  #eventMap: EventMap
+  #listenedMap: ListenedMap
   constructor() {
-    this.#eventMap = new Map() as EventMap
+    this.#listenedMap = new Map() as ListenedMap
   }
 
-  add(type: EventType, listener: Listener) {
-    if (!this.#eventMap.has(type)) {
-      this.#eventMap.set(type, new Set<Listener>())
+  add(type: EventType, listener: Listener, listened: Listenable = window) {
+    if (!this.#listenedMap.has(listened)) {
+      this.#listenedMap.set(listened, new Map() as EventMap)
     }
-    this.#eventMap.get(type)?.add(listener)
-  }
 
-  start(type: EventType) {
-    if (this.#eventMap.has(type)) {
-      for (const event of this.#eventMap.get(type)!) {
-        window.addEventListener(type, event)
-      }
+    const eventMap = this.#listenedMap.get(listened)!
+    if (!eventMap.has(type)) {
+      eventMap.set(type, new Set<Listener>())
     }
-  }
-
-  stop(type: EventType) {
-    if (this.#eventMap.has(type)) {
-      for (const event of this.#eventMap.get(type)!) {
-        window.removeEventListener(type, event)
-      }
-    }
+    eventMap.get(type)!.add(listener)
   }
 
   startAll() {
-    for (const type of this.#eventMap.keys()) {
-      this.start(type)
+    for (const [listened, eventMap] of this.#listenedMap) {
+      for (const [type, listeners] of eventMap) {
+        for (const listener of listeners) {
+          listened.addEventListener(type, listener)
+        }
+      }
     }
   }
 
   stopAll() {
-    for (const type of this.#eventMap.keys()) {
-      this.stop(type)
+    for (const [listened, eventMap] of this.#listenedMap) {
+      for (const [type, listeners] of eventMap) {
+        for (const listener of listeners) {
+          listened.removeEventListener(type, listener)
+        }
+      }
     }
   }
 
   clear() {
-    this.#eventMap.clear()
+    this.#listenedMap.clear()
   }
 }
