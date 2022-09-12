@@ -17,11 +17,12 @@ hero:
    <Sakura v-if="theme === 'sakura'"/>
    <Sparkler v-else-if="theme === 'sparkler'"/>
    <Ribbon v-else-if="theme === 'ribbon'"/>
-   <popper v-else="theme === 'popper'"/>
+   <Popper v-else-if="theme === 'popper'"/>
+   <Meteor v-else="theme === 'meteor'"/>
 </ClientOnly>
 
 <script setup>
-const themes = ["sakura", "sparkler", "popper", "ribbon"]
-const idx = Math.floor(Math.random() * 4)
+const themes = ["sakura", "sparkler", "popper", "ribbon", "meteor"]
+const idx = Math.floor(Math.random() * themes.length)
 const theme = themes[idx]
 </script>

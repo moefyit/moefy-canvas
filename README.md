@@ -83,6 +83,7 @@ export abstract class Theme<T extends ThemeConfig> {
 
 -  theme ribbon :reminder_ribbon:
 -  theme sakura :cherry_blossom:
+-  theme metor :stars:
 
 ## TODO
 

@@ -5,6 +5,7 @@ importers:
   .:
     specifiers:
       '@moefy-canvas/core': workspace:^
+      '@moefy-canvas/theme-meteor': workspace:^
       '@moefy-canvas/theme-popper': workspace:^
       '@moefy-canvas/theme-ribbon': workspace:^
       '@moefy-canvas/theme-sakura': workspace:^
@@ -23,6 +24,7 @@ importers:
       vue: ^3.2.37
     dependencies:
       '@moefy-canvas/core': link:packages/core
+      '@moefy-canvas/theme-meteor': link:packages/theme-meteor
       '@moefy-canvas/theme-popper': link:packages/theme-popper
       '@moefy-canvas/theme-ribbon': link:packages/theme-ribbon
       '@moefy-canvas/theme-sakura': link:packages/theme-sakura
@@ -43,6 +45,16 @@ importers:
 
   packages/core:
     specifiers: {}
+
+  packages/theme-meteor:
+    specifiers:
+      '@moefy-canvas/core': workspace:^
+      '@moefy-canvas/utils': workspace:^
+      ts-debounce: ^4.0.0
+    dependencies:
+      '@moefy-canvas/core': link:../core
+      '@moefy-canvas/utils': link:../utils
+      ts-debounce: 4.0.0
 
   packages/theme-popper:
     specifiers:

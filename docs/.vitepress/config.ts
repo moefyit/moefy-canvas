@@ -50,6 +50,10 @@ export default defineConfig({
               text: 'sakura',
               link: '/themes/sakura.html',
             },
+            {
+              text: 'metor',
+              link: '/themes/meteor.html',
+            },
           ],
         },
       ],

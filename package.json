@@ -18,6 +18,7 @@
     "dev:popper": "pnpm --filter @moefy-canvas/theme-popper dev",
     "dev:ribbon": "pnpm --filter @moefy-canvas/theme-ribbon dev",
     "dev:sakura": "pnpm --filter @moefy-canvas/theme-sakura dev",
+    "dev:meteor": "pnpm --filter @moefy-canvas/theme-meteor dev",
     "build": "pnpm -r run build",
     "test": "vitest --run",
     "release": "bumpp package.json packages/*/package.json --commit '🔖 release: v%s' --push --tag && pnpm build && pnpm -r publish --access public",
@@ -31,6 +32,7 @@
     "@moefy-canvas/theme-ribbon": "workspace:^",
     "@moefy-canvas/theme-sakura": "workspace:^",
     "@moefy-canvas/theme-sparkler": "workspace:^",
+    "@moefy-canvas/theme-meteor": "workspace:^",
     "@moefy-canvas/utils": "workspace:^"
   },
   "devDependencies": {

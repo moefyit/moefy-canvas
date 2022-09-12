@@ -19,6 +19,7 @@ const config: UserConfig = {
       '@moefy-canvas/theme-sakura': resolve(dir, './packages/theme-sakura/src/index.ts'),
       '@moefy-canvas/theme-popper': resolve(dir, './packages/theme-popper/src/index.ts'),
       '@moefy-canvas/theme-ribbon': resolve(dir, './packages/theme-ribbon/src/index.ts'),
+      '@moefy-canvas/theme-meteor': resolve(dir, './packages/theme-meteor/src/index.ts'),
     },
   },
 }

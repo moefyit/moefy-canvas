@@ -2,7 +2,7 @@ import { promises as fs } from 'fs'
 import { dirname, resolve } from 'path'
 import { fileURLToPath } from 'url'
 
-const themes = ['sparkler', 'popper', 'ribbon', 'sakura']
+const themes = ['sparkler', 'popper', 'ribbon', 'sakura', 'meteor']
 const dir = dirname(fileURLToPath(import.meta.url))
 
 async function copyReadme() {
