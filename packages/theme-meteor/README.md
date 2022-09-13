@@ -1,7 +1,7 @@
 # @moefy-canvas/theme-meteor <GitHubLink repo="moefyit/moefy-canvas" subpath="packages/theme-meteor"/>
 
 <p align="center">
-   <img alt="type" src="https://img.shields.io/static/v1?label=type&message=cursor-effects&color=green&style=for-the-badge" />
+   <img alt="type" src="https://img.shields.io/static/v1?label=type&message=background&color=green&style=for-the-badge" />
    <a href="https://www.npmjs.com/package/@moefy-canvas/theme-meteor" target="_blank"><img alt="npm" src="https://img.shields.io/npm/v/@moefy-canvas/theme-meteor.svg?style=for-the-badge&logo=npm"></a>
    <a href="https://www.npmjs.com/package/@moefy-canvas/theme-meteor" target="_blank"><img alt="downloads" src="https://img.shields.io/npm/dt/@moefy-canvas/theme-meteor.svg?style=for-the-badge"></a>
    <a href="https://www.npmjs.com/package/@moefy-canvas/theme-meteor" target="_blank"><img alt="downloads" src="https://img.shields.io/npm/dm/@moefy-canvas/theme-meteor.svg?style=for-the-badge"></a>
