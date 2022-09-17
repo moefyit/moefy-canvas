@@ -40,7 +40,7 @@ const themeConfig: MeteorConfig = {
 
 const canvasOptions: CanvasOptions = {
    opacity: 1,
-   zIndex: MAX_Z_INDEX,
+   zIndex: -MAX_Z_INDEX,
 }
 
 const el = document.getElementById('moefy-canvas')

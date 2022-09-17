@@ -14,7 +14,7 @@ const meteor = new Meteor(
   },
   {
     opacity: 1,
-    zIndex: MAX_Z_INDEX,
+    zIndex: -MAX_Z_INDEX,
   }
 )
 
