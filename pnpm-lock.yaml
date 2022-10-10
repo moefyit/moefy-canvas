@@ -17,10 +17,10 @@ importers:
       markdown-it-task-lists: ^2.1.1
       typescript: ^4.8.3
       vite: ^3.1.0
-      vite-node: 0.23.4
-      vite-plugin-dts: 1.6.4
+      vite-node: 0.24.0
+      vite-plugin-dts: 1.6.5
       vitepress: 1.0.0-alpha.19
-      vitest: 0.23.4
+      vitest: 0.24.0
       vue: ^3.2.39
     dependencies:
       '@moefy-canvas/core': link:packages/core
@@ -37,10 +37,10 @@ importers:
       markdown-it-task-lists: 2.1.1
       typescript: 4.8.3
       vite: 3.1.0
-      vite-node: 0.23.4
-      vite-plugin-dts: 1.6.4_vite@3.1.0
+      vite-node: 0.24.0
+      vite-plugin-dts: 1.6.5_vite@3.1.0
       vitepress: 1.0.0-alpha.19
-      vitest: 0.23.4
+      vitest: 0.24.0
       vue: 3.2.39
 
   packages/core:
@@ -1259,11 +1259,11 @@ packages:
     hasBin: true
     dev: true
 
-  /mlly/0.5.14:
-    resolution: {integrity: sha512-DgRgNUSX9NIxxCxygX4Xeg9C7GX7OUx1wuQ8cXx9o9LE0e9wrH+OZ9fcnrlEedsC/rtqry3ZhUddC759XD/L0w==}
+  /mlly/0.5.16:
+    resolution: {integrity: sha512-LaJ8yuh4v0zEmge/g3c7jjFlhoCPfQn6RCjXgm9A0Qiuochq4BcuOxVfWmdnCoLTlg2MV+hqhOek+W2OhG0Lwg==}
     dependencies:
       acorn: 8.8.0
-      pathe: 0.3.7
+      pathe: 0.3.9
       pkg-types: 0.3.5
       ufo: 0.8.5
     dev: true
@@ -1295,8 +1295,8 @@ packages:
     resolution: {integrity: sha512-sTitTPYnn23esFR3RlqYBWn4c45WGeLcsKzQiUpXJAyfcWkolvlYpV8FLo7JishK946oQwMFUCHXQ9AjGPKExw==}
     dev: true
 
-  /pathe/0.3.7:
-    resolution: {integrity: sha512-yz7GK+kSsS27x727jtXpd5VT4dDfP/JDIQmaowfxyWCnFjOWtE1VIh7i6TzcSfzW0n4+bRQztj1VdKnITNq/MA==}
+  /pathe/0.3.9:
+    resolution: {integrity: sha512-6Y6s0vT112P3jD8dGfuS6r+lpa0qqNrLyHPOwvXMnyNTQaYiwgau2DP3aNDsR13xqtGj7rrPo+jFUATpU6/s+g==}
     dev: true
 
   /pathval/1.1.1:
@@ -1316,8 +1316,8 @@ packages:
     resolution: {integrity: sha512-VkxCBFVgQhNHYk9subx+HOhZ4jzynH11ah63LZsprTKwPCWG9pfWBlkElWFbvkP9BVR0dP1jS9xPdhaHQNK74Q==}
     dependencies:
       jsonc-parser: 3.2.0
-      mlly: 0.5.14
-      pathe: 0.3.7
+      mlly: 0.5.16
+      pathe: 0.3.9
     dev: true
 
   /postcss/8.4.16:
@@ -1469,8 +1469,8 @@ packages:
     engines: {node: '>= 0.4'}
     dev: true
 
-  /tinybench/2.1.5:
-    resolution: {integrity: sha512-ak+PZZEuH3mw6CCFOgf5S90YH0MARnZNhxjhjguAmoJimEMAJuNip/rJRd6/wyylHItomVpKTzZk9zrhTrQCoQ==}
+  /tinybench/2.3.0:
+    resolution: {integrity: sha512-zs1gMVBwyyG2QbVchYIbnabRhMOCGvrwZz/q+SV+LIMa9q5YDQZi2kkI6ZRqV2Bz7ba1uvrc7ieUoE4KWnGeKg==}
     dev: true
 
   /tinypool/0.3.0:
@@ -1548,15 +1548,15 @@ packages:
     engines: {node: '>= 0.10'}
     dev: true
 
-  /vite-node/0.23.4:
-    resolution: {integrity: sha512-8VuDGwTWIvwPYcbw8ZycMlwAwqCmqZfLdFrDK75+o+6bWYpede58k6AAXN9ioU+icW82V4u1MzkxLVhhIoQ9xA==}
+  /vite-node/0.24.0:
+    resolution: {integrity: sha512-AgPZiAgmuQ3LX7ClXVzq9pARAfc88pM/YQaQ3iUIXDuiLdfQdXrpL8DgXswdVmCQmxKC4Qu4C7RPq9NRn50zwA==}
     engines: {node: '>=v14.16.0'}
     hasBin: true
     dependencies:
       debug: 4.3.4
-      mlly: 0.5.14
+      mlly: 0.5.16
       pathe: 0.2.0
-      vite: 3.1.0
+      vite: 3.1.4
     transitivePeerDependencies:
       - less
       - sass
@@ -1565,10 +1565,9 @@ packages:
       - terser
     dev: true
 
-  /vite-plugin-dts/1.6.4_vite@3.1.0:
-    resolution: {integrity: sha512-NaCkdhb9f+0jvmIMQRXbRkSokz6AANbTLjoZOhbeXw3IyLhkM0pTguicM14X8/XEAruZ8XdOM/1MyRgEi70P/Q==}
+  /vite-plugin-dts/1.6.5_vite@3.1.0:
+    resolution: {integrity: sha512-5X6itICUfV8AT0WkHKkE573KMRQE30j4tKzDyvZ770VEZbkGBt87b3j99ENKsW9PZJfI/9br96juq9NbuWoYFg==}
     engines: {node: ^14.18.0 || >=16.0.0}
-    requiresBuild: true
     peerDependencies:
       vite: '>=2.9.0'
     dependencies:
@@ -1664,8 +1663,8 @@ packages:
       - terser
     dev: true
 
-  /vitest/0.23.4:
-    resolution: {integrity: sha512-iukBNWqQAv8EKDBUNntspLp9SfpaVFbmzmM0sNcnTxASQZMzRw3PsM6DMlsHiI+I6GeO5/sYDg3ecpC+SNFLrQ==}
+  /vitest/0.24.0:
+    resolution: {integrity: sha512-k5j3FPTor+MJx2x0pDW2gtVk+s9VC6nSHT3SoqOIk9Je5fFpPgict+Xy2eAVXUogvSixs45Ya1oZk+oK93BO0w==}
     engines: {node: '>=v14.16.0'}
     hasBin: true
     peerDependencies:
@@ -1693,10 +1692,10 @@ packages:
       debug: 4.3.4
       local-pkg: 0.4.2
       strip-literal: 0.4.2
-      tinybench: 2.1.5
+      tinybench: 2.3.0
       tinypool: 0.3.0
       tinyspy: 1.0.2
-      vite: 3.1.0
+      vite: 3.1.4
     transitivePeerDependencies:
       - less
       - sass
