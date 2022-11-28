@@ -17,10 +17,10 @@ importers:
       markdown-it-task-lists: ^2.1.1
       typescript: ^4.8.3
       vite: ^3.1.0
-      vite-node: 0.25.2
+      vite-node: 0.25.3
       vite-plugin-dts: 1.7.1
       vitepress: 1.0.0-alpha.29
-      vitest: 0.25.2
+      vitest: 0.25.3
       vue: ^3.2.39
     dependencies:
       '@moefy-canvas/core': link:packages/core
@@ -37,10 +37,10 @@ importers:
       markdown-it-task-lists: 2.1.1
       typescript: 4.8.3
       vite: 3.1.0
-      vite-node: 0.25.2_@types+node@18.7.16
+      vite-node: 0.25.3_@types+node@18.7.16
       vite-plugin-dts: 1.7.1_vite@3.1.0
       vitepress: 1.0.0-alpha.29_@types+node@18.7.16
-      vitest: 0.25.2
+      vitest: 0.25.3
       vue: 3.2.39
 
   packages/core:
@@ -680,6 +680,12 @@ packages:
 
   /acorn/8.8.0:
     resolution: {integrity: sha512-QOxyigPVrpZ2GXT+PFyZTl6TtOFc5egxHIP9IlQ+RbupQuX4RkT/Bee4/kQuC02Xkzg84JcT7oLYtDIQxp+v7w==}
+    engines: {node: '>=0.4.0'}
+    hasBin: true
+    dev: true
+
+  /acorn/8.8.1:
+    resolution: {integrity: sha512-7zFpHzhnqYKrkYdUjF1HI1bzd0VygEGX8lFk4k5zVMqHEoES+P+7TKI+EvLO9WVMJ8eekdO0aDEK044xTXwPPA==}
     engines: {node: '>=0.4.0'}
     hasBin: true
     dev: true
@@ -1487,13 +1493,13 @@ packages:
     hasBin: true
     dev: true
 
-  /mlly/0.5.16:
-    resolution: {integrity: sha512-LaJ8yuh4v0zEmge/g3c7jjFlhoCPfQn6RCjXgm9A0Qiuochq4BcuOxVfWmdnCoLTlg2MV+hqhOek+W2OhG0Lwg==}
+  /mlly/1.0.0:
+    resolution: {integrity: sha512-QL108Hwt+u9bXdWgOI0dhzZfACovn5Aen4Xvc8Jasd9ouRH4NjnrXEiyP3nVvJo91zPlYjVRckta0Nt2zfoR6g==}
     dependencies:
-      acorn: 8.8.0
-      pathe: 0.3.9
-      pkg-types: 0.3.5
-      ufo: 0.8.5
+      acorn: 8.8.1
+      pathe: 1.0.0
+      pkg-types: 1.0.1
+      ufo: 1.0.0
     dev: true
 
   /ms/2.1.2:
@@ -1523,8 +1529,8 @@ packages:
     resolution: {integrity: sha512-sTitTPYnn23esFR3RlqYBWn4c45WGeLcsKzQiUpXJAyfcWkolvlYpV8FLo7JishK946oQwMFUCHXQ9AjGPKExw==}
     dev: true
 
-  /pathe/0.3.9:
-    resolution: {integrity: sha512-6Y6s0vT112P3jD8dGfuS6r+lpa0qqNrLyHPOwvXMnyNTQaYiwgau2DP3aNDsR13xqtGj7rrPo+jFUATpU6/s+g==}
+  /pathe/1.0.0:
+    resolution: {integrity: sha512-nPdMG0Pd09HuSsr7QOKUXO2Jr9eqaDiZvDwdyIhNG5SHYujkQHYKDfGQkulBxvbDHz8oHLsTgKN86LSwYzSHAg==}
     dev: true
 
   /pathval/1.1.1:
@@ -1540,12 +1546,12 @@ packages:
     engines: {node: '>=8.6'}
     dev: true
 
-  /pkg-types/0.3.5:
-    resolution: {integrity: sha512-VkxCBFVgQhNHYk9subx+HOhZ4jzynH11ah63LZsprTKwPCWG9pfWBlkElWFbvkP9BVR0dP1jS9xPdhaHQNK74Q==}
+  /pkg-types/1.0.1:
+    resolution: {integrity: sha512-jHv9HB+Ho7dj6ItwppRDDl0iZRYBD0jsakHXtFgoLr+cHSF6xC+QL54sJmWxyGxOLYSHm0afhXhXcQDQqH9z8g==}
     dependencies:
       jsonc-parser: 3.2.0
-      mlly: 0.5.16
-      pathe: 0.3.9
+      mlly: 1.0.0
+      pathe: 1.0.0
     dev: true
 
   /postcss/8.4.16:
@@ -1706,7 +1712,7 @@ packages:
   /strip-literal/0.4.2:
     resolution: {integrity: sha512-pv48ybn4iE1O9RLgCAN0iU4Xv7RlBTiit6DKmMiErbs9x1wH6vXBs45tWc0H5wUIF6TLTrKweqkmYF/iraQKNw==}
     dependencies:
-      acorn: 8.8.0
+      acorn: 8.8.1
     dev: true
 
   /supports-preserve-symlinks-flag/1.0.0:
@@ -1768,8 +1774,8 @@ packages:
     hasBin: true
     dev: true
 
-  /ufo/0.8.5:
-    resolution: {integrity: sha512-e4+UtA5IRO+ha6hYklwj6r7BjiGMxS0O+UaSg9HbaTefg4kMkzj4tXzEBajRR+wkxf+golgAWKzLbytCUDMJAA==}
+  /ufo/1.0.0:
+    resolution: {integrity: sha512-DRty0ZBNlJ2R59y4mEupJRKLbkLQsc4qtxjpQv78AwEDuBkaUogMc2LkeqW3HddFlw6NwnXYfdThEZOiNgkmmQ==}
     dev: true
 
   /universalify/0.1.2:
@@ -1793,13 +1799,13 @@ packages:
     engines: {node: '>= 0.10'}
     dev: true
 
-  /vite-node/0.25.2_@types+node@18.7.16:
-    resolution: {integrity: sha512-SKnqkf8HmaCn+iBS3U7rmm8Awe9MNt5KWZwAA2aN6LsbtQRdiQr/CJMyTORYDV+Z6aGt8k806KPwZjTekYR3uQ==}
+  /vite-node/0.25.3_@types+node@18.7.16:
+    resolution: {integrity: sha512-0TyDFASTLJUOPRE5e5isyXXgM/fbTD6D37NKduk718l+Ih9FSwqaaHT5f0pIkJMXzyYT6zo4b4FA6pnGdoky3A==}
     engines: {node: '>=v14.16.0'}
     hasBin: true
     dependencies:
       debug: 4.3.4
-      mlly: 0.5.16
+      mlly: 1.0.0
       pathe: 0.2.0
       source-map: 0.6.1
       source-map-support: 0.5.21
@@ -1922,8 +1928,8 @@ packages:
       - terser
     dev: true
 
-  /vitest/0.25.2:
-    resolution: {integrity: sha512-qqkzfzglEFbQY7IGkgSJkdOhoqHjwAao/OrphnHboeYHC5JzsVFoLCaB2lnAy8krhj7sbrFTVRApzpkTOeuDWQ==}
+  /vitest/0.25.3:
+    resolution: {integrity: sha512-/UzHfXIKsELZhL7OaM2xFlRF8HRZgAHtPctacvNK8H4vOcbJJAMEgbWNGSAK7Y9b1NBe5SeM7VTuz2RsTHFJJA==}
     engines: {node: '>=v14.16.0'}
     hasBin: true
     peerDependencies:
