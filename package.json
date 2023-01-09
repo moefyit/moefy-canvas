@@ -12,7 +12,7 @@
     "url": "https://github.com/moefyit/moefy-canvas/issues"
   },
   "homepage": "https://github.com/moefyit/moefy-canvas#readme",
-  "packageManager": "pnpm@7.21.0",
+  "packageManager": "pnpm@7.23.0",
   "scripts": {
     "dev:sparkler": "pnpm --filter @moefy-canvas/theme-sparkler dev",
     "dev:popper": "pnpm --filter @moefy-canvas/theme-popper dev",
@@ -44,7 +44,7 @@
     "vite": "^4.0.0",
     "vite-node": "0.26.3",
     "vite-plugin-dts": "1.7.1",
-    "vitepress": "1.0.0-alpha.34",
+    "vitepress": "1.0.0-alpha.35",
     "vitest": "0.26.3",
     "vue": "^3.2.39"
   },
