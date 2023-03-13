@@ -18,8 +18,8 @@ importers:
       typescript: ^4.8.3
       vite: ^4.0.0
       vite-node: 0.29.2
-      vite-plugin-dts: 2.0.2
-      vitepress: 1.0.0-alpha.49
+      vite-plugin-dts: 2.1.0
+      vitepress: 1.0.0-alpha.54
       vitest: 0.29.2
       vue: ^3.2.39
     dependencies:
@@ -38,8 +38,8 @@ importers:
       typescript: 4.8.3
       vite: 4.0.0_@types+node@18.7.16
       vite-node: 0.29.2_@types+node@18.7.16
-      vite-plugin-dts: 2.0.2_vite@4.0.0
-      vitepress: 1.0.0-alpha.49_@types+node@18.7.16
+      vite-plugin-dts: 2.1.0_vite@4.0.0
+      vitepress: 1.0.0-alpha.54_@types+node@18.7.16
       vitest: 0.29.2
       vue: 3.2.39
 
@@ -1954,8 +1954,8 @@ packages:
       - terser
     dev: true
 
-  /vite-plugin-dts/2.0.2_vite@4.0.0:
-    resolution: {integrity: sha512-i3HBlrdqE2FQxQqrNwFj9P2ei/I7lt/d3Q8NOE1JCz/gNYhNf/oUeIJamIdWQUNQGhUd/Y6mtpm3kOYPw1gz8Q==}
+  /vite-plugin-dts/2.1.0_vite@4.0.0:
+    resolution: {integrity: sha512-Vw0FdCuM3VLR4hTFHh0yMEzfwI7NyFvPIMFwvE+Q0t4qtoHIfYOP/JXs7nTnHuQk87FSjlhGeIJ1fLBcktgPgA==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
       vite: '>=2.9.0'
@@ -2044,8 +2044,8 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitepress/1.0.0-alpha.49_@types+node@18.7.16:
-    resolution: {integrity: sha512-3nUZJow4qL8NHRWYatqqVj45AJDxWst/TuOj+IbQRhxesEswa+Fpwayj9/FxzRzBl665fuiG5y+QeVhOeUm0OA==}
+  /vitepress/1.0.0-alpha.54_@types+node@18.7.16:
+    resolution: {integrity: sha512-VvnXyRIffMUmoKHbxlXZiajsB8TVk8z4uLq3lowDbere/u1FMFMQPR3xzz7nwWjUEJnm2mw5D43e9Pni16qUUw==}
     hasBin: true
     dependencies:
       '@docsearch/css': 3.3.3
