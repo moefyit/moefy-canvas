@@ -13,6 +13,9 @@ dist
 # pnpm
 .pnpm-store
 
+# vitepress
+docs/.vitepress/cache
+
 # copied readme
 docs/themes/sparkler.md
 docs/themes/popper.md
