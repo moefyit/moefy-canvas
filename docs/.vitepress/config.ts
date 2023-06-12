@@ -7,7 +7,19 @@ export default defineConfig({
   description: '用可可爱爱的 canvas 动效装饰你的网页吧～',
   themeConfig: {
     editLink: {
-      pattern: 'https://github.com/moefyit/moefy-canvas/edit/main/docs/:path',
+      pattern: ({ filePath }) => {
+        const repoBase = 'https://github.com/moefyit/moefy-canvas/edit/main/'
+        if (filePath.startsWith('themes/')) {
+          if (filePath.endsWith('index.md')) {
+            return `${repoBase}README.md`
+          } else {
+            const theme = filePath.split('/')[1].split('.')[0]
+            return `${repoBase}packages/theme-${theme}/README.md`
+          }
+        } else {
+          return `${repoBase}docs/${filePath}`
+        }
+      },
       text: 'Suggest changes to this page',
     },
 
