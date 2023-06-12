@@ -16,9 +16,3 @@ dist
 # vitepress
 docs/.vitepress/cache
 
-# copied readme
-docs/themes/sparkler.md
-docs/themes/popper.md
-docs/themes/ribbon.md
-docs/themes/sakura.md
-docs/themes/index.md

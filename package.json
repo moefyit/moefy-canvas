@@ -23,7 +23,7 @@
     "test": "vitest --run",
     "release": "bumpp package.json packages/*/package.json --commit '🔖 release: v%s' --push --tag && pnpm build && pnpm -r publish --access public",
     "docs:dev": "vitepress dev docs",
-    "docs:build": "pnpm vite-node docs/.vitepress/watchReadme.ts && vitepress build docs",
+    "docs:build": "vitepress build docs",
     "docs:serve": "pnpm docs:build && pnpm dlx serve docs/.vitepress/dist/"
   },
   "dependencies": {
