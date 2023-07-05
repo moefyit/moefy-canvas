@@ -12,7 +12,11 @@ export class Particle implements Vector3D {
   #globalSpeed: GlobalSpeed | null = null
   #color: string | null = null
   #screenMargin: number = 50
-  constructor(public x = 0, public y = 0, public z = 0) {}
+  constructor(
+    public x = 0,
+    public y = 0,
+    public z = 0
+  ) {}
 
   bindGlobalSpeed(globalSpeed: GlobalSpeed) {
     this.#globalSpeed = globalSpeed
