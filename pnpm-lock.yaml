@@ -52,8 +52,8 @@ importers:
         specifier: 0.33.0
         version: 0.33.0(@types/node@18.15.11)
       vite-plugin-dts:
-        specifier: 3.2.0
-        version: 3.2.0(@types/node@18.15.11)(typescript@5.0.3)
+        specifier: 3.3.0
+        version: 3.3.0(@types/node@18.15.11)(typescript@5.0.3)(vite@4.2.1)
       vitepress:
         specifier: 1.0.0-beta.5
         version: 1.0.0-beta.5(@types/node@18.15.11)(search-insights@2.6.0)
@@ -827,7 +827,7 @@ packages:
       fastq: 1.15.0
     dev: true
 
-  /@rollup/pluginutils@5.0.2(rollup@3.26.0):
+  /@rollup/pluginutils@5.0.2:
     resolution: {integrity: sha512-pTd9rIsP92h+B6wWwFbW8RkZv4hiR/xKsqre4SIuAOaOEQRxi0lqLke9k2/7WegC85GgUs9pjmOjCUi3In4vwA==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
@@ -839,7 +839,6 @@ packages:
       '@types/estree': 1.0.0
       estree-walker: 2.0.2
       picomatch: 2.3.1
-      rollup: 3.26.0
     dev: true
 
   /@rushstack/node-core-library@3.59.4(@types/node@18.15.11):
@@ -2304,31 +2303,28 @@ packages:
       - terser
     dev: true
 
-  /vite-plugin-dts@3.2.0(@types/node@18.15.11)(typescript@5.0.3):
-    resolution: {integrity: sha512-s+dwJvDcb/AWgb49oVbq9JiUSIMwaVpFfV4SVIaBZmv9OZyeyDGxujaq+z4HJ4LB4hUG5c4oRAJyLfV66c763Q==}
+  /vite-plugin-dts@3.3.0(@types/node@18.15.11)(typescript@5.0.3)(vite@4.2.1):
+    resolution: {integrity: sha512-9jm7wV8fkA4JaKmZdeg/X71dMi8l9SbdmzQRafW4ea1fOfd/LHBDKuwFuxKpK8h1h8O7abKycXS087EP7EL8Hw==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
       typescript: '*'
+      vite: '*'
+    peerDependenciesMeta:
+      vite:
+        optional: true
     dependencies:
       '@microsoft/api-extractor': 7.36.0(@types/node@18.15.11)
-      '@rollup/pluginutils': 5.0.2(rollup@3.26.0)
-      '@rushstack/node-core-library': 3.59.4(@types/node@18.15.11)
+      '@rollup/pluginutils': 5.0.2
       '@vue/language-core': 1.8.4(typescript@5.0.3)
       debug: 4.3.4
       kolorist: 1.8.0
       typescript: 5.0.3
+      vite: 4.2.1(@types/node@18.15.11)
       vue-tsc: 1.8.4(typescript@5.0.3)
-    optionalDependencies:
-      rollup: 3.26.0
-      vite: 4.3.9(@types/node@18.15.11)
     transitivePeerDependencies:
       - '@types/node'
-      - less
-      - sass
-      - stylus
-      - sugarss
+      - rollup
       - supports-color
-      - terser
     dev: true
 
   /vite@4.2.1(@types/node@18.15.11):
