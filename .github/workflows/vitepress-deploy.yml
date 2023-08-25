@@ -3,6 +3,8 @@ name: VitePress Deploy
 on:
   push:
     branches: [main]
+  pull_request:
+  merge_group:
   workflow_dispatch:
 
 jobs:
@@ -42,6 +44,7 @@ jobs:
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
+        if: github.ref == 'refs/heads/main'
         with:
           personal_token: ${{ secrets.PERSONAL_TOKEN }}
           publish_dir: docs/.vitepress/dist
