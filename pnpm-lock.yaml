@@ -55,8 +55,8 @@ importers:
         specifier: 3.5.2
         version: 3.5.2(@types/node@18.15.11)(typescript@5.0.3)(vite@4.2.1)
       vitepress:
-        specifier: 1.0.0-rc.8
-        version: 1.0.0-rc.8(@types/node@18.15.11)(search-insights@2.6.0)
+        specifier: 1.0.0-rc.10
+        version: 1.0.0-rc.10(@types/node@18.15.11)(search-insights@2.6.0)
       vitest:
         specifier: 0.34.3
         version: 0.34.3
@@ -2336,8 +2336,8 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitepress@1.0.0-rc.8(@types/node@18.15.11)(search-insights@2.6.0):
-    resolution: {integrity: sha512-InoW3VdY0KDrFi/Nffy9hoL5wd7ScWaCiHx6im4TCCvNP01N7AF0Wq5MX+4b3HIZGS6I9b3ltbP1pGvqHP79Mg==}
+  /vitepress@1.0.0-rc.10(@types/node@18.15.11)(search-insights@2.6.0):
+    resolution: {integrity: sha512-+MsahIWqq5WUEmj6MR4obcKYbT7im07jZPCQPdNJExkeOSbOAJ4xypSLx88x7rvtzWHhHc5aXbOhCRvGEGjFrw==}
     hasBin: true
     dependencies:
       '@docsearch/css': 3.5.2
