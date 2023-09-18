@@ -55,8 +55,8 @@ importers:
         specifier: 3.5.3
         version: 3.5.3(@types/node@18.15.11)(typescript@5.0.3)(vite@4.2.1)
       vitepress:
-        specifier: 1.0.0-rc.12
-        version: 1.0.0-rc.12(@types/node@18.15.11)(search-insights@2.6.0)
+        specifier: 1.0.0-rc.14
+        version: 1.0.0-rc.14(@types/node@18.15.11)(search-insights@2.6.0)
       vitest:
         specifier: 0.34.4
         version: 0.34.4
@@ -2336,9 +2336,14 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitepress@1.0.0-rc.12(@types/node@18.15.11)(search-insights@2.6.0):
-    resolution: {integrity: sha512-mZknN5l9lgbBjXwumwdOQQDM+gPivswFEykEQeenY0tv7eocS+bb801IpFZT3mFV6YRhSddmbutHlFgPPADjEg==}
+  /vitepress@1.0.0-rc.14(@types/node@18.15.11)(search-insights@2.6.0):
+    resolution: {integrity: sha512-yChIeXOAcNvVnSVjhziH1vte0uhKb00PuZf7KdIMfx3ixTMAz73Nn+6gREvCv0SdH+anteGUKz5eljv0ygcgGQ==}
     hasBin: true
+    peerDependencies:
+      markdown-it-mathjax3: ^4.3.2
+    peerDependenciesMeta:
+      markdown-it-mathjax3:
+        optional: true
     dependencies:
       '@docsearch/css': 3.5.2
       '@docsearch/js': 3.5.2(search-insights@2.6.0)
