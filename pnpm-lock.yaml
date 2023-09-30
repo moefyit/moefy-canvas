@@ -48,9 +48,6 @@ importers:
       vite:
         specifier: ^4.2.1
         version: 4.2.1(@types/node@18.15.11)
-      vite-node:
-        specifier: 0.34.5
-        version: 0.34.5(@types/node@18.15.11)
       vite-plugin-dts:
         specifier: 3.5.4
         version: 3.5.4(@types/node@18.15.11)(typescript@5.0.3)(vite@4.2.1)
