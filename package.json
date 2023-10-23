@@ -44,7 +44,7 @@
     "typescript": "^5.0.3",
     "vite": "^4.2.1",
     "vite-plugin-dts": "3.6.0",
-    "vitepress": "1.0.0-rc.22",
+    "vitepress": "1.0.0-rc.23",
     "vitest": "0.34.6",
     "vue": "^3.2.47"
   },
