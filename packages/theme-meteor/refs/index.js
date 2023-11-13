@@ -70,14 +70,14 @@
                 ? 'h'
                 : 'v'
               : Math.random() < Math.abs(globalSpeed.y) / (globalSpeedTX + globalSpeedTY)
-              ? 'v'
-              : 'h') == 'h'
+                ? 'v'
+                : 'h') == 'h'
               ? globalSpeed.x > 0
                 ? 'l'
                 : 'r'
               : globalSpeed.y > 0
-              ? 't'
-              : 'b'
+                ? 't'
+                : 'b'
         }
         resetParticle(particle, true)
         switch (direction) {

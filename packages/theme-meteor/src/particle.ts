@@ -59,14 +59,14 @@ export class Particle implements Vector3D {
               ? 'h'
               : 'v'
             : Math.random() < Math.abs(this.#globalSpeed!.y) / (globalSpeedTX + globalSpeedTY)
-            ? 'v'
-            : 'h') == 'h'
+              ? 'v'
+              : 'h') == 'h'
             ? this.#globalSpeed!.x > 0
               ? 'l'
               : 'r'
             : this.#globalSpeed!.y > 0
-            ? 't'
-            : 'b'
+              ? 't'
+              : 'b'
       }
       this.reset(canvasSize, true)
       switch (direction) {
