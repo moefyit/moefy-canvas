@@ -3,7 +3,7 @@
     "./docs/.vitepress/**/*",
     "docs/.vitepress/env.d.ts",
     "./vite.config.base.ts",
-    "./packages/**/src/",
+    "./packages/**/src/"
   ],
-  "extends": "./tsconfig.base.json",
+  "extends": "./tsconfig.base.json"
 }
