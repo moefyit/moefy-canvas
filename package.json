@@ -38,14 +38,14 @@
   },
   "devDependencies": {
     "@types/node": "^20.0.0",
-    "bumpp": "9.4.0",
+    "bumpp": "9.4.1",
     "cheap-watch": "^1.0.4",
     "markdown-it-task-lists": "^2.1.1",
     "typescript": "^5.0.3",
     "vite": "^5.0.0",
-    "vite-plugin-dts": "3.9.0",
+    "vite-plugin-dts": "3.9.1",
     "vitepress": "1.1.4",
-    "vitest": "1.5.2",
+    "vitest": "1.6.0",
     "vue": "^3.2.47"
   },
   "pnpm": {
