@@ -37,7 +37,7 @@
     "@moefy-canvas/utils": "workspace:^"
   },
   "devDependencies": {
-    "@types/node": "^20.0.0",
+    "@types/node": "^22.0.0",
     "bumpp": "9.8.1",
     "cheap-watch": "^1.0.4",
     "markdown-it-task-lists": "^2.1.1",
