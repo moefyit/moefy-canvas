@@ -13,7 +13,7 @@
   },
   "homepage": "https://github.com/moefyit/moefy-canvas#readme",
   "type": "module",
-  "packageManager": "pnpm@9.15.3",
+  "packageManager": "pnpm@9.15.4",
   "scripts": {
     "dev:sparkler": "pnpm --filter @moefy-canvas/theme-sparkler dev",
     "dev:popper": "pnpm --filter @moefy-canvas/theme-popper dev",
@@ -38,7 +38,7 @@
   },
   "devDependencies": {
     "@types/node": "^22.0.0",
-    "bumpp": "9.10.0",
+    "bumpp": "9.10.1",
     "cheap-watch": "^1.0.4",
     "markdown-it-task-lists": "^2.1.1",
     "typescript": "^5.0.3",
