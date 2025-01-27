@@ -38,7 +38,7 @@
   },
   "devDependencies": {
     "@types/node": "^22.0.0",
-    "bumpp": "9.11.1",
+    "bumpp": "10.0.1",
     "cheap-watch": "^1.0.4",
     "markdown-it-task-lists": "^2.1.1",
     "typescript": "^5.0.3",
