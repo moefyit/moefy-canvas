@@ -25,7 +25,9 @@
     "release": "bumpp package.json packages/*/package.json --commit '🔖 release: v%s' --push --tag && pnpm build && pnpm -r publish --access public",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:serve": "pnpm docs:build && pnpm dlx serve docs/.vitepress/dist/"
+    "docs:serve": "pnpm docs:build && pnpm dlx serve docs/.vitepress/dist/",
+    "fmt": "prettier --write .",
+    "fmt:check": "prettier --check ."
   },
   "dependencies": {
     "@moefy-canvas/core": "workspace:^",
@@ -41,6 +43,7 @@
     "bumpp": "10.0.1",
     "cheap-watch": "^1.0.4",
     "markdown-it-task-lists": "^2.1.1",
+    "prettier": "^3.4.2",
     "typescript": "^5.7.3",
     "vite": "^6.0.11",
     "vite-plugin-dts": "4.5.0",

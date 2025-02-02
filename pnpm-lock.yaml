@@ -42,6 +42,9 @@ importers:
       markdown-it-task-lists:
         specifier: ^2.1.1
         version: 2.1.1
+      prettier:
+        specifier: ^3.4.2
+        version: 3.4.2
       typescript:
         specifier: ^5.7.3
         version: 5.7.3
@@ -1463,6 +1466,11 @@ packages:
 
   preact@10.13.2:
     resolution: {integrity: sha512-q44QFLhOhty2Bd0Y46fnYW0gD/cbVM9dUVtNTDKPcdXSMA7jfY+Jpd6rk3GB0lcQss0z5s/6CmVP0Z/hV+g6pw==}
+
+  prettier@3.4.2:
+    resolution: {integrity: sha512-e9MewbtFo+Fevyuxn/4rrcDAaq0IYxPGLvObpQjiZBMAzB9IGmzlnG9RZy3FFas+eBMu2vA0CszMeduow5dIuQ==}
+    engines: {node: '>=14'}
+    hasBin: true
 
   prompts@2.4.2:
     resolution: {integrity: sha512-NxNv/kLguCA7p3jE8oL2aEBsrJWgAakBpgmgK6lpPWV+WuOmY6r2/zbAVnP+T8bQlA0nzHXSJSJW0Hq7ylaD2Q==}
@@ -3073,6 +3081,8 @@ snapshots:
       source-map-js: 1.2.1
 
   preact@10.13.2: {}
+
+  prettier@3.4.2: {}
 
   prompts@2.4.2:
     dependencies:
