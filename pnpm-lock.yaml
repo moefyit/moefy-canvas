@@ -34,8 +34,8 @@ importers:
         specifier: ^22.0.0
         version: 22.10.10
       bumpp:
-        specifier: 9.11.1
-        version: 9.11.1
+        specifier: 10.0.1
+        version: 10.0.1
       cheap-watch:
         specifier: ^1.0.4
         version: 1.0.4
@@ -1034,9 +1034,9 @@ packages:
   brace-expansion@2.0.1:
     resolution: {integrity: sha512-XnAIvQ8eM+kC6aULx6wuQiwVsnzsi9d3WxzV3FpWTGA19F621kwdbsAcFKXgKUHZWsy+mY6iL1sHTxWEFCytDA==}
 
-  bumpp@9.11.1:
-    resolution: {integrity: sha512-jBHlab9NnRwrpHsockb5E+MBo0os2yS6S7i3cnN8hB6EkTardKQotmd0CFdOc8pubLz2fxj2AD6RGtrySVG6Mw==}
-    engines: {node: '>=10'}
+  bumpp@10.0.1:
+    resolution: {integrity: sha512-TBCR4FjNiubf+t6QFncNHJzCDwcz6SM2PPt/UoIGwGoe5ZTbSqu37nNJFlxBngWCUb1rYbf43ocNT1pPaNu5CQ==}
+    engines: {node: '>=18'}
     hasBin: true
 
   c12@2.0.1:
@@ -1612,9 +1612,6 @@ packages:
   tar@6.2.0:
     resolution: {integrity: sha512-/Wo7DcT0u5HUV486xg675HtjNd3BXZ6xDbzsCUZPt5iw8bTQ63bP0Raut3mvro9u+CUyq7YQd8Cx55fsZXxqLQ==}
     engines: {node: '>=10'}
-
-  tiny-conventional-commits-parser@0.0.1:
-    resolution: {integrity: sha512-N5+AZWdBeHNSgTIaxvx0+9mFrnW4H1BbjQ84H7i3TuWSkno8Hju886hLaHZhE/hYEKrfrfl/uHurqpZJHDuYGQ==}
 
   tinybench@2.9.0:
     resolution: {integrity: sha512-0+DUvqWMValLmha6lr4kD8iAMK1HzV0/aKnCtWb9v9641TnP/MFb7Pc2bxoxQjTXAErryXVgUOfv2YqNllqGeg==}
@@ -2635,7 +2632,7 @@ snapshots:
     dependencies:
       balanced-match: 1.0.2
 
-  bumpp@9.11.1:
+  bumpp@10.0.1:
     dependencies:
       c12: 2.0.1
       cac: 6.7.14
@@ -2645,7 +2642,6 @@ snapshots:
       package-manager-detector: 0.2.8
       prompts: 2.4.2
       semver: 7.6.3
-      tiny-conventional-commits-parser: 0.0.1
       tinyexec: 0.3.2
       tinyglobby: 0.2.10
     transitivePeerDependencies:
@@ -3256,8 +3252,6 @@ snapshots:
       minizlib: 2.1.2
       mkdirp: 1.0.4
       yallist: 4.0.0
-
-  tiny-conventional-commits-parser@0.0.1: {}
 
   tinybench@2.9.0: {}
 
