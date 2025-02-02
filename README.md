@@ -76,21 +76,22 @@ export abstract class Theme<T extends ThemeConfig> {
 
 ### Mouse cursor effects themes
 
-- theme popper :tada:
-- theme sparkler :sparkler:
+-  theme popper :tada:
+-  theme sparkler :sparkler:
 
 ### Background themes
 
-- theme ribbon :reminder_ribbon:
-- theme sakura :cherry_blossom:
-- theme meteor :stars:
+-  theme ribbon :reminder_ribbon:
+-  theme sakura :cherry_blossom:
+-  theme meteor :stars:
 
 ## TODO
 
-- [x] theme sakara :cherry_blossom:, ref: <https://github.com/jhammann/sakura>
-- [ ] 优化 sakura 的效果（目前效果只是简单能看，尚需仔细调优）
-- [ ] 增加非全屏支持
-- [ ] theme popper :tada:, 添加新形状 Confetti 🎊，ref: <https://github.com/catdad/canvas-confetti>
-- [ ] 增加动态的 Ribbon，ref: <https://gist.github.com/imaegoo/074b5842d9cd8d80ecfa0d3fa4ecd556>
-- [ ] 待 [OffscreenCanvas](https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas) 稳定，尝试使用其结合 Web Workder 进行离屏渲染
-- [ ] 尝试 wasm
+-  [x] theme sakara :cherry_blossom:, ref: <https://github.com/jhammann/sakura>
+-  [ ] 优化 sakura 的效果（目前效果只是简单能看，尚需仔细调优）
+-  [ ] 增加非全屏支持
+-  [ ] theme popper :tada:, 添加新形状 Confetti 🎊，ref: <https://github.com/catdad/canvas-confetti>
+-  [ ] 增加动态的 Ribbon，ref: <https://gist.github.com/imaegoo/074b5842d9cd8d80ecfa0d3fa4ecd556>
+-  [x] 使用 [OffscreenCanvas](https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas)
+-  [ ] 尝试使用 Web Workder 进行离屏渲染
+-  [ ] 尝试 wasm

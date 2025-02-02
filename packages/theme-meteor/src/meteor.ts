@@ -53,7 +53,6 @@ export class Meteor implements Theme<MeteorConfig> {
       window.innerWidth,
       window.innerHeight,
       true,
-      true,
       this.#canvasOptions
     )
     this.#initParticles()

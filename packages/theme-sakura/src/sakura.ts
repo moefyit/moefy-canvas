@@ -34,7 +34,6 @@ export class Sakura implements Theme<SakuraConfig> {
       window.innerWidth,
       window.innerHeight,
       true,
-      true,
       this.#canvasOptions
     )
     this.#listen()
