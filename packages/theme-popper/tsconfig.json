@@ -1,5 +1,8 @@
 {
   "extends": "../../tsconfig.base.json",
   "include": ["./src", "./__tests__", "./playground"],
-  "references": [{ "path": "../utils/" }, { "path": "../core/" }]
+  "references": [{ "path": "../utils/" }, { "path": "../core/" }],
+  "compilerOptions": {
+    "declarationDir": "./dist"
+  }
 }

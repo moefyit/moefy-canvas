@@ -1,4 +1,7 @@
 {
   "extends": "../../tsconfig.base.json",
-  "include": ["./src", "./__tests__", "../../env.d.ts"]
+  "include": ["./src", "./__tests__", "../../env.d.ts"],
+  "compilerOptions": {
+    "declarationDir": "./dist"
+  }
 }
