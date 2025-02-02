@@ -12,7 +12,11 @@ export class Particle implements Vector3D {
   #globalSpeed: GlobalSpeed | null = null
   #color: string | null = null
   #screenMargin: number = 50
-  constructor(public x = 0, public y = 0, public z = 0) {}
+  constructor(
+    public x = 0,
+    public y = 0,
+    public z = 0
+  ) {}
 
   bindGlobalSpeed(globalSpeed: GlobalSpeed) {
     this.#globalSpeed = globalSpeed
@@ -55,14 +59,14 @@ export class Particle implements Vector3D {
               ? 'h'
               : 'v'
             : Math.random() < Math.abs(this.#globalSpeed!.y) / (globalSpeedTX + globalSpeedTY)
-            ? 'v'
-            : 'h') == 'h'
+              ? 'v'
+              : 'h') == 'h'
             ? this.#globalSpeed!.x > 0
               ? 'l'
               : 'r'
             : this.#globalSpeed!.y > 0
-            ? 't'
-            : 'b'
+              ? 't'
+              : 'b'
       }
       this.reset(canvasSize, true)
       switch (direction) {
