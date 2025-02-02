@@ -33,7 +33,7 @@ export class Boom {
     }
   }
 
-  draw(ctx: CanvasRenderingContext2D, canvasSize: Size2D) {
+  draw(ctx: OffscreenCanvasRenderingContext2D, canvasSize: Size2D) {
     for (const particle of this.#particles) {
       particle.draw(ctx, canvasSize)
     }

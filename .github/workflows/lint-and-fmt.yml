@@ -1,4 +1,4 @@
-name: Test
+name: Lint and Format
 
 on:
   push:
@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  test:
+  lint-and-fmt:
     runs-on: ubuntu-latest
 
     steps:
@@ -24,14 +24,12 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
           cache: 'pnpm'
 
       - name: Install dependencies
         run: pnpm i --frozen-lockfile
 
-      - name: Build VitePress site
-        run: pnpm docs:build
-
-      - name: Test using vitest
-        run: pnpm test
+      - name: Format check
+        run: |
+          pnpm fmt:check

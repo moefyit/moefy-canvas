@@ -43,7 +43,6 @@ export class Popper implements Theme<PopperConfig> {
       window.innerWidth,
       window.innerHeight,
       true,
-      true,
       this.#canvasOptions
     )
     this.#listen()

@@ -25,7 +25,7 @@ export class Patel {
     this.#imgElement = imgElement
   }
 
-  draw(ctx: CanvasRenderingContext2D, canvasSize: Size2D) {
+  draw(ctx: OffscreenCanvasRenderingContext2D, canvasSize: Size2D) {
     ctx.translate(this.#position.x, this.#position.y)
     ctx.rotate(this.#angle)
     ctx.drawImage(this.#imgElement, 0, 0, this.#size, this.#size)

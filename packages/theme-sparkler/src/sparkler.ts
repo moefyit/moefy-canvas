@@ -64,7 +64,6 @@ export class Sparkler implements Theme<SparklerConfig> {
       window.innerWidth,
       window.innerHeight,
       true,
-      true,
       this.#canvasOptions
     )
     this.#listen()

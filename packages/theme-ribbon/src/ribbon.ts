@@ -25,7 +25,6 @@ export class Ribbon implements Theme<RibbonConfig> {
       window.innerWidth,
       window.innerHeight,
       true,
-      true,
       this.#canvasOptions
     )
     this.#listen()
@@ -69,7 +68,7 @@ export class Ribbon implements Theme<RibbonConfig> {
     this.#board!.render()
   }
 
-  #draw(ctx: CanvasRenderingContext2D, canvasSize: Size2D) {
+  #draw(ctx: OffscreenCanvasRenderingContext2D, canvasSize: Size2D) {
     const { width, height } = canvasSize
     const foldMark: [Vector2D, Vector2D] = [
       { x: 0, y: height * 0.7 + this.#size },
@@ -78,7 +77,7 @@ export class Ribbon implements Theme<RibbonConfig> {
     while (foldMark[1].x < width + this.#size) this.#drawFold(ctx, foldMark)
   }
 
-  #drawFold(ctx: CanvasRenderingContext2D, foldMark: [Vector2D, Vector2D]) {
+  #drawFold(ctx: OffscreenCanvasRenderingContext2D, foldMark: [Vector2D, Vector2D]) {
     const size = this.#size
     const p1 = foldMark[0]
     const p2 = foldMark[1]

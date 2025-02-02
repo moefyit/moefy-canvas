@@ -94,7 +94,7 @@ export class Particle implements Vector3D {
     }
   }
 
-  draw(canvasContext: CanvasRenderingContext2D, currentTime: number) {
+  draw(canvasContext: OffscreenCanvasRenderingContext2D, currentTime: number) {
     canvasContext.lineCap = 'round'
     canvasContext.lineWidth = 3 * this.z
     canvasContext.strokeStyle = this.#color!
