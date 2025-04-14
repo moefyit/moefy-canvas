@@ -13,7 +13,7 @@
   },
   "homepage": "https://github.com/moefyit/moefy-canvas#readme",
   "type": "module",
-  "packageManager": "pnpm@10.7.1",
+  "packageManager": "pnpm@10.8.0",
   "scripts": {
     "dev:sparkler": "pnpm --filter @moefy-canvas/theme-sparkler dev",
     "dev:popper": "pnpm --filter @moefy-canvas/theme-popper dev",
