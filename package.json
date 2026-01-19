@@ -40,7 +40,7 @@
   },
   "devDependencies": {
     "@types/node": "^24.0.0",
-    "bumpp": "10.3.2",
+    "bumpp": "10.4.0",
     "cheap-watch": "^1.0.4",
     "markdown-it-task-lists": "^2.1.1",
     "prettier": "^3.4.2",
@@ -48,7 +48,7 @@
     "vite": "^7.0.0",
     "vite-plugin-dts": "4.5.4",
     "vitepress": "1.6.4",
-    "vitest": "4.0.16",
+    "vitest": "4.0.17",
     "vue": "^3.5.13"
   },
   "pnpm": {
