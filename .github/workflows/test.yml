@@ -30,7 +30,7 @@ jobs:
         run: vp i --frozen-lockfile
 
       - name: Build VitePress site
-        run: vp docs:build
+        run: vp run docs:build
 
       - name: Test using vitest
         run: pnpm test
