@@ -18,9 +18,6 @@ jobs:
           fetch-depth: 0
           submodules: true
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
-
       - uses: voidzero-dev/setup-vp@v1
         with:
           node-version: '24'
@@ -33,4 +30,4 @@ jobs:
         run: vp run docs:build
 
       - name: Test using vitest
-        run: pnpm test
+        run: vp test --run
