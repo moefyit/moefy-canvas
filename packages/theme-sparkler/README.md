@@ -24,20 +24,20 @@ pnpm add @moefy-canvas/theme-sparkler
 
 ```ts
 import {
-   Sparkler,
-   SparklerMode,
-   type SparklerConfig,
-   type CanvasOptions,
-   MAX_Z_INDEX,
+  Sparkler,
+  SparklerMode,
+  type SparklerConfig,
+  type CanvasOptions,
+  MAX_Z_INDEX,
 } from '@moefy-canvas/theme-sparkler'
 
 const themeConfig: SparklerConfig = {
-   mode: SparklerMode.TRAIL,
+  mode: SparklerMode.TRAIL,
 }
 
 const canvasOptions: CanvasOptions = {
-   opacity: 1,
-   zIndex: MAX_Z_INDEX,
+  opacity: 1,
+  zIndex: MAX_Z_INDEX,
 }
 
 const el = document.getElementById('moefy-canvas')
@@ -49,17 +49,17 @@ sparkler.mount(el as HTMLCanvasElement)
 
 ```ts
 export enum SparklerMode {
-   FOLLOW = 'follow',
-   TRAIL = 'trail',
+  FOLLOW = 'follow',
+  TRAIL = 'trail',
 }
 
 export interface SparklerConfig extends ThemeConfig {
-   mode?: SparklerMode
-   numParticles?: number
-   sparkleFactor?: number
-   particleDurationRange?: [number, number]
-   particleDistanceRange?: [number, number]
-   particleSizeRange?: [number, number]
+  mode?: SparklerMode
+  numParticles?: number
+  sparkleFactor?: number
+  particleDurationRange?: [number, number]
+  particleDistanceRange?: [number, number]
+  particleSizeRange?: [number, number]
 }
 ```
 

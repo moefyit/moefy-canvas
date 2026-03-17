@@ -1,4 +1,4 @@
-import type { UserConfig } from 'vite'
+import type { UserConfig } from 'vite-plus'
 import { dirname, resolve } from 'path'
 import { fileURLToPath } from 'url'
 import { execSync } from 'child_process'

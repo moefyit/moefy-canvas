@@ -26,7 +26,7 @@
     ".": "./dist/index.js"
   },
   "scripts": {
-    "dev": "vite --config vite.config.ts playground",
-    "build": "vite build"
+    "dev": "vp dev --config vite.config.ts playground",
+    "build": "vp build"
   }
 }

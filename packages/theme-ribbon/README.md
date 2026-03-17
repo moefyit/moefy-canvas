@@ -24,19 +24,19 @@ pnpm add @moefy-canvas/theme-ribbon
 
 ```ts
 import {
-   Ribbon,
-   type RibbonConfig,
-   type CanvasOptions,
-   MAX_Z_INDEX,
+  Ribbon,
+  type RibbonConfig,
+  type CanvasOptions,
+  MAX_Z_INDEX,
 } from '@moefy-canvas/theme-ribbon'
 
 const themeConfig: RibbonConfig = {
-   size: 90,
+  size: 90,
 }
 
 const canvasOptions: CanvasOptions = {
-   opacity: 1,
-   zIndex: -MAX_Z_INDEX,
+  opacity: 1,
+  zIndex: -MAX_Z_INDEX,
 }
 
 const el = document.getElementById('moefy-canvas')
@@ -48,7 +48,7 @@ sparkler.mount(el as HTMLCanvasElement)
 
 ```ts
 export interface RibbonConfig extends ThemeConfig {
-   size?: number
+  size?: number
 }
 ```
 

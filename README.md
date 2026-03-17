@@ -34,20 +34,20 @@ sparkler.mount(el as HTMLCanvasElement)
 
 ```ts
 import {
-   Sparkler,
-   SparklerMode,
-   type SparklerConfig,
-   type CanvasOptions,
-   MAX_Z_INDEX,
+  Sparkler,
+  SparklerMode,
+  type SparklerConfig,
+  type CanvasOptions,
+  MAX_Z_INDEX,
 } from '@moefy-canvas/theme-sparkler'
 
 const themeConfig: SparklerConfig = {
-   mode: SparklerMode.TRAIL,
+  mode: SparklerMode.TRAIL,
 }
 
 const canvasOptions: CanvasOptions = {
-   opacity: 1,
-   zIndex: MAX_Z_INDEX,
+  opacity: 1,
+  zIndex: MAX_Z_INDEX,
 }
 
 const el = document.getElementById('moefy-canvas')
@@ -59,16 +59,16 @@ sparkler.mount(el as HTMLCanvasElement)
 
 ```ts
 export interface CanvasOptions {
-   opacity?: number // default: 1
-   zIndex?: number // default: 0
+  opacity?: number // default: 1
+  zIndex?: number // default: 0
 }
 
 export type ThemeConfig = Record<string, any>
 
 export abstract class Theme<T extends ThemeConfig> {
-   constructor(themeConfig?: T, canvasOptions?: CanvasOptions) {}
-   abstract mount(el: HTMLCanvasElement): void
-   abstract unmount(): void
+  constructor(themeConfig?: T, canvasOptions?: CanvasOptions) {}
+  abstract mount(el: HTMLCanvasElement): void
+  abstract unmount(): void
 }
 ```
 
