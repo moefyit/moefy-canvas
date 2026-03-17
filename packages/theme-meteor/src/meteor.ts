@@ -42,8 +42,6 @@ export class Meteor implements Theme<MeteorConfig> {
     }
     this.#particleColor = particleColor
     this.#canvasOptions = canvasOptions
-
-    this.animate = this.animate.bind(this)
   }
 
   mount(el: HTMLCanvasElement) {
@@ -129,7 +127,7 @@ export class Meteor implements Theme<MeteorConfig> {
     this.#mousePosition = currentPosition
   }
 
-  #handleMouseLeave(event: MouseEvent | TouchEvent) {
+  #handleMouseLeave(_event: MouseEvent | TouchEvent) {
     this.#mousePosition = null
   }
 
@@ -140,7 +138,7 @@ export class Meteor implements Theme<MeteorConfig> {
     }
   }
 
-  #handleColorSchemeChange(event: any) {
+  #handleColorSchemeChange(_event: Event) {
     const particleColor: string = isDarkMode()
       ? this.#particleColor.dark
       : this.#particleColor.light
@@ -149,11 +147,11 @@ export class Meteor implements Theme<MeteorConfig> {
     }
   }
 
-  #handleVisibilityChange(event: any) {
+  #handleVisibilityChange(_event: Event) {
     this.#paused = document.hidden
   }
 
-  private animate(currentTime: number) {
+  private animate = (currentTime: number) => {
     if (this.#stopped) {
       this.#board!.clear()
       return
@@ -175,7 +173,7 @@ export class Meteor implements Theme<MeteorConfig> {
     }
 
     // 绘制与渲染
-    this.#board!.draw((ctx, canvasSize) => {
+    this.#board!.draw((ctx, _canvasSize) => {
       for (const particle of this.#particles) {
         particle.draw(ctx, currentTime)
       }

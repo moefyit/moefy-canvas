@@ -84,7 +84,9 @@ class OnscreenCanvasWithContext extends CanvasWithContext {
     style.zIndex = zIndex.toString()
     style.width = (canvasSize ? canvasSize.width : canvas.width).toString() + 'px'
     style.height = (canvasSize ? canvasSize.height : canvas.height).toString() + 'px'
-    opacity !== 1 && (style.opacity = opacity.toString())
+    if (opacity !== 1) {
+      style.opacity = opacity.toString()
+    }
     style.pointerEvents = 'none'
   }
 }
@@ -108,7 +110,9 @@ class OffscreenCanvasWithContext extends CanvasWithContext {
     const dpr = (this.hd ? window.devicePixelRatio : 1) ?? 1
     this.offscreenCanvas.width = Math.round(this.size.width * dpr)
     this.offscreenCanvas.height = Math.round(this.size.height * dpr)
-    this.hd && this.ctx.scale(dpr, dpr)
+    if (this.hd) {
+      this.ctx.scale(dpr, dpr)
+    }
   }
 
   to(canvas: OnscreenCanvasWithContext) {

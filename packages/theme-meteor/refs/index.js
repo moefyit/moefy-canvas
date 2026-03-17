@@ -3,7 +3,7 @@
  * 为提高可读性，部分重构
  */
 
-!(function () {
+;(function () {
   let prevX = null
   let prevY = null
   var numParticles = (window.innerWidth + window.innerHeight) / 8,
@@ -114,8 +114,12 @@
       ctx.moveTo(particle.x, particle.y)
       let dx = 2 * globalSpeed.x
       let dy = 2 * globalSpeed.y
-      Math.abs(dx) < 0.1 && (dx = 0.5)
-      Math.abs(dy) < 0.1 && (dy = 0.5)
+      if (Math.abs(dx) < 0.1) {
+        dx = 0.5
+      }
+      if (Math.abs(dy) < 0.1) {
+        dy = 0.5
+      }
       ctx.lineTo(particle.x + dx, particle.y + dy)
       ctx.stroke()
     })

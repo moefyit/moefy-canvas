@@ -33,8 +33,6 @@ export class Popper implements Theme<PopperConfig> {
     this.#size = size
     this.#numParticles = numParticles
     this.#canvasOptions = canvasOptions
-
-    this.animate = this.animate.bind(this)
   }
 
   mount(el: HTMLCanvasElement) {
@@ -77,14 +75,16 @@ export class Popper implements Theme<PopperConfig> {
     }
     const boom = new Boom(this.#shape, { ...currentPosition }, this.#size, this.#numParticles)
     this.#booms.add(boom)
-    this.#running || this.#startAnimation()
+    if (!this.#running) {
+      this.#startAnimation()
+    }
   }
 
   #handleResize(event: UIEvent) {
     this.#board!.handleResize(event)
   }
 
-  #handleVisibilityChange(event: any) {
+  #handleVisibilityChange(_event: Event) {
     this.#booms.clear()
     this.#running = false
   }
@@ -93,7 +93,7 @@ export class Popper implements Theme<PopperConfig> {
     requestAnimationFrame(this.animate)
   }
 
-  private animate() {
+  private animate = () => {
     this.#running = true
     if (this.#booms.size === 0) {
       this.#running = false

@@ -53,8 +53,6 @@ export class Sparkler implements Theme<SparklerConfig> {
     this.#particleSizeRange = particleSizeRange
     this.#originalSparkleFactor = this.#sparkleFactor
     this.#canvasOptions = canvasOptions
-
-    this.animate = this.animate.bind(this)
   }
 
   mount(el: HTMLCanvasElement) {
@@ -130,7 +128,7 @@ export class Sparkler implements Theme<SparklerConfig> {
     }
   }
 
-  #handleMouseUp(event: MouseEvent | TouchEvent) {
+  #handleMouseUp(_event: MouseEvent | TouchEvent) {
     this.#sparkleFactor = this.#originalSparkleFactor
   }
 
@@ -138,11 +136,11 @@ export class Sparkler implements Theme<SparklerConfig> {
     this.#board!.handleResize(event)
   }
 
-  #handleVisibilityChange(event: any) {
+  #handleVisibilityChange(_event: Event) {
     this.#paused = document.hidden
   }
 
-  private animate(currentTime: number) {
+  private animate = (currentTime: number) => {
     if (this.#stopped) {
       this.#board!.clear()
       return
@@ -160,7 +158,7 @@ export class Sparkler implements Theme<SparklerConfig> {
     }
 
     // 绘制与渲染
-    this.#board!.draw((ctx, canvasSize) => {
+    this.#board!.draw((ctx, _canvasSize) => {
       for (const particle of this.#particles) {
         particle.draw(ctx, currentTime)
         if (particle.shouldRemove(currentTime)) {

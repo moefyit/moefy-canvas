@@ -47,7 +47,7 @@ export class Particle {
     this.#opacity = 1 - step
   }
 
-  draw(canvasContext: OffscreenCanvasRenderingContext2D, currentTime: number) {
+  draw(canvasContext: OffscreenCanvasRenderingContext2D, _currentTime: number) {
     canvasContext.fillStyle = opacify(this.#color, this.#opacity)
 
     canvasContext.beginPath()

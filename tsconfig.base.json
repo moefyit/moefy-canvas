@@ -16,22 +16,21 @@
     "strict": true,
     "strictNullChecks": true,
     "target": "ES2018",
-    "baseUrl": "packages",
     "paths": {
-      "@moefy-canvas/theme-sparkler/*": ["theme-sparkler/src/*"],
-      "@moefy-canvas/theme-sparkler": ["theme-sparkler/src"],
-      "@moefy-canvas/theme-popper/*": ["theme-popper/src/*"],
-      "@moefy-canvas/theme-popper": ["theme-popper/src"],
-      "@moefy-canvas/theme-ribbon/*": ["theme-ribbon/src/*"],
-      "@moefy-canvas/theme-ribbon": ["theme-ribbon/src"],
-      "@moefy-canvas/theme-sakura/*": ["theme-sakura/src/*"],
-      "@moefy-canvas/theme-sakura": ["theme-sakura/src"],
-      "@moefy-canvas/theme-meteor/*": ["theme-meteor/src/*"],
-      "@moefy-canvas/theme-meteor": ["theme-meteor/src"],
-      "@moefy-canvas/utils/*": ["utils/src/*"],
-      "@moefy-canvas/utils": ["utils/src"],
-      "@moefy-canvas/core/*": ["core/src/*"],
-      "@moefy-canvas/core": ["core/src"]
+      "@moefy-canvas/theme-sparkler/*": ["./packages/theme-sparkler/src/*"],
+      "@moefy-canvas/theme-sparkler": ["./packages/theme-sparkler/src"],
+      "@moefy-canvas/theme-popper/*": ["./packages/theme-popper/src/*"],
+      "@moefy-canvas/theme-popper": ["./packages/theme-popper/src"],
+      "@moefy-canvas/theme-ribbon/*": ["./packages/theme-ribbon/src/*"],
+      "@moefy-canvas/theme-ribbon": ["./packages/theme-ribbon/src"],
+      "@moefy-canvas/theme-sakura/*": ["./packages/theme-sakura/src/*"],
+      "@moefy-canvas/theme-sakura": ["./packages/theme-sakura/src"],
+      "@moefy-canvas/theme-meteor/*": ["./packages/theme-meteor/src/*"],
+      "@moefy-canvas/theme-meteor": ["./packages/theme-meteor/src"],
+      "@moefy-canvas/utils/*": ["./packages/utils/src/*"],
+      "@moefy-canvas/utils": ["./packages/utils/src"],
+      "@moefy-canvas/core/*": ["./packages/core/src/*"],
+      "@moefy-canvas/core": ["./packages/core/src"]
     }
   }
 }

@@ -21,8 +21,6 @@ export class Sakura implements Theme<SakuraConfig> {
   constructor({ numPatels = 30 }: SakuraConfig = {}, canvasOptions: CanvasOptions = {}) {
     this.#numPatels = numPatels
     this.#canvasOptions = canvasOptions
-
-    this.animate = this.animate.bind(this)
   }
 
   mount(el: HTMLCanvasElement) {
@@ -64,7 +62,7 @@ export class Sakura implements Theme<SakuraConfig> {
     this.#board!.handleResize(event)
   }
 
-  #handleVisibilityChange(event: any) {
+  #handleVisibilityChange(_event: Event) {
     this.#paused = document.hidden
   }
 
@@ -72,7 +70,7 @@ export class Sakura implements Theme<SakuraConfig> {
     requestAnimationFrame(this.animate)
   }
 
-  private animate() {
+  private animate = () => {
     if (this.#stopped) {
       this.#board!.clear()
       return
