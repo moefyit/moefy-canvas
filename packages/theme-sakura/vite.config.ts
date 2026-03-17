@@ -1,6 +1,6 @@
 import { dirname, resolve } from 'path'
 import { fileURLToPath } from 'url'
-import { defineConfig } from 'vite'
+import { defineConfig } from 'vite-plus'
 import dts from 'vite-plugin-dts'
 import baseConfig from '../../vite.config.base'
 

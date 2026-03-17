@@ -36,7 +36,7 @@ export abstract class Particle {
 }
 
 export class Circle extends Particle {
-  draw(ctx: OffscreenCanvasRenderingContext2D, canvasSize: Size2D) {
+  draw(ctx: OffscreenCanvasRenderingContext2D, _canvasSize: Size2D) {
     ctx.fillStyle = this.color
     ctx.beginPath()
     ctx.arc(this.position.x, this.position.y, this.size, 0, Math.PI * 2)
@@ -50,7 +50,7 @@ export class Star extends Particle {
     super(origin, size, speed, color, angle)
   }
 
-  draw(ctx: OffscreenCanvasRenderingContext2D, canvasSize: Size2D) {
+  draw(ctx: OffscreenCanvasRenderingContext2D, _canvasSize: Size2D) {
     ctx.fillStyle = this.color
     ctx.beginPath()
     const R = this.size * 2

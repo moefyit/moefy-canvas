@@ -1,4 +1,4 @@
-import { App, h } from 'vue'
+import { App } from 'vue'
 import DefaultTheme from 'vitepress/theme'
 import GitHubLink from './components/GitHubLink.vue'
 import Sparkler from './components/Sparkler.vue'

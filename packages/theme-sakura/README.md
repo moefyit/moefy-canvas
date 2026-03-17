@@ -24,19 +24,19 @@ pnpm add @moefy-canvas/theme-sakura
 
 ```ts
 import {
-   Sakura,
-   type SakuraConfig,
-   MAX_Z_INDEX,
-   type CanvasOptions,
+  Sakura,
+  type SakuraConfig,
+  MAX_Z_INDEX,
+  type CanvasOptions,
 } from '@moefy-canvas/theme-sakura'
 
 const themeConfig: SakuraConfig = {
-   numPatels: 30,
+  numPatels: 30,
 }
 
 const canvasOptions: CanvasOptions = {
-   opacity: 1,
-   zIndex: -MAX_Z_INDEX,
+  opacity: 1,
+  zIndex: -MAX_Z_INDEX,
 }
 
 const el = document.getElementById('moefy-canvas')
@@ -48,7 +48,7 @@ sakura.mount(el as HTMLCanvasElement)
 
 ```ts
 export interface SakuraConfig extends ThemeConfig {
-   numPatels?: number
+  numPatels?: number
 }
 ```
 

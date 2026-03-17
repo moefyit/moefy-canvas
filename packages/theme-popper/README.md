@@ -24,22 +24,22 @@ pnpm add @moefy-canvas/theme-popper
 
 ```ts
 import {
-   Popper,
-   PopperShape,
-   type PopperConfig,
-   MAX_Z_INDEX,
-   type CanvasOptions,
+  Popper,
+  PopperShape,
+  type PopperConfig,
+  MAX_Z_INDEX,
+  type CanvasOptions,
 } from '@moefy-canvas/theme-popper'
 
 const themeConfig: PopperConfig = {
-   shape: PopperShape.Star,
-   size: 1.75,
-   numParticles: 10,
+  shape: PopperShape.Star,
+  size: 1.75,
+  numParticles: 10,
 }
 
 const canvasOptions: CanvasOptions = {
-   opacity: 1,
-   zIndex: MAX_Z_INDEX,
+  opacity: 1,
+  zIndex: MAX_Z_INDEX,
 }
 
 const el = document.getElementById('moefy-canvas')
@@ -51,14 +51,14 @@ popper.mount(el as HTMLCanvasElement)
 
 ```ts
 export enum PopperShape {
-   Star = 'star',
-   Circle = 'circle',
+  Star = 'star',
+  Circle = 'circle',
 }
 
 export interface PopperConfig extends ThemeConfig {
-   shape?: PopperShape
-   size?: number
-   numParticles?: number
+  shape?: PopperShape
+  size?: number
+  numParticles?: number
 }
 ```
 

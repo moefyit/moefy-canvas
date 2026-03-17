@@ -24,23 +24,23 @@ pnpm add @moefy-canvas/theme-meteor
 
 ```ts
 import {
-   Meteor,
-   type MeteorConfig,
-   type CanvasOptions,
-   MAX_Z_INDEX,
+  Meteor,
+  type MeteorConfig,
+  type CanvasOptions,
+  MAX_Z_INDEX,
 } from '@moefy-canvas/theme-meteor'
 
 const themeConfig: MeteorConfig = {
-   numParticles: null,
-   particleColor: {
-      light: 'rgba(102, 175, 239, .2)',
-      dark: 'rgba(245, 236, 66, .2)',
-   },
+  numParticles: null,
+  particleColor: {
+    light: 'rgba(102, 175, 239, .2)',
+    dark: 'rgba(245, 236, 66, .2)',
+  },
 }
 
 const canvasOptions: CanvasOptions = {
-   opacity: 1,
-   zIndex: -MAX_Z_INDEX,
+  opacity: 1,
+  zIndex: -MAX_Z_INDEX,
 }
 
 const el = document.getElementById('moefy-canvas')
@@ -52,13 +52,13 @@ meteor.mount(el as HTMLCanvasElement)
 
 ```ts
 export interface ColorTheme {
-   light: string
-   dark: string
+  light: string
+  dark: string
 }
 
 export interface MeteorConfig extends ThemeConfig {
-   numParticles?: number | null
-   particleColor?: string | ColorTheme
+  numParticles?: number | null
+  particleColor?: string | ColorTheme
 }
 ```
 

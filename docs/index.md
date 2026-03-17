@@ -2,15 +2,15 @@
 layout: home
 
 hero:
-   name: Moefy Canvas
-   text: 🎉 用 canvas 装饰你的网页吧～
-   actions:
-      - theme: brand
-        text: Get Started
-        link: /themes/
-      - theme: alt
-        text: View on GitHub
-        link: https://github.com/moefyit/moefy-canvas
+  name: Moefy Canvas
+  text: 🎉 用 canvas 装饰你的网页吧～
+  actions:
+    - theme: brand
+      text: Get Started
+      link: /themes/
+    - theme: alt
+      text: View on GitHub
+      link: https://github.com/moefyit/moefy-canvas
 ---
 
 <ClientOnly>

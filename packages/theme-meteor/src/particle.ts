@@ -94,7 +94,7 @@ export class Particle implements Vector3D {
     }
   }
 
-  draw(canvasContext: OffscreenCanvasRenderingContext2D, currentTime: number) {
+  draw(canvasContext: OffscreenCanvasRenderingContext2D, _currentTime: number) {
     canvasContext.lineCap = 'round'
     canvasContext.lineWidth = 3 * this.z
     canvasContext.strokeStyle = this.#color!
@@ -102,8 +102,12 @@ export class Particle implements Vector3D {
     canvasContext.moveTo(this.x, this.y)
     let dx = 2 * this.#globalSpeed!.x
     let dy = 2 * this.#globalSpeed!.y
-    Math.abs(dx) < 0.1 && (dx = 0.5)
-    Math.abs(dy) < 0.1 && (dy = 0.5)
+    if (Math.abs(dx) < 0.1) {
+      dx = 0.5
+    }
+    if (Math.abs(dy) < 0.1) {
+      dy = 0.5
+    }
     canvasContext.lineTo(this.x + dx, this.y + dy)
     canvasContext.stroke()
   }

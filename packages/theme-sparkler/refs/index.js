@@ -8,9 +8,6 @@
 function normalize(x, MIN, MAX) {
   return (x - MIN) / (MAX - MIN)
 }
-function denormalize(x, MIN, MAX) {
-  return x * (MAX - MIN) + MIN
-}
 function getRandomFloat(min, max) {
   return Math.random() * (max - min) + min
 }
@@ -42,10 +39,6 @@ class CursorSparkler {
     this.y = 0
     this.shouldAnimate = true
     this.sparkles = []
-    this.onMouseMove = this.onMouseMove.bind(this)
-    this.onMouseDown = this.onMouseDown.bind(this)
-    this.onMouseUp = this.onMouseUp.bind(this)
-    this.onAnimationFrame = this.onAnimationFrame.bind(this)
   }
 
   listen() {
@@ -120,12 +113,12 @@ class CursorSparkler {
     })
   }
 
-  onMouseMove(e) {
-    this.x = e.pageX
-    this.y = e.pageY
+  onMouseMove = (event) => {
+    this.x = event.pageX
+    this.y = event.pageY
   }
 
-  onMouseDown(e) {
+  onMouseDown = (_event) => {
     if (!this.originalSparkleFactor) {
       this.originalSparkleFactor = this.options.sparkleFactor
     } else {
@@ -134,11 +127,11 @@ class CursorSparkler {
     this.options.sparkleFactor *= 4
   }
 
-  onMouseUp(e) {
+  onMouseUp = (_event) => {
     this.options.sparkleFactor = this.originalSparkleFactor || 1
     delete this.originalSparkleFactor
   }
-  onAnimationFrame(time) {
+  onAnimationFrame = (time) => {
     if (!this.shouldAnimate) return
     if (!this.start) this.start = time
     this.render(time)
