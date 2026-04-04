@@ -1,16 +1,6 @@
 import { defineConfig } from 'vitepress'
 import taskListsMdPlugin from 'markdown-it-task-lists'
-import baseViteConfig from '../../vite.config.base'
-
-const { define } = baseViteConfig
-const alias =
-  baseViteConfig.resolve?.alias && !Array.isArray(baseViteConfig.resolve.alias)
-    ? Object.fromEntries(
-        Object.entries(baseViteConfig.resolve.alias).filter(([, replacement]) => {
-          return typeof replacement === 'string'
-        })
-      )
-    : {}
+import { sharedAlias, sharedDefine } from '../../vite.config.base'
 
 export default defineConfig({
   title: 'moefy-canvas',
@@ -87,9 +77,9 @@ export default defineConfig({
   },
 
   vite: {
-    define,
+    define: sharedDefine,
     resolve: {
-      alias,
+      alias: sharedAlias,
     },
   },
 })
