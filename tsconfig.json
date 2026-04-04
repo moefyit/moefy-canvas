@@ -2,6 +2,7 @@
   "include": [
     "./docs/.vitepress/**/*",
     "docs/.vitepress/env.d.ts",
+    "./env.d.ts",
     "./vite.config.base.ts",
     "./packages/**/src/"
   ],

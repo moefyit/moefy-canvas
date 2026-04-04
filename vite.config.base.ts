@@ -6,7 +6,7 @@ import { readFileSync } from 'fs'
 
 const dir = dirname(fileURLToPath(import.meta.url))
 
-const config: UserConfig = {
+const config = {
   define: {
     __MOEFY_CANVAS_VERSION__: JSON.stringify(getAppVersion()),
     __GIT_HASH__: JSON.stringify(getGitHash()),
@@ -22,7 +22,7 @@ const config: UserConfig = {
       '@moefy-canvas/theme-meteor': resolve(dir, './packages/theme-meteor/src/index.ts'),
     },
   },
-}
+} satisfies UserConfig
 
 function getGitHash() {
   return execSync('git rev-parse --short HEAD').toString().trim()
