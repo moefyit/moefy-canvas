@@ -6,27 +6,23 @@ import { readFileSync } from 'fs'
 
 const dir = dirname(fileURLToPath(import.meta.url))
 
-export const sharedDefine = {
-  __MOEFY_CANVAS_VERSION__: JSON.stringify(getAppVersion()),
-  __GIT_HASH__: JSON.stringify(getGitHash()),
-}
-
-export const sharedAlias = {
-  '@moefy-canvas/core': resolve(dir, './packages/core/src/index.ts'),
-  '@moefy-canvas/utils': resolve(dir, './packages/utils/src/index.ts'),
-  '@moefy-canvas/theme-sparkler': resolve(dir, './packages/theme-sparkler/src/index.ts'),
-  '@moefy-canvas/theme-sakura': resolve(dir, './packages/theme-sakura/src/index.ts'),
-  '@moefy-canvas/theme-popper': resolve(dir, './packages/theme-popper/src/index.ts'),
-  '@moefy-canvas/theme-ribbon': resolve(dir, './packages/theme-ribbon/src/index.ts'),
-  '@moefy-canvas/theme-meteor': resolve(dir, './packages/theme-meteor/src/index.ts'),
-}
-
-const config: UserConfig = {
-  define: sharedDefine,
-  resolve: {
-    alias: sharedAlias,
+const config = {
+  define: {
+    __MOEFY_CANVAS_VERSION__: JSON.stringify(getAppVersion()),
+    __GIT_HASH__: JSON.stringify(getGitHash()),
   },
-}
+  resolve: {
+    alias: {
+      '@moefy-canvas/core': resolve(dir, './packages/core/src/index.ts'),
+      '@moefy-canvas/utils': resolve(dir, './packages/utils/src/index.ts'),
+      '@moefy-canvas/theme-sparkler': resolve(dir, './packages/theme-sparkler/src/index.ts'),
+      '@moefy-canvas/theme-sakura': resolve(dir, './packages/theme-sakura/src/index.ts'),
+      '@moefy-canvas/theme-popper': resolve(dir, './packages/theme-popper/src/index.ts'),
+      '@moefy-canvas/theme-ribbon': resolve(dir, './packages/theme-ribbon/src/index.ts'),
+      '@moefy-canvas/theme-meteor': resolve(dir, './packages/theme-meteor/src/index.ts'),
+    },
+  },
+} satisfies UserConfig
 
 function getGitHash() {
   return execSync('git rev-parse --short HEAD').toString().trim()
