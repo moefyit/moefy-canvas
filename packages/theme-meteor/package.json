@@ -33,6 +33,6 @@
   "dependencies": {
     "@moefy-canvas/core": "workspace:^",
     "@moefy-canvas/utils": "workspace:^",
-    "ts-debounce": "^4.0.0"
+    "ts-debounce": "^5.0.0"
   }
 }

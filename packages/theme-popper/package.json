@@ -31,7 +31,7 @@
     "build": "vp build"
   },
   "dependencies": {
-    "ts-debounce": "^4.0.0",
+    "ts-debounce": "^5.0.0",
     "@moefy-canvas/core": "workspace:^",
     "@moefy-canvas/utils": "workspace:^"
   }
