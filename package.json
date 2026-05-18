@@ -39,11 +39,11 @@
     "@moefy-canvas/utils": "workspace:^"
   },
   "devDependencies": {
-    "@types/node": "^24.12.3",
+    "@types/node": "^24.12.4",
     "bumpp": "11.1.0",
     "cheap-watch": "^1.0.4",
     "markdown-it-task-lists": "^2.1.1",
-    "oxc-minify": "^0.129.0",
+    "oxc-minify": "^0.131.0",
     "typescript": "^6.0.3",
     "vite": "catalog:",
     "vite-plugin-dts": "5.0.0",
