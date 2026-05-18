@@ -46,7 +46,7 @@
     "oxc-minify": "^0.129.0",
     "typescript": "^6.0.3",
     "vite": "catalog:",
-    "vite-plugin-dts": "4.5.4",
+    "vite-plugin-dts": "5.0.0",
     "vite-plus": "catalog:",
     "vitepress": "^2.0.0-alpha.17",
     "vitest": "catalog:",
