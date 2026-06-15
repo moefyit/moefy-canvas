@@ -39,18 +39,18 @@
     "@moefy-canvas/utils": "workspace:^"
   },
   "devDependencies": {
-    "@types/node": "^24.13.1",
+    "@types/node": "^24.13.2",
     "bumpp": "11.1.0",
     "cheap-watch": "^1.0.4",
     "markdown-it-task-lists": "^2.1.1",
-    "oxc-minify": "^0.134.0",
+    "oxc-minify": "^0.135.0",
     "typescript": "^6.0.3",
     "vite": "catalog:",
     "vite-plugin-dts": "5.0.2",
     "vite-plus": "catalog:",
     "vitepress": "^2.0.0-alpha.17",
     "vitest": "catalog:",
-    "vue": "^3.5.35"
+    "vue": "^3.5.38"
   },
   "pnpm": {
     "peerDependencyRules": {
