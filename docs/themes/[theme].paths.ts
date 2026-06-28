@@ -1,9 +1,8 @@
 import fs from 'fs'
-import { fileURLToPath } from 'url'
-import { dirname, resolve } from 'path'
+import { resolve } from 'path'
 
 const themes = ['sparkler', 'popper', 'ribbon', 'sakura', 'meteor']
-const dir = dirname(fileURLToPath(import.meta.url))
+const dir = resolve(process.cwd(), 'docs/themes')
 
 const pageWithPath = [
   ['index', '../../README.md'],

@@ -1,6 +1,10 @@
+import { execSync } from 'child_process'
+import { readFileSync } from 'fs'
+import { resolve } from 'path'
 import { defineConfig } from 'vitepress'
 import taskListsMdPlugin from 'markdown-it-task-lists'
-import baseViteConfig from '../../vite.config.base'
+
+const repoRoot = process.cwd()
 
 export default defineConfig({
   title: 'moefy-canvas',
@@ -77,6 +81,28 @@ export default defineConfig({
   },
 
   vite: {
-    ...baseViteConfig,
+    define: {
+      __MOEFY_CANVAS_VERSION__: JSON.stringify(getAppVersion()),
+      __GIT_HASH__: JSON.stringify(getGitHash()),
+    },
+    resolve: {
+      alias: {
+        '@moefy-canvas/core': resolve(repoRoot, './packages/core/src/index.ts'),
+        '@moefy-canvas/utils': resolve(repoRoot, './packages/utils/src/index.ts'),
+        '@moefy-canvas/theme-sparkler': resolve(repoRoot, './packages/theme-sparkler/src/index.ts'),
+        '@moefy-canvas/theme-sakura': resolve(repoRoot, './packages/theme-sakura/src/index.ts'),
+        '@moefy-canvas/theme-popper': resolve(repoRoot, './packages/theme-popper/src/index.ts'),
+        '@moefy-canvas/theme-ribbon': resolve(repoRoot, './packages/theme-ribbon/src/index.ts'),
+        '@moefy-canvas/theme-meteor': resolve(repoRoot, './packages/theme-meteor/src/index.ts'),
+      },
+    },
   },
 })
+
+function getGitHash() {
+  return execSync('git rev-parse --short HEAD').toString().trim()
+}
+
+function getAppVersion() {
+  return JSON.parse(readFileSync(resolve(repoRoot, './package.json')).toString())['version']
+}
