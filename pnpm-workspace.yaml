@@ -1,13 +1,18 @@
 packages:
   - 'packages/**'
 catalog:
-  vite: npm:@voidzero-dev/vite-plus-core@latest
-  vitest: npm:@voidzero-dev/vite-plus-test@latest
+  vite: npm:@voidzero-dev/vite-plus-core@^0.2.1
+  vitest: 4.1.9
   vite-plus: latest
 overrides:
   vite: 'catalog:'
   vitest: 'catalog:'
 peerDependencyRules:
+  ignoreMissing:
+    - '@algolia/client-search'
+    - react
+    - react-dom
+    - '@types/react'
   allowAny:
     - vite
     - vitest
