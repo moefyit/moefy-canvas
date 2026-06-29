@@ -8,6 +8,11 @@ overrides:
   vite: 'catalog:'
   vitest: 'catalog:'
 peerDependencyRules:
+  ignoreMissing:
+    - '@algolia/client-search'
+    - react
+    - react-dom
+    - '@types/react'
   allowAny:
     - vite
     - vitest
