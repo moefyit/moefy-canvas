@@ -1,7 +1,7 @@
 packages:
   - 'packages/**'
 catalog:
-  vite: npm:@voidzero-dev/vite-plus-core@^0.2.1
+  vite: npm:@voidzero-dev/vite-plus-core@^1.0.0
   vitest: 4.1.9
   vite-plus: latest
 overrides:
